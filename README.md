@@ -210,7 +210,7 @@ int main() {
 }
 ```
 
-Functions
+# Functions 
 
 In C++, functions can only return one value. C++ allows us to overload functions (polymorphism). Function can be inside classes (member functions) or not (global/ free functions). 
 When we pass in variables as parameters into a function in C++, the arguments we are passing inside parenthesis in the function call, are called 'actual arguments'. The arguments we define in the function definition that reflect these actual arguments are called 'formal arguments'. In C++, every time a function gets called, the process happening is, copy the values of actual arguments into formal arguments. When we pass in or return values to/from functions, the process of copying can be expensive. So, we should try to pass parameters and return values as references. But we should be careful not to get ourselves into a dangling pointer. We can pass reference variables into a function just by passing the variable name (don't need to add & in the function call, only add the in the definition and prototype). 
