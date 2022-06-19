@@ -117,7 +117,9 @@ Reference variables in C++ are declared using an `&` sign before the variable na
 Data type of the reference variable must be the same type as the variable it points to.  
 
 We can declare a global constant variable using the const keyword (right after the namespace declaration). It will be available for all the functions. 
-	const int number = 5;
+```cpp
+const int number = 5;
+```
 
 If we create a variable and not initialize it by giving it a value, at the moment it will be holding a garbage value. A garbage value is whatever the state of that point of the memory was. It was never initialized, neither was cleared. So, when we create a variable, the best thing to do is to initialize it to zero by using the equal sign, or empty curly braces.  [ int var {} ; ]
 
