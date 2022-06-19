@@ -706,7 +706,9 @@ Struct comes from the **C** language, it allows us to create user-defined types 
 
 They can have member functions, constructors and destructors. The only difference is that in structs, the default access modifier is public, unlike in a class which is private by default.  
 
-We can define our own structures using the struct keyword. Inside curly braces, we must define the members, and the braces must be closed with a semi-colon. Then we can create objects using this structure. We can use the member access operator (the dot . ) to access it's member variables. In the C way of defining types, there is no way to define the methods for the type within the type definition, so the operations for the structure are defined outside the struct block. 
+We can define our own structures using the `struct` keyword. Inside curly braces, we must define the members, and the braces must be closed with a semi-colon. Then we can create objects using this structure.  
+
+We can use the member access operator (the dot . ) to access it's member variables. In the C way of defining types, there is no way to define the methods for the type within the type definition, so the operations for the structure are defined outside the struct block. 
 
 ```cpp
 #include <iostream>
