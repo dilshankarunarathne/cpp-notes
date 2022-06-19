@@ -96,7 +96,8 @@ C++ is a strongly typed language. We must declare the type of a variable in its 
 There are two main types of integers, signed and unsigned. Signed integers can hold positive and negative numbers. Unsigned integers can only hold positive numbers. 
 We need to declare it using `signed` or `unsigned` keywords before the `int` keyword. If we just use int keyword, the default is signed integer. 
 For real numbers there are float (4 bytes), double (8 bytes) and long double (10 bytes) types we could use. 
-From C++ 11, it's recommended that we initialize a variable like given below, instead of using the = operator.
+From C++ 11, it's recommended that we initialize a variable like given below, instead of using the `=` assignment operator. 
+
 ```cpp
 double rate_of_interest {0.07};
 ```
