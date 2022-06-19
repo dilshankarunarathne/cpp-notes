@@ -316,9 +316,9 @@ The name of the array always holds the first element's pointer. Whenever we're r
 Referring to an index as 4[a] is also possible, because - `4[a] -> (*4 + &a)`  
 To print out the elements, either these ways are allowed.  `a[i]`    `i[a]`   `*(a+i)`
 
-We can declare an integer arrays using -
-	int arrayName[10];
-	int arrayX[5] = {10,20,30,40,50};
+We can declare an integer arrays using -  
+`int arrayName[10];`
+`int arrayX[5] = {10,20,30,40,50};`
 If we declare an array, and not initialize it, all of its items will be holding garbage values. 
 If we declare an int array of 10 elements, and we initialize it using {10,20}, these items will be filled into the corresponding indexes of the array, and the rest of the array's elements would be initialized with zero. 
 If we initialize an array with {0}, all of its elements are going to be zero. 
