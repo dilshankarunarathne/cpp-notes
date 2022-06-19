@@ -787,7 +787,7 @@ p->holderName = "Tom";
 delete p;
 ```
 
-Object Oriented Programming
+# Object Oriented Programming 
 
 Classes in C++ are defined using the class keyword followed by the name of the class and curly braces block ended with a semi-colon. A class typically have three sections, private, public and protected. These access modifiers must be followed with a colon, and then we can write the members in there. We can have multiple sections of access modifiers. If nothing is mentioned, the members are going to be considered as private. Protected members will be available in the scope of that same class and within the child classes.
 The methods can be implemented in-place, within the class right with the declaration. But in general practice, we usually implement the methods outside of the class. But if the methods are very simple (like setters/getters) we can write them in-place. 
