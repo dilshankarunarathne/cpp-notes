@@ -42,7 +42,7 @@ int main() {
 
 If we’re using the entire std namespace like this, we should be careful not to mix our code with anything from the std namespace. It’s also strongly discouraged to use the entire std namespace in header files. 
 
-# Enums
+# Enums 
 
 In C++, we can create an enum (usually in a header file) using the enum keyword, followed by open and close curly braces contained values and a semi-colon. They can contain few possible states (or values) a variable field can get. Special thing about C++ enums is that they can be referred only by the value, and without the enum name. So, all the values in a enum have to be unique and cannot be conflicted with values from another enum. 
 
@@ -58,7 +58,7 @@ int main () {
 }
 ```
 
-Pre-Processors
+# Pre Processors 
 
 Anything that starts with a # is called a pre-processor directive. They are instructions for the compiler usually to combine files together, to include a library or for debugging purposes. We can create debug builds with more output than release builds. We can also use them for convenience, like include guards with #ifendif , #endif and #define that we can use to stop the same library from importing more than once. 
 When we create a sub class, and in its definition,  we’ve included the super class, then whenever we’re working with those classes in a separate function, we only need to include the sub class. If we include both, we’ll get a compile time error. We can get around this by adding #ifendif, #define and #endif preprocessor directives in the class header file, so we don’t have to worry about that, the classes themselves will figure it out.
