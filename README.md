@@ -79,7 +79,11 @@ When we create a sub class, and in its definition,  we’ve included the super c
 ```cpp
 #ifndef CLASSNAME_H
 #define CLASSNAME_H
-class Classname { /* everything*/ } ;
+
+class Classname { 
+    /* everything*/ 
+};
+
 #endif // CLASSNAME_H
 ```
 
