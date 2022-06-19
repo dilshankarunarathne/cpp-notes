@@ -704,15 +704,19 @@ For example, if we wanted to sort based on a different factor, or if we want to 
 
 Struct comes from the C language, it allows us to create user-defined types in a fundamental way. We can do that using classes with object-oriented programming too. But struct is generally used for POD – ‘plain old data’ with little or no business logic. They can have member functions, constructors and destructors. The only difference is that in structs, the default access modifier is public, unlike in a class which is private by default.   
 We can define our own structures using the struct keyword. Inside curly braces, we must define the members, and the braces must be closed with a semi-colon. Then we can create objects using this structure. We can use the member access operator (the dot . ) to access it's member variables. In the C way of defining types, there is no way to define the methods for the type within the type definition, so the operations for the structure are defined outside the struct block. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 #include <iostream>
 #include <string>
+
 using namespace std;
+
 struct Account {
 	int accNo;
 	string holderName;
 	double balance;
 };
+
 Account readAccountData() {
 	Account acc;
 	cout << "Input account number: " ;
@@ -723,6 +727,7 @@ Account readAccountData() {
 	cin >> acc.balance;
 	return acc;
 }
+
 void printAccountData (Account& acc) {
 	cout << "Account Details" << endl;
 	cout << "-----------------------------" << endl;
@@ -730,6 +735,7 @@ void printAccountData (Account& acc) {
 	cout << "Holder's name: " << acc.holderName << endl;
 	cout << "Balance: $" << acc.balance << endl;
 }
+
 bool accountDebit (Account& acc, double amount) {
 	bool success = false;
 	if (acc.balance >= amount) {
@@ -738,9 +744,11 @@ bool accountDebit (Account& acc, double amount) {
 	}
 	return success;
 }
+
 void accountCredit (Account& acc, double amount) {
 	acc.balance += amount;
 }
+
 int main() {
 	Account a;
 	a = readAccountData();
@@ -753,11 +761,11 @@ int main() {
 		cout << "Account debited with $" << amount << " successfully." << endl;
 		cout << "Current balance: $" << a.balance << endl << endl;
 	} else {
-cout << "Debit unsuccessful, make sure you have sufficient balance." << endl << endl;
+		cout << "Debit unsuccessful, make sure you have sufficient balance." << endl << endl;
 	}
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
 
 We can also access members of a struct type using struct pointer. In that case, we have to use the arrow operator to access the members, instead of the dot operator. If we allocate the object dynamically, we can use pointers and the arrow operator. Or we can use the dereferencing operator on the pointer to use the dot operator, but if we do that, we need to cover the dereferencing with parenthesis to separate it from the dot operator. 
 -------------------------------------------------------------------------------------------------
