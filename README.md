@@ -635,7 +635,7 @@ names.erase (names.begin(), names.size()-2;
 
 # Map 
 
-Map <map> is a collection in the standard library. Things In a map are organized in key-value pairs. Just like vectors, it grows when it needs to. It keeps the sorted order, so we can access items using keys and speed search, but it costs a little to add items. We can use the key inside square brackets to access a value, or we can use the find method to look up. We can also use pair and insert functions to add pairs. 
+Map is a collection in the standard library. Things In a map are organized in key-value pairs. Just like vectors, it grows when it needs to. It keeps the sorted order, so we can access items using keys and speed search, but it costs a little to add items. We can use the key inside square brackets to access a value, or we can use the find method to look up. We can also use pair and insert functions to add pairs. 
 Map iterators points to a pair, first and seconds. We need to dereference the pointer to get the key and the value. 
 -------------------------------------------------------------------------------------------------
 map <int, string> mymap;
