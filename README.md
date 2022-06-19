@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-If we’re using the entire std namespace like this, we should be careful not to mix our code with anything from the std namespace. It’s also strongly discouraged to use the entire std namespace in header files. 
+If we’re using the entire std namespace like this, we should be careful not to mix our code with anything from the **std** namespace. It’s also strongly discouraged to use the entire **std** namespace in header files. 
 
 # Enums 
 
