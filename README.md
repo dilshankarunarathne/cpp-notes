@@ -8,8 +8,10 @@ endl is a manipulator we can use to create a new line in the output.
 
 At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
 
-Scope and namespace 
-The scope resolution operator :: is used to mention the scope. 
+# Scope and namespace 
+
+The scope resolution operator :: is used to mention the scope.  
+
 We can use the using keyword to declare a namespace. Functionality that comes with the standard library is all in the std namespace. Using this functionality, we can implement our version of the standard libraries. Take string for an example, we can either use std::string or we can write our own string class and with that namespace mylib::string can be used. It’s possible to mix and match them in the same application without any confusion. In C++, no words are really preserved, so string is available to name our class. We don’t actually have to mention the namespace each time we use anything from the standard library. We can declare the namespace using the using keyword. Usage of this keyword and mentioning the namespace is just a convenient way to tell the compiler, whenever I’m using cout, I mean std::cout.  
 
 ```cpp
