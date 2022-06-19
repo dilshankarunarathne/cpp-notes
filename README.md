@@ -652,7 +652,9 @@ auto found = find(2);
 cout << found->first << “ : “ << found->second << endl;
 ```
 
-The find method returns an iterator. We can get the found items by dereferencing it, or we could use square brackets to access the found item. In case of a map, there can be only one hit for each key, because they are unique. But there are other collections that can have more, and in those collections, find method returns an iterator with more than one item. 
+The `find` method returns an iterator. We can get the found items by dereferencing it, or we could use square brackets to access the found item.  
+In case of a map, there can be only one hit for each key, because they are unique.  
+But there are other collections that can have more, and in those collections, find method returns an iterator with more than one item. 
 
 Other Collections
 
