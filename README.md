@@ -2,7 +2,7 @@
 
 The `main()` function is the entry point of a program's execution. We can use `#include` to import a library, followed by the name of the library within either angle brackets if the library is in standard libraries, or double quotation marks if the library exists inside the project directory.  
 
-cout is an object of the ostream class. Functions in this class is used to control the flow of bits to some destination. When we create an instance of cout, its destination is fixed as the output console. 
+`cout` is an object of the `ostream` class. Functions in this class are used to control the flow of bits to some destination. When we create an instance of cout, its destination is fixed as the output console. 
 The insertion operator << is the operator we use to push some bits from the memory into an object. 
 endl is a manipulator we can use to create a new line in the output.  
 
