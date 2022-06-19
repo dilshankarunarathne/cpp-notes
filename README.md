@@ -394,7 +394,7 @@ The begin method of the string class returns the string iterator object, with th
 
 If we want to traverse a string in the reverse direction, we can use a reverse iterator. We can declare a reverse iterator using `string::reverse_iterator`. In reverse iterator, we need to call `str.rbegin` to get the reverse iterator object from the string. We can use the `str.rend` function to check if we've came to the beginning of the string. In reverse iterator, we need to use unary increment to traverse. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 string str = "Hello world";
 string::iterator it = str.begin();
 while (it != str.end()) {
@@ -406,7 +406,7 @@ while (rit != str.rend()) {
 	cout << *rit << " ";
 	++rit;
 }
--------------------------------------------------------------------------------------------------
+```
 
 There is a clear method in the string class that we could use to clear all the characters of a string. To delete a specific portion of a string, we can use the erase method. We can call the erase method on the string and pass it the starting index position and the number of characters we want to erase. We can also use the (str.begin()+number) to indicate the starting position. Likewise, we can use (str.end()-number) to indicate the finishing position of the erasing. 
 String class has push_back('char') method to add a character at the end of the string and pop_back method to pop a single character from the end of the string. The front method returns a reference to the first character, we can use it to change the first character. Likewise, back method returns a reference to the last character. There is also an append method, we can use to append another string literal to the end of a string. We can use the insert(pos, 'string slice') method to insert a string literal at a given position of a string. 
