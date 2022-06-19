@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by doing this.  
+When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by using `using` keyword and committing to that namespace.  
 
 ```cpp
 using namespace std;
