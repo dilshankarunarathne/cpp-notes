@@ -572,8 +572,10 @@ The compiler will not write any instructions for this memory allocation. The all
 
 Whenever we allocate memory dynamically using the `new` keyword, that memory will be allocated in the **heap** memory.  
 The **stack** area is used by the system to allocate compile time memory. So, all the local variables that are declared using compile time allocation, will be using the **stack**.  Once the operation is finished, the operating system de-allocate (or release) the memory implicitly from the stack.  
-But with dynamic allocation, it's programmer’s responsibility to de-allocate the heap memory once the job is done, with delete keyword. The heap is also called the 'free store’. 
-Whenever we’re using dynamic memory allocation, we need to make sure that we’ve implemented the copy constructor, the copy assignment operator and the destructor. 
+
+But with dynamic allocation, it's programmer’s responsibility to de-allocate the heap memory once the job is done, with `delete` keyword. The heap is also called the **free store**.  
+
+Whenever we’re using dynamic memory allocation, we need to make sure that we’ve implemented the **copy constructor**, the copy assignment operator and the destructor. 
 
 Whenever we dynamically allocate memory, there is a chance to have some memory leak if we fail to manage the memory efficiently. For an example, if we write a function that dynamically allocate an integer variable locally. Once the function is completed and the execution is returned to the caller, if we did not delete that memory explicitly, there will be a memory leak. The pointer for that memory will be lost within the program, but the allocated memory stays intact. So, it's no longer possible for us to reach that memory. The operating system will not be able to release that memory for later use. We also must never call return in a function, before a delete keyword.
 
