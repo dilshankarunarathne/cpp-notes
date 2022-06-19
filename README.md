@@ -610,7 +610,8 @@ Vectors can grow automatically. We can add any number of elements, and still acc
 
 Because of this functionality, memory allocation for each time we add a new element costs a bit much time. The vector class has a clever algorithm to have optimal balance between the execution time and memory utilization. When we're constantly adding elements to a vector, its capacity growth gets higher than its size. Vector class will allocate more memory, so when we add more elements, it can execute faster. So, at any time of a vector’s execution, it's capacity might be slightly higher than its size.  
 
-If we don't want this extra space, we can use shrink_to_fit method. It will discard all the extra allocated elements at the end. 
+If we don't want this extra space, we can use `shrink_to_fit` method. It will discard all the extra allocated elements at the end.  
+
 There are many ways to create a vector. If we declare a vector like v1 in this example, that means this v1 vector has five elements, and each of those elements are initially set to -1. We can initialize a vector with an array. The first parameter is the array and the second parameter is the last element, in the v2 vector, we're copying all 5 elements, and in v3 we're copying only the second and the third elements. We can initialize a vector with another vector (v5), and it's going to be a deep copy. We can initialize a vector with an iterator like in v6, and it will be a deep copy. In that case, we can also use rbegin, rend, begin and end methods as iterators.  
 -------------------------------------------------------------------------------------------------
 	vector <int> v1(5, -1);
