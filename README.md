@@ -375,9 +375,10 @@ But we can only call the constructor once for each string object. If we ever wan
 When we use `cin` to get input to a string variable, it only takes one word. Anything we type in after the first whitespace is going to be discarded by C++. We can use `cin` to get only one word input. But if we want a string with more than one word as input, we can use the global `getline` method. We need to pass in the input stream (`cin` object) and the string variable in which the string be saved to the `getline` function to get the whole string.  
 `getline(cin, myline);`  
 
-We can use the at function of string class and pass it the index of the character we want, to get a specific character of a string by its index. We can also do that by considering the string an array, and using square brackets. There is also a length function in string class. 
+We can use the at function of string class and pass it the index of the character we want, to get a specific character of a string by its index. We can also do that by considering the string an array, and using square brackets. There is also a length function in string class.  
 Characters are comparable, to check if a letter is in lower case we can use the comparison operators. To make a character upper case, we can subtract 32 from that character, because in ascii, the difference between a simple letter and its corresponding capital letter is 32. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 string str = "Hello world";
 for (char &p:str) {
 	if (p >= 'a' && p <= 'z') {
@@ -385,7 +386,7 @@ for (char &p:str) {
 	}
 }
 cout << str << endl;
--------------------------------------------------------------------------------------------------
+```
 
 We can use iterators to traverse through a string (or any other collection). In C++ we need to create an iterator object accordingly to the type of the collection. We need to use the scope resolution operator :: to specify the type. 
 The begin method of the string class returns the string iterator object, with the pointer placed at the beginning of the string. Same way, str.end function returns an iterator that's placed at the end of the string. We can use that to check if the iterator has come to the end of the string. When we traverse the collection, we need to use the dereferencing operator to get the element. In this case, the dereferencing operator is not about pointers, it's been overloaded for the iterator class. We also need to increment the iterator using unary operator, after we got the element. 
