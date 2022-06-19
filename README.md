@@ -40,20 +40,18 @@ int main() {
 
 If we’re using the entire std namespace like this, we should be careful not to mix our code with anything from the std namespace. It’s also strongly discouraged to use the entire std namespace in header files. 
 
+# Enums
 
-
-
-
-Enums
 In C++, we can create an enum (usually in a header file) using the enum keyword, followed by open and close curly braces contained values and a semi-colon. They can contain few possible states (or values) a variable field can get. Special thing about C++ enums is that they can be referred only by the value, and without the enum name. So, all the values in a enum have to be unique and cannot be conflicted with values from another enum. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 enum Status {Approved, Pending, Cancelled};
 int main () {
 	Status s = Pending;
 s = Approved;
 return 0;
 }
--------------------------------------------------------------------------------------------------
+```
 
 Pre-Processors
 
