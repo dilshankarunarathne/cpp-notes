@@ -308,7 +308,7 @@ int main() {
 
 If a pointer points to an object, and we want to use a member function of that object, we have to cover the pointer variable with a bracket `(*p)` and then use the dot `.` character to call the member. Or we can use the arrow sign `->`. 
 
-Arrays
+# Arrays 
 
 Array is a contiguous data structure. Which means, all the elements are going to be allocated one after another in the primary memory. The name of the array always holds the first element's pointer. Whenever we're referring to an element with its index, the compiler uses pointer calculations to get the pointer of the given element. 
 	a[1] -> (*&a +1) 
