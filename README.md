@@ -198,13 +198,15 @@ We can use mod operation on the returned number to get it in a range.
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+
 using namespace std;
+
 int main() {
-	srand(time(NULL));
-	for(int i=1; i<=10; ++i) {
-		cout << rand() % 100 << endl;	// numbers till 100
-	}
-	return 0;
+    srand(time(NULL));
+    for(int i=1; i<=10; ++i) {
+        cout << rand() % 100 << endl;	// numbers till 100
+    }
+    return 0;
 }
 ```
 
