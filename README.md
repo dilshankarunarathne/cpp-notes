@@ -32,6 +32,7 @@ When we’re using only one namespace or when we’re using a lot of things in t
 
 ```cpp
 using namespace std;
+
 int main() {
 	cout << "Hello world" << endl << "The next line" << endl;
 	return 0;
