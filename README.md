@@ -1,15 +1,16 @@
 # Introduction to C++ 
 
-The main function is the entry point of a program's execution. We can use #include to import a library, followed by the name of the library within either angle brackets if the library is in standard libraries, or double quotation marks if the library exists inside the project directory. 
+The main function is the entry point of a program's execution. We can use #include to import a library, followed by the name of the library within either angle brackets if the library is in standard libraries, or double quotation marks if the library exists inside the project directory.  
+
 cout is an object of the ostream class. Functions in this class is used to control the flow of bits to some destination. When we create an instance of cout, its destination is fixed as the output console. 
 The insertion operator << is the operator we use to push some bits from the memory into an object. 
-endl is a manipulator we can use to create a new line in the output. 
+endl is a manipulator we can use to create a new line in the output.  
 
-At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. Everything of the standard library is in the std namespace. Those class names start with lower case letters. 
+At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
 
 Scope and namespace 
 The scope resolution operator :: is used to mention the scope. 
-We can use the using keyword to declare a namespace. Functionality that comes with the standard library is all in the std namespace. Using this functionality, we can implement our version of the standard libraries. Take string for an example, we can either use std::string or we can write our own string class and with that namespace mylib::string can be used. It’s possible to mix and match them in the same application without any confusion. In C++, no words are really preserved, so string is available to name our class. We don’t actually have to mention the namespace each time we use anything from the standard library. We can declare the namespace using the using keyword. Usage of this keyword and mentioning the namespace is just a convenient way to tell the compiler, whenever I’m using cout, I mean std::cout. 
+We can use the using keyword to declare a namespace. Functionality that comes with the standard library is all in the std namespace. Using this functionality, we can implement our version of the standard libraries. Take string for an example, we can either use std::string or we can write our own string class and with that namespace mylib::string can be used. It’s possible to mix and match them in the same application without any confusion. In C++, no words are really preserved, so string is available to name our class. We don’t actually have to mention the namespace each time we use anything from the standard library. We can declare the namespace using the using keyword. Usage of this keyword and mentioning the namespace is just a convenient way to tell the compiler, whenever I’m using cout, I mean std::cout.  
 
 ```cpp
 int main() {
@@ -18,7 +19,7 @@ int main() {
     return 0;
 }
 ```
-or
+or  
 ```cpp
 using std::cout;
 using std::endl;
@@ -29,7 +30,7 @@ int main() {
 }
 ```
 
-When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by doing this. 
+When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by doing this.  
 
 ```cpp
 using namespace std;
@@ -60,7 +61,8 @@ int main () {
 
 # Pre Processors 
 
-Anything that starts with a # is called a pre-processor directive. They are instructions for the compiler usually to combine files together, to include a library or for debugging purposes. We can create debug builds with more output than release builds. We can also use them for convenience, like include guards with #ifendif , #endif and #define that we can use to stop the same library from importing more than once. 
+Anything that starts with a # is called a pre-processor directive. They are instructions for the compiler usually to combine files together, to include a library or for debugging purposes. We can create debug builds with more output than release builds. We can also use them for convenience, like include guards with #ifendif , #endif and #define that we can use to stop the same library from importing more than once.  
+
 When we create a sub class, and in its definition,  we’ve included the super class, then whenever we’re working with those classes in a separate function, we only need to include the sub class. If we include both, we’ll get a compile time error. We can get around this by adding #ifendif, #define and #endif preprocessor directives in the class header file, so we don’t have to worry about that, the classes themselves will figure it out.
 #define keyword is used to define a constant arbitrary. We need to give it the same name as the file name, usually in upper or Camel case pre-fixed with an underscore. That will define the class, but to prevent it from being defined again, we can cover the whole definition with #ifndef – ‘if not defined’ and #endif pre-processor directives. This pattern is called an ‘include guard’. The name of the include guard must be unique for each class. 
 
