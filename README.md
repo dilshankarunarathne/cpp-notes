@@ -675,7 +675,8 @@ Sorting and searching functions in C++ come externally to collections. They are 
 
 The standard for_each function in the standard library, takes three arguments. A begin iterator, an end iterator and what to do when it gets to each element. Interestingly, as that third argument, we can implement our own function that takes an auto (or the actual type) argument and does something, and pass the name of that function (without parameters). That would be a functional call. 
 The find_if method takes a start iterator, an end iterator, and a function which will return true for a certain value. Only the elements that got true returned from the given function will be returned as an iterator of the given type. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 void print (int i) {
 	cout << I << “ “ ;
 }
@@ -692,7 +693,7 @@ while (o != v.end()) {
 	cout << *o << “ “;
 	o = find_if (++o, v.end(), odd);
 }
--------------------------------------------------------------------------------------------------
+```
 
 We can sort a collection by simply calling the sort function with start and end iterators passed to it. It actually has a lot of overloads that take different arguments. For example, if we wanted to sort based on a different factor, or if we want to use a different order. 
 
