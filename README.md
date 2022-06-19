@@ -49,7 +49,7 @@ enum Status {Approved, Pending, Cancelled};
 int main () {
     Status s = Pending;
     s = Approved;
-return 0;
+    return 0;
 }
 ```
 
