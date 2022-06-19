@@ -254,7 +254,11 @@ Usually, when we try to identify an error, it’s good practice to start from th
 
 Integers (type `int`) in C++ takes 4 bytes space. For any variable, the byte number is the least significant byte, the starting byte of that particular value in primary memory. When we look at a pointer for a variable, it gives us the address of the first byte of that variable's value in memory. Then C++ runtime checks the data type and gets the number of bytes that data type takes, and gets that number of bytes from that starting address.  
 
-`&` is called the **address of** operator, because it gives us the memory address of any variable. In C++, any value that starts with 0x is a hex (hexa-decimal) value. If we print out the pointer of a variable, we'll get a hex number. If we want the number to be an integer and not hexa-decimal, we can cast the pointer into unsigned. If the & is prefixed to a variable that means, please take the address of this instance. And if & is post fixed to a type that means, this is a reference variable of this type. 
+`&` is called the **address of** operator, because it gives us the memory address of any variable. In C++, any value that starts with 0x is a hex (hexa-decimal) value. If we print out the pointer of a variable, we'll get a hex number. If we want the number to be an integer and not hexa-decimal, we can cast the pointer into unsigned.  
+
+If the `&` operator is prefixed to a variable that means, *please take the address of this instance*. 
+And if `&` is post fixed to a type that means, *this is a reference variable of this type*.  
+
 We can also create pointer variables in C++. If we declare a variable p, with type int* , it's considered to be a pointer variable of an integer. We can put the * symbol (Asterix) after the data type or before the variable name (double* k or double *k). But if we want to declare multiple pointer variables in one declaration, post-fixing the data type would be the way to go. After the declaration, we can initialize it with the pointer of some variable in memory. Once we have a pointer variable, pointing to a variable in memory, the pointer variable only holds the address of the initial byte of that value. But we can use that pointer to manipulate the whole value. The * symbol is called the dereferencing operator. 
 -------------------------------------------------------------------------------------------------
 int temp = 300;
