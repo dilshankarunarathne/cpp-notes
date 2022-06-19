@@ -465,7 +465,8 @@ while(iss >> k) {
 ```
 
 We need to use the getline method with passed in the istringstream object and the token string object and the delimiter (the default delimiter for getline method is the new line character) to extract string tokens from a stream. With that, we can use it without the peek and ignore. We can nest this functionality to get more robust istringstream s.
--------------------------------------------------------------------------------------------------
+
+```cpp
 string source = "John:10,Tina:20,Robin:18";
 istringstream iss (source);
 string part;
@@ -477,7 +478,7 @@ while(getline(iss, part, ',')) {
 	}
 	cout << endl;
 }
--------------------------------------------------------------------------------------------------
+```
 
 To concatenate different types of data into a string, we can use the ostringstream class of the sstream header. We can use the insertion operator << to insert different types of values into the ostringstream object. At the end, we can use the str method of the ostringstream class to get the stream into a string object.
 
