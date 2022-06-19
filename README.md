@@ -2,9 +2,9 @@
 
 The `main()` function is the entry point of a program's execution. We can use `#include` to import a library, followed by the name of the library within either angle brackets if the library is in standard libraries, or double quotation marks if the library exists inside the project directory.  
 
-`cout` is an object of the `ostream` class. Functions in this class are used to control the flow of bits to some destination. When we create an instance of cout, its destination is fixed as the output console. 
-The insertion operator << is the operator we use to push some bits from the memory into an object. 
-endl is a manipulator we can use to create a new line in the output.  
+`cout` is an object of the `ostream` class. Functions in this class are used to control the flow of bits to some destination. When we create an instance of `cout`, its destination is fixed as the output console. 
+The insertion operator `<<` is the operator we use to push some bits from the memory into an object. 
+`endl` is a manipulator we can use to create a new line in the output.  
 
 At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
 
