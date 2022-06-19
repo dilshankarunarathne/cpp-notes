@@ -289,11 +289,14 @@ We can also call function by pointers as well as references.
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 void plusSome(int* value1, int* value2) {
 	*value1 = *value1 + 10;
 	*value2 = *value2 + 5;
 }
+
 int main() {
 	int first = 13;
 	int second = 53;
