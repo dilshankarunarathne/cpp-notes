@@ -147,9 +147,11 @@ int main() {
 }
 ```
 
-We cannot use the equals operator and a unary increment or decrement operator with a constant, we'll get a compilation error. That's because, under the hood, this is what's happening.
-	p = ++x; 	// ++x -> x = x + 1
-	p = ++5; 	// ++5 -> 5 = 5 + 1
+We cannot use the assignment operator and a unary increment or decrement operator with a constant, we'll get a compilation error. That's because, under the hood, this is what's happening.
+```cpp
+p = ++x; 	// ++x -> x = x + 1
+p = ++5; 	// ++5 -> 5 = 5 + 1
+```
 
 The result of any comparison in C++ is either true or false. It is a value of the bool data type. True in C++ is represented with 1 and false in C++ is represented with 0. Relational operators in C++ are ==, !=, >, >=, <, <=.
 Logical operators in C++ are logical AND &&, logical OR || and logical NOT !
