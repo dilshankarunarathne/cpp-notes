@@ -101,7 +101,7 @@ From C++ 11, it's recommended that we initialize a variable like given below, in
 ```cpp
 double rate_of_interest {0.07};
 ```
-There is also an auto keyword in C++. If we ever decided not to declare the data type and let the compiler decide it, we can use this keyword and pass in the value. 
+There is also an `auto` keyword in C++. If we ever decided not to declare the data type and let the compiler decide it, we can use this keyword and pass in the value. 
 
 ```cpp
 #include <iostream>
