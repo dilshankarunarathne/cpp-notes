@@ -485,10 +485,11 @@ To concatenate different types of data into a string, we can use the `ostringstr
 We can use the `atoi` method on c-type strings (legacy - not string objects), to parse them into integers.  
 We can use the `c_str` method to convert a string object into a c-type string.  
 This way is commonly used in parsing integers read from files. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 string m = "50";
 int number = atoi(m.c_str());
--------------------------------------------------------------------------------------------------
+```
 
 C-style Strings 
 
