@@ -87,7 +87,7 @@ class Classname {
 #endif // CLASSNAME_H
 ```
 
-We can also use the #pragma once  to tell the compiler to only include this only once. 
+We can also use the `#pragma once`  to tell the compiler to only include this only once. 
 
 # Data Types and Operators
 
