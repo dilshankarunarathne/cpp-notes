@@ -936,7 +936,7 @@ Wall command enables show all warnings in the compilation. We don't need to ment
 In general practice, we don't usually compile multiple filed projects in the previous way. Instead we use the **make** utility in order to build the projects.  
 
 Consider a project with three files, `testclass.h`, `testclass.cpp` and `main.cpp` in the same directory.  
-We can write a makefile for that like this. 
+We can write a **makefile** for that like this. 
 -------------------------------------------------------------------------------------------------
 all: myprogram
 
