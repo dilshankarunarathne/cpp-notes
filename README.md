@@ -901,8 +901,12 @@ But, we can still get around that using mutable variables. Once we declare a mem
 We can declare a variable mutable using the `mutable` keyword.  
 This is only used in such occasions as a simple operation for performance enhancement. 
 
-When we write constructors in C++, we can use the general way to initialize variable just like in other languages, by taking arguments and assigning them into the member variables. But this costs a performance wastage. When a constructor like that is called, it first creates the member variables in memory and initialize them, and once the assignment takes place, those variable values are changed into them. This might not be a problem when we’re dealing with small objects that have int like members. But most of user defined types (like strings, etc) takes up a considerable amount of processing power, if we keep this up. So, it’s good practice to write constructors this way. 
-------------------------------------------------------------------------------------------------- 
+When we write constructors in C++, we can use the general way to initialize variable just like in other languages, by taking arguments and assigning them into the member variables.  
+But this costs a performance wastage. When a constructor like that is called, it first creates the member variables in memory and initialize them, and once the assignment takes place, those variable values are changed into them.  
+This might not be a problem when we’re dealing with small objects that have int like members. But most of user defined types (like strings, etc) takes up a considerable amount of processing power, if we keep this up.  
+So, it’s good practice to write constructors this way. 
+
+```cpp 
 MyClass {
 private: 
 	string mystring;
@@ -910,7 +914,7 @@ public:
 	MyClass(string s);
 };
 MyClass::MyClass (string s) : mystring(s) { /* leave this empty*/}
--------------------------------------------------------------------------------------------------
+```
 
 Objects we create are instances of classes. They have a lifetime. When we call a constructor, memory is allocated for that particular object in stack. The object goes out of scope, usually at a }, and then the reserved memory is released. In C++ there is a saying RAII – Resource Acquisition is Initialization, that means if we have a resource that needs to be managed (e.g.- an opened file, a database connection or a windows cursor), the constructor will acquire the resource and once its lifetime ends, the destructor will be called to release the resource. 
 Whenever if needed, we can use { } to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called. 
