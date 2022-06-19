@@ -612,15 +612,16 @@ Because of this functionality, memory allocation for each time we add a new elem
 
 If we don't want this extra space, we can use `shrink_to_fit` method. It will discard all the extra allocated elements at the end.  
 
-There are many ways to create a vector. If we declare a vector like v1 in this example, that means this v1 vector has five elements, and each of those elements are initially set to -1. We can initialize a vector with an array. The first parameter is the array and the second parameter is the last element, in the v2 vector, we're copying all 5 elements, and in v3 we're copying only the second and the third elements. We can initialize a vector with another vector (v5), and it's going to be a deep copy. We can initialize a vector with an iterator like in v6, and it will be a deep copy. In that case, we can also use rbegin, rend, begin and end methods as iterators.  
--------------------------------------------------------------------------------------------------
-	vector <int> v1(5, -1);
-	int x[] = {10,20,30,40,50};
-	vector <int> v2 (x, x+5);
-	vector <int> v3 (x+1, x+3);
-	vector <int> v5 (v4);
-	vector <int> v6 (v5.begin(), v5.begin() + 3)
--------------------------------------------------------------------------------------------------
+There are many ways to create a vector. If we declare a vector like `v1` in this example, that means this v1 vector has five elements, and each of those elements are initially set to -1. We can initialize a vector with an array. The first parameter is the array and the second parameter is the last element, in the v2 vector, we're copying all 5 elements, and in v3 we're copying only the second and the third elements. We can initialize a vector with another vector (v5), and it's going to be a deep copy. We can initialize a vector with an iterator like in v6, and it will be a deep copy. In that case, we can also use rbegin, rend, begin and end methods as iterators. 
+
+```cpp
+vector <int> v1(5, -1);
+int x[] = {10,20,30,40,50};
+vector <int> v2 (x, x+5);
+vector <int> v3 (x+1, x+3);
+vector <int> v5 (v4);
+vector <int> v6 (v5.begin(), v5.begin() + 3)
+```
 
 There are methods like front and back in vector class, that gives us the first and the last element in the vector. We can use those methods to change the current first and last elements. We can use the insert method to insert a new element in a desired location within the vector. The new element will take that place, and the rest of the elements would be pushed back. There is an erase method in the vector class that we can use to remove a particular element from the vector. It accepts a single parameter, we can pass in end, front, etc. Or it also accepts a two parameter range for beginning and end of erasing. 
 -------------------------------------------------------------------------------------------------
