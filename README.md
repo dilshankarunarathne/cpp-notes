@@ -412,9 +412,10 @@ There is a clear method in the string class that we could use to clear all the c
 
 String class has `push_back`('char') method to add a character at the end of the string and `pop_back` method to pop a single character from the end of the string. The front method returns a reference to the first character, we can use it to change the first character.  
 Likewise, back method returns a reference to the last character.  
-There is also an `append` method, we can use to append another string literal to the end of a string. We can use the insert(pos, 'string slice') method to insert a string literal at a given position of a string. 
-We can use the find method to search for a string inside another string. We can pass the search start position as a second parameter if we want. Whenever a match is found, it will return the index of the target as an unsigned integer. 
--------------------------------------------------------------------------------------------------
+There is also an `append` method, we can use to append another string literal to the end of a string. We can use the `insert`(pos, 'string slice') method to insert a string literal at a given position of a string.  
+We can use the `find` method to search for a string inside another string. We can pass the search start position as a second parameter if we want. Whenever a match is found, it will return the index of the target as an unsigned integer. 
+
+```cpp
 string str ("You must know, first my no longer be first if second comes first!");
 string target("first");
 string::size_type index = str.find(target, 10);
@@ -422,7 +423,8 @@ while (index != string::npos) {
 	cout << "Target string '" << target << "'' found at index : " index << endl;
 	index = str.find(target, index +1);
 }
--------------------------------------------------------------------------------------------------
+```
+
 Size_type is a general implementation of unsigned integer, we can use it to make compatible between systems. 
 npos is the value that's going to be returned by find, if the target is not found till the end of the string. 
 We can use the find_first_of method to find the first occurrence of any character of a given string, inside another string. 
