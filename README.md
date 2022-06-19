@@ -627,10 +627,11 @@ vector <int> v6 (v5.begin(), v5.begin() + 3)
 There are methods like front and back in vector class, that gives us the first and the last element in the vector. We can use those methods to change the current first and last elements.  
 We can use the `insert` method to insert a new element in a desired location within the vector. The new element will take that place, and the rest of the elements would be pushed back.  
 There is an `erase` method in the vector class that we can use to remove a particular element from the vector. It accepts a single parameter, we can pass in end, front, etc. Or it also accepts a two parameter range for beginning and end of erasing. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 vector <string> names {"Anthony", "Josh", "Mark", "Linda", "Carl"};
 names.erase (names.begin(), names.size()-2;
--------------------------------------------------------------------------------------------------
+```
 
 Map
 
