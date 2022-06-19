@@ -326,6 +326,7 @@ To print out the elements, either these ways are allowed.  `a[i]`    `i[a]`   `*
 In C++ 11, a range for loop was introduced. We can use it to traverse an array. The syntax is similar to for each loop 
 `for(data_type_of_elements   identifier  :  collection)`
 We can get a reference to variables in the for-range loop, and use the identifier to manipulate the elements of that array. We can also use auto type for simple things, so we can pass in different types of arrays. 
+
 ```cpp
 int x[] = {10,20,30,40,50};
 for (int &p: x) {
