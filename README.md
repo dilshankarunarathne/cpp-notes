@@ -635,9 +635,12 @@ names.erase (names.begin(), names.size()-2;
 
 # Map 
 
-Map is a collection in the standard library. Things In a map are organized in key-value pairs. Just like vectors, it grows when it needs to. It keeps the sorted order, so we can access items using keys and speed search, but it costs a little to add items. We can use the key inside square brackets to access a value, or we can use the find method to look up. We can also use pair and insert functions to add pairs. 
+Map is a collection in the standard library. Things In a map are organized in key-value pairs. Just like vectors, it grows when it needs to. It keeps the sorted order, so we can access items using keys and speed search, but it costs a little to add items.  
+We can use the key inside square brackets to access a value, or we can use the find method to look up.  
+We can also use `pair` and `insert` functions to add pairs. 
 Map iterators points to a pair, first and seconds. We need to dereference the pointer to get the key and the value. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 map <int, string> mymap;
 mymap [1] = “One”;
 pair <int, string> p(2, “Two);
@@ -647,7 +650,7 @@ for (auto ip = mymap.begin(); ip != mymap.end(); ip++) {
 }
 auto found = find(2);
 cout << found->first << “ : “ << found->second << endl;
--------------------------------------------------------------------------------------------------
+```
 
 The find method returns an iterator. We can get the found items by dereferencing it, or we could use square brackets to access the found item. In case of a map, there can be only one hit for each key, because they are unique. But there are other collections that can have more, and in those collections, find method returns an iterator with more than one item. 
 
