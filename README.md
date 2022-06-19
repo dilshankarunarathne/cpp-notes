@@ -106,7 +106,9 @@ There is also an `auto` keyword in C++. If we ever decided not to declare the da
 ```cpp
 #include <iostream>
 #include <typeinfo>
+
 using namespace std;
+
 int main() {
     auto myVar = 9.5;
     cout << "Type of myVar : " << typeid(myVar).name() << endl;
@@ -139,7 +141,9 @@ In this example, the equals assignment happens before the increment.
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 int main() {
     int x {10};
     int p;
