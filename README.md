@@ -671,9 +671,11 @@ We can use the **multimap**, if we want a map-like structure, but with more than
 
 # Sorting and Searching 
 
-Sorting and searching functions in C++ come externally to collections. They are in a header called algorithm. They take a collection or in most cases, a pair of iterators, so it can search from given beginning to the given end of the collection. We can use the same functions in any collection. 
+Sorting and searching functions in C++ come externally to collections. They are in a header called `algorithm`. They take a collection or in most cases, a pair of iterators, so it can search from given beginning to the given end of the collection. We can use the same functions in any collection. 
 
-The standard for_each function in the standard library, takes three arguments. A begin iterator, an end iterator and what to do when it gets to each element. Interestingly, as that third argument, we can implement our own function that takes an auto (or the actual type) argument and does something, and pass the name of that function (without parameters). That would be a functional call. 
+The standard *for_each* function in the standard library, takes three arguments. A begin iterator, an end iterator and what to do when it gets to each element.  
+Interestingly, as that third argument, we can implement our own function that takes an *auto* (or the actual type) argument and does something, and pass the name of that function (without parameters). That would be a functional call.  
+
 The find_if method takes a start iterator, an end iterator, and a function which will return true for a certain value. Only the elements that got true returned from the given function will be returned as an iterator of the given type. 
 
 ```cpp
