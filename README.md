@@ -796,7 +796,8 @@ The methods can be implemented in-place, within the class right with the declara
 
 Usually, the class declaration is written separately in a header file, and the method implementations are written in another cpp file.  
 
-In order to write the implementations for the methods outside of the class, we need to use the 'belongs to' operator (also known as the scope resolution operator ::) and indicate the class in which this method is declared in. 
+In order to write the implementations for the methods outside of the class, we need to use the '**belongs to**' operator (also known as the **scope resolution operator** `::`) and indicate the class in which this method is declared in.  
+
 C++ allows us to overload any method of a class, as long as those methods have different method signatures. 
 An object cannot be created if there is no constructer defined in the class. But, if we do not write a constructor, once we try to construct an object, the compiler writes a default constructor for us. The default constructor is an empty constructor block, with no parameters and no functionality within the constructor. But if we write a constructor with any signature, the compiler will not write the default constructor. We can implement the constructors outside of the class. 
 In general practice, we implement the toString method in the class using an ostringstream object. 
