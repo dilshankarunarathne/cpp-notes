@@ -502,7 +502,8 @@ So, we should take advantage of the modern `std::string` and `std::wstring` when
 # File I/O 
 
 We can use fstream header to handle file inputs and outputs in C++. We can use ofsteam class to output data into a file. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -521,7 +522,8 @@ int main () {
 	fout.close();
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
+
 If the given myfile.txt doesn't exist, it's going to be created. Otherwise it will be overwritten and all existing the content of the file will be lost. If the file fails to create or load, the fail method will return true. Finally, we need to execute the close method, that will flush (or dump) all the data into the file. 
 
 We can use the ifstream class to read files. The eof method in ifstream class returns true if we've reached the end of the file. 
