@@ -558,7 +558,7 @@ int main () {
 
 We can use the `setw`(width) method to print data into cout with a better structure. This class is in `iomanip` header. There is other functionality given in C++ to make it easier. 
 
-Dynamic Memory Allocation
+# Dynamic Memory Allocation 
 
 Usually in C++, the compiler will write instructions for memory allocation during the compilation of a program. Then it actually uses the allocated memory in execution. This is called 'compile-time allocation'. Take an integer array x[100] for an example. In this scenario, the compiler will write instructions to allocate 400 bytes for this array. It is a fixed-allocation which means, during the execution, we can't get more memory. That is one drawback of compile time allocation. But if we allocate memory in runtime, we can allocate exactly what we need, so there will be no shortage or wastage of memory. 
 We can use the new keyword in C++ to dynamically allocate memory for a pointer. The new keyword should be followed by the data type. That memory will be allocated during the execution of the program. The compiler will not write any instructions for this memory allocation. The allocation will be arranged contiguously. The base address will be stored in the pointer.
