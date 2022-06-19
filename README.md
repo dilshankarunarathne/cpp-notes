@@ -174,13 +174,17 @@ The main best thing about using a switch statement instead of if-else, is that t
 The ordering of the cases is not mandatory. The values of cases always have to be constants. If we do not add the `break` keyword, once a case is executed, it's going to fall through all the next cases and execute them until it comes to the end of the statement, or it finds a break. We don't have to add a `break` to the last statement. 
 ```cpp
 switch (n) {
-	case 1 : 	cout << "One" << endl;
-				break;
-	case 2 : 	cout << "Two" << endl;
-				break;
-	case 3 : 	cout << "Three" << endl;
-				break;
-	default : 	cout << "Invalid number for this" << endl;
+    case 1 :    
+        cout << "One" << endl;
+        break;
+    case 2 : 
+        cout << "Two" << endl;
+        break;
+    case 3 : 
+        cout << "Three" << endl;
+        break;
+    default : 
+        cout << "Invalid number for this" << endl;
 }
 ```
 
