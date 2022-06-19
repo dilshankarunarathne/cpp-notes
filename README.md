@@ -44,7 +44,7 @@ When we’re using only one namespace or when we’re using a lot of things in t
 using namespace std;
 
 int main() {
-	cout << "Hello world" << endl << "The next line" << endl;
+	cout << "Hello world" << endl << "The next line" << endl; 
 	return 0;
 }
 ```
@@ -58,7 +58,7 @@ Special thing about C++ enums is that they can be referred only by the value, an
 
 ```cpp
 enum Status {
-    Approved, Pending, Cancelled
+    Approved, Pending, Cancelled 
 };
 
 int main () {
