@@ -224,22 +224,27 @@ In C++, every time a function gets called, the process happening is, copy the va
 
 The process of compiling C++ starts from the beginning of our code and goes line by line. Its scope is whatever is written prior to the line currently compiling. But the process of execution starts from the `main()` function, and its flow depends on how our code is written.  
 Because of the compilation starts from the top, if we call a function in our code before it appears in the code, the compiler will not compile the code. So, we need to mention that function's details prior to the calling. That is called a function prototype declaration. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 #include <iostream>
+
 using namespace std;
+
 void swap(int &, int &);
+
 int main() {
 	int first = 13;
 	int second = 53;
 	swap (first, second);
 	return 0;
 }
+
 void swap(int &a, int &b) {
 	int temp = a;
 	a = b;
 	b = temp;
 }
--------------------------------------------------------------------------------------------------
+```
 
 If we’ve correctly declared our function in a header file, and correctly passed in the arguments, we should not get any compile time errors. If we’ve not correctly implemented the function in the cpp file, we’ll get linker errors. Linker errors looks like  Code.obj: error LNK ###  . If we get an error like this, we should probably look in the implementation. Usually, when we try to identify an error, it’s good practice to start from the first line of compilation output. 
 
