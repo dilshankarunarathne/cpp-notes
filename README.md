@@ -425,7 +425,7 @@ while (index != string::npos) {
 }
 ```
 
-Size_type is a general implementation of unsigned integer, we can use it to make compatible between systems. 
+**Size_type** is a general implementation of unsigned integer, we can use it to make compatible between systems.  
 npos is the value that's going to be returned by find, if the target is not found till the end of the string. 
 We can use the find_first_of method to find the first occurrence of any character of a given string, inside another string. 
 
