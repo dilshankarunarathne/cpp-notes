@@ -275,10 +275,13 @@ References on the other hand, cannot be null. They always have to be initialized
 
 If we declare an integer pointer like const `int* cpi` , that means the `cpi` points to a **constant integer**, of which we cannot change the value.  
 Or if we declare it like `int * const cpi` , that means a **constant pointer**, which cannot be changed. We cannot change the address of a constant pointer, it has to be pointing to the same object.  
-We can combine both of those functionalities and declare something like `const int* const crazyInt` of which we cannot perform each of those things, it can only access the data. 
+We can combine both of those functionalities and declare something like `const int* const crazyInt` of which we cannot perform each of those things, it can only access the data.  
 
-The size of the memory that takes for a pointer depends on the architecture of the compiler we're using. If it's 32bit compiler, a pointer takes 32 bits in memory. We can use the sizeof function to see how much a memory a variable or a pointer take. In 32bit compiler, the size of a char pointer (p) is 4 bytes, while the size of the character itself (*p) takes 1 byte. 
-The operating system allocates the variables of one code-block in memory, in a top to bottom stack. If we declare a few variables and check their pointers, we'll see that their pointer starts after the previous one's highest significant digit. There is a pointer add operator in C++, which will give us the address of the next variable within that block, once we +1 a pointer. Same way, if we subtract one from a pointer, it's going to get the value of the address of the previous variable in memory. 
+The size of the memory that takes for a pointer depends on the architecture of the compiler we're using. If it's 32bit compiler, a pointer takes 32 bits in memory.  
+We can use the sizeof function to see how much a memory a variable or a pointer take. In 32bit compiler, the size of a char pointer (`p`) is 4 bytes, while the size of the character itself (`*p`) takes 1 byte.  
+
+The operating system allocates the variables of one code-block in memory, in a top to bottom stack. If we declare a few variables and check their pointers, we'll see that their pointer starts after the previous one's highest significant digit. There is a pointer add operator in C++, which will give us the address of the next variable within that block, once we +1 a pointer. Same way, if we subtract one from a pointer, it's going to get the value of the address of the previous variable in memory.  
+
 Consider two integer values declared as temp1 and temp2 that are allocated at 7012088 and 7012084 (may vary from execution to execution), if we create two integer pointer variables t1 and t2, if we do (t2 = 2t +1), we'll get the value of t1 (because it's top-down, the memory is allocated in descending order. t2 +1 = t1, even though t2 is declared after t1). 
 
 C++ do not allow us to assign a pointer to a different type of pointer (e.g.- int pointer to a char pointer). But we can use explicit casting to get around that. If we create an int pointer that holds some value, and we assign that pointer into a char pointer using explicit casting, once we print out the value of that char variable, we'll get the ascii character at whatever that integer's first byte's value is. 
