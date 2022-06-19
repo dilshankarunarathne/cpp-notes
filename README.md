@@ -141,9 +141,9 @@ In this example, the equals assignment happens before the increment.
 #include <iostream>
 using namespace std;
 int main() {
-	int x {10};
-	int p;
-	p = x++ ;
+    int x {10};
+    int p;
+    p = x++;
 }
 ```
 
