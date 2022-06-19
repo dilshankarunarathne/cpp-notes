@@ -530,8 +530,9 @@ If the given **myfile.txt** doesn't exist, it's going to be created. Otherwise i
 If the file fails to create or load, the fail method will return true.  
 Finally, we need to execute the `close` method, that will flush (or dump) all the data into the file. 
 
-We can use the ifstream class to read files. The eof method in ifstream class returns true if we've reached the end of the file. 
--------------------------------------------------------------------------------------------------
+We can use the `ifstream` class to read files. The eof method in `ifstream` class returns true if we've reached the end of the file.  
+
+```cpp
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -551,7 +552,7 @@ int main () {
 	fin.close();
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
 
 We can use the setw(width) method to print data into cout with a better structure. This class is in iomanip header. There is other functionality given in C++ to make it easier. 
 
