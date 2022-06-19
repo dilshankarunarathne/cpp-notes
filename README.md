@@ -575,13 +575,13 @@ The **stack** area is used by the system to allocate compile time memory. So, al
 
 But with dynamic allocation, it's programmer’s responsibility to de-allocate the heap memory once the job is done, with `delete` keyword. The heap is also called the **free store**.  
 
-Whenever we’re using dynamic memory allocation, we need to make sure that we’ve implemented the **copy constructor**, the copy assignment operator and the destructor. 
+Whenever we’re using dynamic memory allocation, we need to make sure that we’ve implemented the **copy constructor**, the copy assignment operator and the destructor.  
 
 Whenever we dynamically allocate memory, there is a chance to have some memory leak if we fail to manage the memory efficiently.  
 For an example, if we write a function that dynamically allocate an integer variable locally. Once the function is completed and the execution is returned to the caller, if we did not delete that memory explicitly, there will be a memory leak.  
 The pointer for that memory will be lost within the program, but the allocated memory stays intact. So, it's no longer possible for us to reach that memory. The operating system will not be able to release that memory for later use. We also must never call return in a function, before a `delete` keyword.  
 
-There are two ways to copy a compile time allocated array into a dynamically allocated array. A shallow copy means, we're just copying the pointer. So, our dynamically allocated pointer would actually be pointing to the same array in stack area. If the program deletes the original array, the copied shallow array would still have a dangling pointer, that points to an invalid memory. 
+There are two ways to copy a compile time allocated array into a dynamically allocated array. A **shallow copy** means, we're just copying the pointer. So, our dynamically allocated pointer would actually be pointing to the same array in stack area. If the program deletes the original array, the copied shallow array would still have a dangling pointer, that points to an invalid memory. 
 To get around this, we need to use deep copying. We can implement that by creating an entirely new array dynamically using the new keyword, and copying each element from the source array using a for loop. 
 
 Vectors
