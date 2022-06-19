@@ -556,7 +556,7 @@ int main () {
 }
 ```
 
-We can use the setw(width) method to print data into cout with a better structure. This class is in iomanip header. There is other functionality given in C++ to make it easier. 
+We can use the `setw`(width) method to print data into cout with a better structure. This class is in `iomanip` header. There is other functionality given in C++ to make it easier. 
 
 Dynamic Memory Allocation
 
