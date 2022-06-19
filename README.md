@@ -697,7 +697,8 @@ while (o != v.end()) {
 }
 ```
 
-We can sort a collection by simply calling the sort function with start and end iterators passed to it. It actually has a lot of overloads that take different arguments. For example, if we wanted to sort based on a different factor, or if we want to use a different order. 
+We can sort a collection by simply calling the `sort` function with start and end iterators passed to it. It actually has a lot of overloads that take different arguments.  
+For example, if we wanted to sort based on a different factor, or if we want to use a different order. 
 
 Struct
 
