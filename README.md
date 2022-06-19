@@ -804,7 +804,7 @@ An object cannot be created if there is no constructer defined in the class. But
 The default constructor is an empty constructor block, with no parameters and no functionality within the constructor. But if we write a constructor with any signature, the compiler will not write the default constructor. We can implement the constructors outside of the class.  
 In general practice, we implement the toString method in the class using an ostringstream object. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 class Car{
     private:
         string color;
@@ -820,6 +820,7 @@ class Car{
         void stopEngine();
         string toString();
 };
+
 string Car::toString(){
     ostringstream oss;
     oss << "Color of the Car: " << color << endl;
@@ -830,41 +831,48 @@ string Car::toString(){
         oss << "Engine is Off" << endl;
     return oss.str();
 }
+
 Car::Car(string color){
     this->color = color;
     speed = 0;
     isEngineOn = false;
 }
+
 Car::Car(){
   this->color = "Gray";
   this->speed = 0;
   this->isEngineOn = false;
 }
+
 int Car::getSpeed(){
     return this->speed;
 }
+
 void Car::stopEngine(){
     if (this->isEngineOn){
         this->isEngineOn = false;
         this->speed = 0;
     }
 }
+
 void Car::acceleration(){
     if (this->isEngineOn)
         this->speed += 10;
 }
+
 void Car::applyBreak(){
     if (this->speed - 8 >= 0 )
         this->speed -= 8;
     else
         this->`speed = 0;
 }
+
 void Car::startEngine(){
     if (!this->isEngineOn){
         this->isEngineOn = true;
     }
 }
--------------------------------------------------------------------------------------------------
+```
 
 In memory management, for each object the variable values are loaded to memory at each instance. But the methods are only loaded once. The methods will know on which object to work on, because we're calling them on each object, using the dot operator. So, as long as we call the methods from a method which contains the objects (e.g.- main) there will not be any confusion. 
 Think about the control flow of a program. When we're calling a method on an object, the control will jump inside the method implementation. If the information, on which object the method is called on is not passed in to the method, the runtime will not be able to resolve the member variables for the method to work on. That information is not passed on to the methods explicitly by the programmer. But it's happening implicitly by the use of 'this pointer'. 
