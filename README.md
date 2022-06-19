@@ -74,7 +74,8 @@ Anything that starts with a `#` is called a pre-processor directive. They are in
 
 When we create a sub class, and in its definition,  we’ve included the super class, then whenever we’re working with those classes in a separate function, we only need to include the sub class. If we include both, we’ll get a compile time error. We can get around this by adding `#ifendif`, `#define` and `#endif` preprocessor directives in the class header file, so we don’t have to worry about that, the classes themselves will figure it out.  
 
-`#define` keyword is used to define a constant arbitrary. We need to give it the same name as the file name, usually in upper or Camel case pre-fixed with an underscore. That will define the class, but to prevent it from being defined again, we can cover the whole definition with #ifndef – ‘if not defined’ and #endif pre-processor directives. This pattern is called an ‘include guard’. The name of the include guard must be unique for each class. 
+`#define` keyword is used to define a constant arbitrary. We need to give it the same name as the file name, usually in upper or Camel case pre-fixed with an underscore. That will define the class, but to prevent it from being defined again, we can cover the whole definition with `#ifndef` – ‘if not defined’ and `#endif` pre-processor directives. 
+This pattern is called an **include guard**. The name of the include guard must be unique for each class. 
 
 ```cpp
 #ifndef CLASSNAME_H
