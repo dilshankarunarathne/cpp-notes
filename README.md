@@ -919,7 +919,11 @@ MyClass::MyClass (string s) : mystring(s) {
 }
 ```
 
-Objects we create are instances of classes. They have a lifetime. When we call a constructor, memory is allocated for that particular object in stack. The object goes out of scope, usually at a }, and then the reserved memory is released. In C++ there is a saying RAII – Resource Acquisition is Initialization, that means if we have a resource that needs to be managed (e.g.- an opened file, a database connection or a windows cursor), the constructor will acquire the resource and once its lifetime ends, the destructor will be called to release the resource. 
+Objects we create are instances of classes. They have a lifetime.  
+When we call a constructor, memory is allocated for that particular object in stack.  
+The object goes out of scope, usually at a `}`, and then the reserved memory is released.  
+
+In C++ there is a saying **RAII – Resource Acquisition is Initialization**, that means if we have a resource that needs to be managed (e.g.- an opened file, a database connection or a windows cursor), the constructor will acquire the resource and once its lifetime ends, the destructor will be called to release the resource.  
 Whenever if needed, we can use { } to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called. 
 
 We can use 'make' to compile a C++ program with multiple files. Or we can use an IDE.  
