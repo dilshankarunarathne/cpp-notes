@@ -259,14 +259,16 @@ Integers (type `int`) in C++ takes 4 bytes space. For any variable, the byte num
 If the `&` operator is prefixed to a variable that means, *please take the address of this instance*. 
 And if `&` is post fixed to a type that means, *this is a reference variable of this type*.  
 
-We can also create pointer variables in C++. If we declare a variable `p`, with type `int*`, it's considered to be a pointer variable of an integer. We can put the `*` symbol (Asterix) after the data type or before the variable name (`double* k` or `double *k`). But if we want to declare multiple pointer variables in one declaration, post-fixing the data type would be the way to go. After the declaration, we can initialize it with the pointer of some variable in memory. Once we have a pointer variable, pointing to a variable in memory, the pointer variable only holds the address of the initial byte of that value. But we can use that pointer to manipulate the whole value. The * symbol is called the dereferencing operator. 
--------------------------------------------------------------------------------------------------
+We can also create pointer variables in C++. If we declare a variable `p`, with type `int*`, it's considered to be a pointer variable of an integer. We can put the `*` symbol (Asterix) after the data type or before the variable name (`double* k` or `double *k`).  
+But if we want to declare multiple pointer variables in one declaration, post-fixing the data type would be the way to go. After the declaration, we can initialize it with the pointer of some variable in memory. Once we have a pointer variable, pointing to a variable in memory, the pointer variable only holds the address of the initial byte of that value. But we can use that pointer to manipulate the whole value. The `*` symbol is called the dereferencing operator. 
+
+```cpp
 int temp = 300;
 int *p = &temp;
 // now, the value is 300
 *p = *p + 1
 // now, it's 301
--------------------------------------------------------------------------------------------------
+```
 
 If we try to dereference a bad pointer, our program will crash in run time. To not let this, happen, we can immediately initialize pointers when we declare them. C++ 11, introduced a keyword nullptr we could use to initialize a pointer as null. Then before we access that pointer, we can use either an if statement or an error handling code to check if it is null, and use it only if it’s not null. References on the other hand, cannot be null. They always have to be initialized with something. 
 If we declare an integer pointer like const int* cpi , that means the cpi points to a constant integer, of which we cannot change the value. Or if we declare it like int * const cpi , that means a constant pointer, which cannot be changed. We cannot change the address of a constant pointer, it has to be pointing to the same object. We can combine both of those functionalities and declare something like const int* const crazyInt of which we cannot perform each of those things, it can only access the data. 
