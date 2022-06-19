@@ -936,8 +936,9 @@ Wall command enables show all warnings in the compilation. We don't need to ment
 In general practice, we don't usually compile multiple filed projects in the previous way. Instead we use the **make** utility in order to build the projects.  
 
 Consider a project with three files, `testclass.h`, `testclass.cpp` and `main.cpp` in the same directory.  
-We can write a **makefile** for that like this. 
--------------------------------------------------------------------------------------------------
+We can write a **makefile** for that like this.  
+
+```cmake
 all: myprogram
 
 myprogram: main.o testclass.o
@@ -952,8 +953,10 @@ testclass.o: testclass.cpp
 clean:
 	rm testclass.o
 	rm main.o
--------------------------------------------------------------------------------------------------
-We need to save this file as 'makefile' with no extension in the same folder. Once we execute the command 'make' in that directory, the project will be built. 
+```
+
+We need to save this file as '**makefile**' with no extension in the same folder. Once we execute the command `make` in that directory, the project will be built.  
+
 These all, clean and others are called rules (or rule labels). all rule label indicates what the final executable is after the compilation. Then it tells how that executable is going to be created. Right after the colon, we have to indicate what objects required to create the executable. Then in the next line with one tab from the beginning, we need to write the command for the compilation of that executable, given those indicated object files exist. Then in the same way, we need to indicate how to build the required dependencies for that executable to be created. If they depend on others, we need to add rules for those too. And at the end, we can add some clean-up commands using the clean rule label. 
 
 Operator Overloading
