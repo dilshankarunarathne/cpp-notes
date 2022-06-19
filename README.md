@@ -13,9 +13,9 @@ We can use the using keyword to declare a namespace. Functionality that comes wi
 
 ```cpp
 int main() {
-	std::string word {“World”};
-	std::cout << "Hello " << word << std::endl;
-	return 0;
+    std::string word {“World”};
+    std::cout << "Hello " << word << std::endl;
+    return 0;
 }
 ```
 or
@@ -23,8 +23,8 @@ or
 using std::cout;
 using std::endl;
 int main() {
-	cout << "Hello world" << endl << "The next line" << endl;
-	return 0;
+    cout << "Hello world" << endl << "The next line" << endl;
+    return 0;
 }
 ```
 When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by doing this. 
