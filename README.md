@@ -480,9 +480,11 @@ while(getline(iss, part, ',')) {
 }
 ```
 
-To concatenate different types of data into a string, we can use the ostringstream class of the sstream header. We can use the insertion operator << to insert different types of values into the ostringstream object. At the end, we can use the str method of the ostringstream class to get the stream into a string object.
+To concatenate different types of data into a string, we can use the `ostringstream` class of the `sstream` header. We can use the insertion operator `<<` to insert different types of values into the `ostringstream` object. At the end, we can use the `str` method of the `ostringstream` class to get the stream into a string object.
 
-We can use the atoi method on c-type strings (legacy - not string objects), to parse them into integers. We can use the c_str method to convert a string object into a c-type string. This way is commonly used in parsing integers read from files. 
+We can use the `atoi` method on c-type strings (legacy - not string objects), to parse them into integers.  
+We can use the `c_str` method to convert a string object into a c-type string.  
+This way is commonly used in parsing integers read from files. 
 -------------------------------------------------------------------------------------------------
 string m = "50";
 int number = atoi(m.c_str());
