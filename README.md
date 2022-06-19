@@ -162,13 +162,13 @@ There also shortcut assignment operations in C++, like `+=`, `-=`, `*=` and `/=`
 The `char` or the character data type is used to hold a single character. We always have to assign the value in single quote marks. The default encoding is ASCII. We can cast the char variable or the value into an int data type to get the ascii code. 
 But, there is no exponential (power of) operator in C++.
 
-Some programmers use (`3==i`) instead of (`i==3`) as the condition in if statements with binary equals operator, it’s called the **Yoda syntax**. They tend to use this because, if they leave off one equal sign in the operator, instead of doing an assignment operation, the compiler will return an error, because we can’t assign a new value to an integer literal. 
+Some programmers use (`3==i`) instead of (`i==3`) as the condition in if statements with binary equals operator, it’s called the **Yoda syntax**. They tend to use this because, if they leave off one equal sign in the operator, instead of doing an assignment operation, the compiler will return an error, because we can’t assign a new value to an integer literal.  
 If we ever have anything to be checked if it’s not zero before pass it into a function (e.g.- modular operator, that will blow up if we pass in zero as the right-hand operand), C++ programmers tend to use this pattern extensively. 
 `if (y && (x % y))`
 
-The only **ternary operator** in C++ is the conditional operator. It's defined as,
-`(condition)?(expression if the condition is true):(expression if the condition is false)`
-We can nest these conditional operators to get an equivalent to an else if statement. This is also called the ‘immediate if’ statement. 
+The only **ternary operator** in C++ is the conditional operator. It's defined as,  
+`(condition)?(expression if the condition is true):(expression if the condition is false)`  
+We can nest these conditional operators to get an equivalent to an else if statement. This is also called the **immediate if** statement. 
 
 The main best thing about using a switch statement instead of if-else, is that the compiler doesn’t have to test the expression for each condition, so it’s much more efficient than using if-else statements over and over again. Using an enum or an integer value instead of an expression is very common in switch statements. The ordering of the cases is not mandatory. The values of cases always have to be constants. If we do not add the break keyword, once a case is executed, it's going to fall through all the next cases and execute them until it comes to the end of the statement, or it finds a break. We don't have to add a break to the last statement. 
 -------------------------------------------------------------------------------------------------
