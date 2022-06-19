@@ -589,7 +589,7 @@ There are two ways to copy a compile time allocated array into a dynamically all
 
 To get around this, we need to use deep copying. We can implement that by creating an entirely new array dynamically using the new keyword, and copying each element from the source array using a for loop.  
 
-Vectors
+# Vectors 
 
 Vectors are dynamic containers and its implementation is available in the standard C++ library. Vector class comes with a lot of functions that we can use to process our data. We need to use the vector keyword to initialize a vector. It must be followed by the type of the elements in angle brackets and the vector variable name. We can use the push_back(value) method in the vector class to append an element at the end of the vector. We can also assign values like arrays using indexes. We can use a for loop to iterate through a vector. 
 -------------------------------------------------------------------------------------------------
