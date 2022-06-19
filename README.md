@@ -246,7 +246,9 @@ void swap(int &a, int &b) {
 }
 ```
 
-If we’ve correctly declared our function in a header file, and correctly passed in the arguments, we should not get any compile time errors. If we’ve not correctly implemented the function in the cpp file, we’ll get linker errors. Linker errors looks like  Code.obj: error LNK ###  . If we get an error like this, we should probably look in the implementation. Usually, when we try to identify an error, it’s good practice to start from the first line of compilation output. 
+If we’ve correctly declared our function in a header file, and correctly passed in the arguments, we should not get any compile time errors.  
+If we’ve not correctly implemented the function in the cpp file, we’ll get linker errors. Linker errors looks like  `Code.obj: error LNK ###`. If we get an error like this, we should probably look in the implementation.  
+Usually, when we try to identify an error, it’s good practice to start from the first line of compilation output. 
 
 Pointers
 
