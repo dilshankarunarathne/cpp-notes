@@ -116,7 +116,7 @@ int main() {
 Reference variables in C++ are declared using an `&` sign before the variable name. We must initialize a reference variable in C++.  When we declare a reference variable, we must mention to which variable this is going to refer. 
 Data type of the reference variable must be the same type as the variable it points to.  
 
-We can declare a global constant variable using the const keyword (right after the namespace declaration). It will be available for all the functions. 
+We can declare a global constant variable using the `const` keyword (right after the namespace declaration). It will be available for all the functions. 
 ```cpp
 const int number = 5;
 ```
