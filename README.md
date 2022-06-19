@@ -927,18 +927,13 @@ In C++ there is a saying **RAII – Resource Acquisition is Initialization**, th
 
 Whenever if needed, we can use `{ }` to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called.  
 
-We can use '*make*' to compile a C++ program with multiple files. Or we can use an IDE.  
-If we have a project with a class called testclass that's declare in `testclass.h` and implemented in `testclass.cpp` with a client named `main.cpp`, the command to compile all files looks like this.  
-
-```cmake
-g++ -o myprogram -Wall main.cpp testclass.cpp
-``` 
-
-Wall command enables show all warnings in the compilation. We don't need to mention the header files. 
-
 # Make 
 
-In general practice, we don't usually compile multiple filed projects in the previous way. Instead we use the make utility in order to build the projects.  
+If we have a project with a class called testclass that's declare in `testclass.h` and implemented in `testclass.cpp` with a client named `main.cpp`, the command to compile all files looks like this.  
+`g++ -o myprogram -Wall main.cpp testclass.cpp`  
+Wall command enables show all warnings in the compilation. We don't need to mention the header files. 
+
+In general practice, we don't usually compile multiple filed projects in the previous way. Instead we use the **make** utility in order to build the projects.  
 
 Consider a project with three files, `testclass.h`, `testclass.cpp` and `main.cpp` in the same directory.  
 We can write a makefile for that like this. 
