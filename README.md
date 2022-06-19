@@ -507,7 +507,9 @@ We can use `fstream` header to handle file inputs and outputs in C++. We can use
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+
 using namespace std;
+
 int main () {
 	ofstream fout;
 	fout.open("myfile.txt");
