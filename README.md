@@ -85,7 +85,7 @@ class Classname {
     /* everything*/ 
 };
 
-#endif // CLASSNAME_H
+#endif CLASSNAME_H
 ```
 
 We can also use the `#pragma once`  to tell the compiler to only include this only once. 
