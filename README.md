@@ -426,8 +426,8 @@ while (index != string::npos) {
 ```
 
 **Size_type** is a general implementation of unsigned integer, we can use it to make compatible between systems.  
-npos is the value that's going to be returned by find, if the target is not found till the end of the string. 
-We can use the find_first_of method to find the first occurrence of any character of a given string, inside another string. 
+**npos** is the value that's going to be returned by find, if the target is not found till the end of the string.  
+We can use the **find_first_of** method to find the first occurrence of any character of a given string, inside another string.  
 
 There’s also a wstring class In the standard library for wide strings, which could be useful in a Unicode situation. 
 String comparison in C++ is done based on their position in the dictionary. That's called lexicographical comparison. Lexicon is the dictionary and lexicography are the style of writing the dictionary. We can use comparison operators to compare strings. They are shortcuts to the compare method of the string class. If we want to, we can use that instead. String compare method returns an integer. If both strings are equal, it will return 0. If the string we compare on comes first in the dictionary, it will return -1. And if the augmented string appears first in the dictionary, it will return +1. 
