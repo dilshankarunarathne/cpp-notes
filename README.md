@@ -90,7 +90,7 @@ class Classname {
 
 We can also use the `#pragma once`  to tell the compiler to only include this only once. 
 
-# Data Types and Operators
+# Data Types and Operators 
 
 C++ is a strongly typed language. We must declare the type of a variable in its declaration. There are two main types of integers, signed and unsigned. Signed integers can hold positive and negative numbers. Unsigned integers can only hold positive numbers. We need to declare it using signed or unsigned keywords before int keyword. If we just use int keyword, the default is signed integer. 
 For real numbers there are float (4 bytes), double (8 bytes) and long double (10 bytes) types we could use. 
