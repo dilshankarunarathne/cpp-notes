@@ -656,7 +656,7 @@ The `find` method returns an iterator. We can get the found items by dereferenci
 In case of a map, there can be only one hit for each key, because they are unique.  
 But there are other collections that can have more, and in those collections, find method returns an iterator with more than one item. 
 
-Other Collections
+# Other Collections 
 
 There is also a list class in the standard library that implements a linked list. We can traverse a linked list just like we do with a standard vector. Each element of a linked list keeps two pointers, for the previous and next element. Adding elements is faster in linked lists, but it takes some time to access the elements. 
 All these classes are declared in the standard library, so they can be used interchangeably. If we declare the type to be auto, we can change the collection type whenever we want to, it would still work because after all they have the same standards. 
