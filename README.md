@@ -6,7 +6,9 @@ The `main()` function is the entry point of a program's execution. We can use `#
 The insertion operator `<<` is the operator we use to push some bits from the memory into an object. 
 `endl` is a manipulator we can use to create a new line in the output.  
 
-At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
+At first, C++ had no library that shipped with it. It only had the C Runtime Library. Then the STL – Standard Template Library came along. It had a set of headers that offered functionality, collections, data structures and algorithms as templates. That, later grew into be the Standard Library. 
+It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. 
+Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
 
 # Scope and namespace 
 
