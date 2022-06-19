@@ -536,7 +536,9 @@ We can use the `ifstream` class to read files. The eof method in `ifstream` clas
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+
 using namespace std;
+
 int main () {
 	ifstream fin;
 	fin.open("data1.txt");
