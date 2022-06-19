@@ -134,7 +134,8 @@ All the operators (like +, - and even = ) returns a value. If we execute  int x=
 The operators that required to be applied on only one operand are called unary operators. The unary increment ++ and unary decrement -- operators are the most commonly used unary operators. These two unary operators can be post-fixed or pre-fixed (either x++ or ++x). 
 Unless there are more than one operator in the expression with the unary operator, there is no difference between the post-fixed and pre-fixed operators. But once there is more than one operator, the post-fixed operator will be executed after the other operator, and the pre-fixed operator will be executed before the other operator. 
 In this example, the equals assignment happens before the increment. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 #include <iostream>
 using namespace std;
 int main() {
@@ -142,7 +143,7 @@ int main() {
 	int p;
 	p = x++ ;
 }
--------------------------------------------------------------------------------------------------
+```
 
 We cannot use the equals operator and a unary increment or decrement operator with a constant, we'll get a compilation error. That's because, under the hood, this is what's happening.
 	p = ++x; 	// ++x -> x = x + 1
