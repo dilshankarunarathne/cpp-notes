@@ -433,7 +433,7 @@ There’s also a wstring class In the standard library for wide strings, which c
 String comparison in C++ is done based on their position in the dictionary. That's called lexicographical comparison.  
 Lexicon is the dictionary and lexicography are the style of writing the dictionary. We can use comparison operators to compare strings. They are shortcuts to the compare method of the string class. If we want to, we can use that instead. String compare method returns an integer. If both strings are equal, it will return 0. If the string we compare on comes first in the dictionary, it will return -1. And if the augmented string appears first in the dictionary, it will return +1. 
 
-We can use the replace method of the string class, to replace a part of a string with some other string. We need to pass in the replacement index as the first parameter, and the replacement length (size of the target we're looking for) as the second parameter, and the replacement string as the third parameter to the replace method. 
+We can use the `replace` method of the string class, to replace a part of a string with some other string. We need to pass in the replacement index as the first parameter, and the replacement length (size of the target we're looking for) as the second parameter, and the replacement string as the third parameter to the `replace` method. 
 
 ```cpp
 string str ("first is the first would we like first");
