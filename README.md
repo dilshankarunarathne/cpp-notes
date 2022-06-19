@@ -250,7 +250,7 @@ If we’ve correctly declared our function in a header file, and correctly passe
 If we’ve not correctly implemented the function in the cpp file, we’ll get linker errors. Linker errors looks like  `Code.obj: error LNK ###`. If we get an error like this, we should probably look in the implementation.  
 Usually, when we try to identify an error, it’s good practice to start from the first line of compilation output. 
 
-Pointers
+# Pointers 
 
 Integers (type int) in C++ takes 4 bytes space. For any variable, the byte number is the least significant byte, the starting byte of that particular value in primary memory. When we look at a pointer for a variable, it gives us the address of the first byte of that variable's value in memory. Then C++ runtime checks the data type and gets the number of bytes that data type takes, and gets that number of bytes from that starting address. 
 & is called the 'address of' operator, because it gives us the memory address of any variable. In C++, any value that starts with 0x is a hex (hexa-decimal) value. If we print out the pointer of a variable, we'll get a hex number. If we want the number to be an integer and not hexa-decimal, we can cast the pointer into unsigned. If the & is prefixed to a variable that means, please take the address of this instance. And if & is post fixed to a type that means, this is a reference variable of this type. 
