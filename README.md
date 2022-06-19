@@ -164,7 +164,7 @@ But, there is no exponential (power of) operator in C++.
 
 Some programmers use (`3==i`) instead of (`i==3`) as the condition in if statements with binary equals operator, it’s called the **Yoda syntax**. They tend to use this because, if they leave off one equal sign in the operator, instead of doing an assignment operation, the compiler will return an error, because we can’t assign a new value to an integer literal. 
 If we ever have anything to be checked if it’s not zero before pass it into a function (e.g.- modular operator, that will blow up if we pass in zero as the right-hand operand), C++ programmers tend to use this pattern extensively. 
-if (y && (x % y))
+`if (y && (x % y))`
 
 The only ternary operator in C++ is the conditional operator. It's defined as,
 (condition)?(expression if the condition is true):(expression if the condition is false)
