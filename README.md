@@ -773,7 +773,8 @@ int main() {
 ```
 
 We can also access members of a struct type using struct pointer. In that case, we have to use the arrow operator to access the members, instead of the dot operator. If we allocate the object dynamically, we can use pointers and the arrow operator. Or we can use the dereferencing operator on the pointer to use the dot operator, but if we do that, we need to cover the dereferencing with parenthesis to separate it from the dot operator. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 Account a;
 Account* aptr = &a;
 aptr->accNo = 5;
@@ -783,7 +784,7 @@ Account *b = new Account;
 (*p).accNo = 45;
 p->holderName = "Tom";
 delete p;
--------------------------------------------------------------------------------------------------
+```
 
 Object Oriented Programming
 
