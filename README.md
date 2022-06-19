@@ -338,20 +338,24 @@ for (auto k: x) {
 ```
 
 Special thing to note about arrays in C++ is, their variable name only holds the base address. It doesn't contain the number of elements. So, when we pass an array to a function, it's not easy to get around because, we cannot process it without its length. So usually, C++ recommends to receive a reference to the array in functions. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 #include <iostream>
+
 using namespace std;
+
 const int size_of_array = 5;
 void print_array (int (&x) [size_of_array]) {
 	for (auto k:x) {
 		cout << k << " " ;
 	}
 }
+
 int main() {
 	int x[] = {10,20,30,40,50};
 	print_array(x);
 }
--------------------------------------------------------------------------------------------------
+```
 
 Even though arrays can be very useful, most developers recommend not to use them, and to use a vector or another collection instead. That’s because of a few problems, that C-style arrays have. First is that they don’t know how big they are. Arrays do not allocate its length information anywhere. It’s okay to use them only if we know exactly how big our array is, and it is good practice to use a constant integer member variable for the length of each array, and pass that into the array, so when we need to know how big it is, we can just refer to that integer. If the array is allocated dynamically, on the heap, there’s literary no way of telling or even calculating how big the array actually is. This could lead into errors. 
 Using pointer manipulation extensively to access elements of an array could lead into errors very easily. If the array is allocated dynamically, we could just increment the value and get any number of pseudo values that are actually not in the array. And more dangerously, we can actually write new elements to the array, past its boundaries. When we try to add an element beyond the boundaries of an array, if we’re using pointers, it would actually work, and overwrite some other point in memory, cause there’s no way for an array to be automatically resized just because we’ve added new elements to it. This error would not even be noticed by the compiler or runtime, and lead into a buffer overflow error or worse, without us even noticing. 
