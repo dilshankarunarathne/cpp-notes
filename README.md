@@ -570,6 +570,8 @@ But if we allocate memory in runtime, we can allocate exactly what we need, so t
 We can use the `new` keyword in C++ to dynamically allocate memory for a pointer. The `new` keyword should be followed by the data type. That memory will be allocated during the execution of the program.  
 The compiler will not write any instructions for this memory allocation. The allocation will be arranged contiguously. The base address will be stored in the pointer.  
 
+### Stack vs Heap Memory Allocation 
+
 Whenever we allocate memory dynamically using the `new` keyword, that memory will be allocated in the **heap** memory.  
 The **stack** area is used by the system to allocate compile time memory. So, all the local variables that are declared using compile time allocation, will be using the **stack**.  Once the operation is finished, the operating system de-allocate (or release) the memory implicitly from the stack.  
 
@@ -581,8 +583,11 @@ Whenever we dynamically allocate memory, there is a chance to have some memory l
 For an example, if we write a function that dynamically allocate an integer variable locally. Once the function is completed and the execution is returned to the caller, if we did not delete that memory explicitly, there will be a memory leak.  
 The pointer for that memory will be lost within the program, but the allocated memory stays intact. So, it's no longer possible for us to reach that memory. The operating system will not be able to release that memory for later use. We also must never call return in a function, before a `delete` keyword.  
 
-There are two ways to copy a compile time allocated array into a dynamically allocated array. A **shallow copy** means, we're just copying the pointer. So, our dynamically allocated pointer would actually be pointing to the same array in stack area. If the program deletes the original array, the copied shallow array would still have a dangling pointer, that points to an invalid memory. 
-To get around this, we need to use deep copying. We can implement that by creating an entirely new array dynamically using the new keyword, and copying each element from the source array using a for loop. 
+### Shallow vs Deep Copies 
+
+There are two ways to copy a compile time allocated array into a dynamically allocated array. A **shallow copy** means, we're just copying the pointer. So, our dynamically allocated pointer would actually be pointing to the same array in stack area. If the program deletes the original array, the copied shallow array would still have a dangling pointer, that points to an invalid memory.  
+
+To get around this, we need to use deep copying. We can implement that by creating an entirely new array dynamically using the new keyword, and copying each element from the source array using a for loop.  
 
 Vectors
 
