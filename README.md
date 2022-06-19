@@ -446,10 +446,11 @@ while (pso != string::npos) {
 }
 ```
 
-We can use the substring method to take out a portion of a string. We need to pass in the starting index position of the substring, and the length of the substring to the substring method. It returns a string. 
+We can use the `substring` method to take out a portion of a string. We need to pass in the starting index position of the substring, and the length of the substring to the `substring` method. It returns a string.  
 
-We can use the istringstream class of the header sstream to push a string to a stream. We need to pass in the source string to the istringstream object. We can use the extraction operator >> to extract each value from the stream. Default is to use spaces as delimiters. Otherwise we need to use the peek and ignore methods in istringstream to skip the delimiters. Peek method can check what the next character in the stream is, without making any disturbance. 
--------------------------------------------------------------------------------------------------
+We can use the `istringstream` class of the header sstream to push a string to a stream. We need to pass in the source string to the istringstream object. We can use the extraction operator >> to extract each value from the stream. Default is to use spaces as delimiters. Otherwise we need to use the peek and ignore methods in istringstream to skip the delimiters. Peek method can check what the next character in the stream is, without making any disturbance. 
+
+```cpp
 string source = "10,20,30,40,50";
 istringstream iss(source);
 int k;
@@ -459,7 +460,7 @@ while(iss >> k) {
 		iss.ignore();
 	}
 }
--------------------------------------------------------------------------------------------------
+```
 
 We need to use the getline method with passed in the istringstream object and the token string object and the delimiter (the default delimiter for getline method is the new line character) to extract string tokens from a stream. With that, we can use it without the peek and ignore. We can nest this functionality to get more robust istringstream s.
 -------------------------------------------------------------------------------------------------
