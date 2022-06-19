@@ -47,8 +47,8 @@ In C++, we can create an enum (usually in a header file) using the enum keyword,
 ```cpp
 enum Status {Approved, Pending, Cancelled};
 int main () {
-	Status s = Pending;
-s = Approved;
+    Status s = Pending;
+    s = Approved;
 return 0;
 }
 ```
