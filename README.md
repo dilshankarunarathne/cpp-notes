@@ -27,14 +27,17 @@ int main() {
     return 0;
 }
 ```
+
 When we’re using only one namespace or when we’re using a lot of things in the same namespace, we can tell the compiler that we’re using the entire namespace by doing this. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 using namespace std;
 int main() {
 	cout << "Hello world" << endl << "The next line" << endl;
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
+
 If we’re using the entire std namespace like this, we should be careful not to mix our code with anything from the std namespace. It’s also strongly discouraged to use the entire std namespace in header files. 
 
 
