@@ -222,7 +222,8 @@ The arguments we define in the function definition that reflect these actual arg
 
 In C++, every time a function gets called, the process happening is, copy the values of actual arguments into formal arguments. When we pass in or return values to/from functions, the process of copying can be expensive. So, we should try to pass parameters and return values as references. But we should be careful not to get ourselves into a dangling pointer. We can pass reference variables into a function just by passing the variable name (don't need to add `&` in the function call, only add the in the definition and prototype). 
 
-The process of compiling C++ starts from the beginning of our code and goes line by line. Its scope is whatever is written prior to the line currently compiling. But the process of execution starts from the main function, and its flow depends on how our code is written. Because of the compilation starts from the top, if we call a function in our code before it appears in the code, the compiler will not compile the code. So, we need to mention that function's details prior to the calling. That is called a function prototype declaration. 
+The process of compiling C++ starts from the beginning of our code and goes line by line. Its scope is whatever is written prior to the line currently compiling. But the process of execution starts from the `main()` function, and its flow depends on how our code is written.  
+Because of the compilation starts from the top, if we call a function in our code before it appears in the code, the compiler will not compile the code. So, we need to mention that function's details prior to the calling. That is called a function prototype declaration. 
 -------------------------------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
