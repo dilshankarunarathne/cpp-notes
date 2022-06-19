@@ -392,7 +392,8 @@ We can use iterators to traverse through a string (or any other collection). In 
 
 The begin method of the string class returns the string iterator object, with the pointer placed at the beginning of the string. Same way, `str.end` function returns an iterator that's placed at the end of the string. We can use that to check if the iterator has come to the end of the string. When we traverse the collection, we need to use the dereferencing operator to get the element. In this case, the dereferencing operator is not about pointers, it's been overloaded for the iterator class. We also need to increment the iterator using unary operator, after we got the element.  
 
-If we want to traverse a string in the reverse direction, we can use a reverse iterator. We can declare a reverse iterator using string::reverse_iterator. In reverse iterator, we need to call str.rbegin to get the reverse iterator object from the string. We can use the str.rend function to check if we've came to the beginning of the string. In reverse iterator, we need to use unary increment to traverse. 
+If we want to traverse a string in the reverse direction, we can use a reverse iterator. We can declare a reverse iterator using `string::reverse_iterator`. In reverse iterator, we need to call `str.rbegin` to get the reverse iterator object from the string. We can use the `str.rend` function to check if we've came to the beginning of the string. In reverse iterator, we need to use unary increment to traverse. 
+
 -------------------------------------------------------------------------------------------------
 string str = "Hello world";
 string::iterator it = str.begin();
