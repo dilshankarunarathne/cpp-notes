@@ -526,7 +526,9 @@ int main () {
 }
 ```
 
-If the given myfile.txt doesn't exist, it's going to be created. Otherwise it will be overwritten and all existing the content of the file will be lost. If the file fails to create or load, the fail method will return true. Finally, we need to execute the close method, that will flush (or dump) all the data into the file. 
+If the given **myfile.txt** doesn't exist, it's going to be created. Otherwise it will be overwritten and all existing the content of the file will be lost.  
+If the file fails to create or load, the fail method will return true.  
+Finally, we need to execute the `close` method, that will flush (or dump) all the data into the file. 
 
 We can use the ifstream class to read files. The eof method in ifstream class returns true if we've reached the end of the file. 
 -------------------------------------------------------------------------------------------------
