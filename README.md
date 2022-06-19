@@ -108,8 +108,8 @@ There is also an `auto` keyword in C++. If we ever decided not to declare the da
 #include <typeinfo>
 using namespace std;
 int main() {
-	auto myVar = 9.5;
-	cout << "Type of myVar : " << typeid(myVar).name() << endl;
+    auto myVar = 9.5;
+    cout << "Type of myVar : " << typeid(myVar).name() << endl;
 }
 ```
 
