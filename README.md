@@ -924,11 +924,14 @@ When we call a constructor, memory is allocated for that particular object in st
 The object goes out of scope, usually at a `}`, and then the reserved memory is released.  
 
 In C++ there is a saying **RAII – Resource Acquisition is Initialization**, that means if we have a resource that needs to be managed (e.g.- an opened file, a database connection or a windows cursor), the constructor will acquire the resource and once its lifetime ends, the destructor will be called to release the resource.  
-Whenever if needed, we can use { } to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called. 
 
-We can use 'make' to compile a C++ program with multiple files. Or we can use an IDE.  
-If we have a project with a class called testclass that's declare in testclass.h and implemented in testclass.cpp with a client named main.cpp, the command to compile all files looks like this.
-	g++ -o myprogram -Wall main.cpp testclass.cpp
+Whenever if needed, we can use `{ }` to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called.  
+
+We can use '*make*' to compile a C++ program with multiple files. Or we can use an IDE.  
+If we have a project with a class called testclass that's declare in `testclass.h` and implemented in `testclass.cpp` with a client named `main.cpp`, the command to compile all files looks like this.
+```make
+g++ -o myprogram -Wall main.cpp testclass.cpp
+```
 Wall command enables show all warnings in the compilation. We don't need to mention the header files. 
 
 Make
