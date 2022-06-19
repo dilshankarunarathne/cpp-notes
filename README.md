@@ -591,15 +591,18 @@ To get around this, we need to use deep copying. We can implement that by creati
 
 # Vectors 
 
-Vectors are dynamic containers and its implementation is available in the standard C++ library. Vector class comes with a lot of functions that we can use to process our data. We need to use the vector keyword to initialize a vector. It must be followed by the type of the elements in angle brackets and the vector variable name. We can use the push_back(value) method in the vector class to append an element at the end of the vector. We can also assign values like arrays using indexes. We can use a for loop to iterate through a vector. 
--------------------------------------------------------------------------------------------------
+Vectors are dynamic containers and its implementation is available in the standard C++ library. Vector class comes with a lot of functions that we can use to process our data.  
+We need to use the `vector` keyword to initialize a vector. It must be followed by the type of the elements in angle brackets and the vector variable name.  
+We can use the `push_back`(value) method in the vector class to append an element at the end of the vector. We can also assign values like arrays using indexes. We can use a for loop to iterate through a vector. 
+
+```cpp
 vector <int> v;
 v.push_back(10);
 v[1] = 20;
 for (int p:v) {
 	cout << p << ", ";
 }
--------------------------------------------------------------------------------------------------
+```
 
 The values of a vector, are actually contained within a dynamic array, inside the vector object that is abstracted from us. We can get the base address of that array using the data method of the vector class. We can capture that address into a pointer (the pointer's type should be the type of the elements), and using that we can manipulate the elements.
 
