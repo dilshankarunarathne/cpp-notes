@@ -306,7 +306,7 @@ int main() {
 }
 ```
 
-If a pointer points to an object, and we want to use a member function of that object, we have to cover the pointer variable with a bracket (*p) and then use the dot character to call the member. Or we can use the arrow sign. 
+If a pointer points to an object, and we want to use a member function of that object, we have to cover the pointer variable with a bracket `(*p)` and then use the dot `.` character to call the member. Or we can use the arrow sign `->`. 
 
 Arrays
 
