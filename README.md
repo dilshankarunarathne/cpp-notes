@@ -171,7 +171,7 @@ The only **ternary operator** in C++ is the conditional operator. It's defined a
 We can nest these conditional operators to get an equivalent to an else if statement. This is also called the **immediate if** statement. 
 
 The main best thing about using a switch statement instead of if-else, is that the compiler doesn’t have to test the expression for each condition, so it’s much more efficient than using if-else statements over and over again. Using an enum or an integer value instead of an expression is very common in switch statements. The ordering of the cases is not mandatory. The values of cases always have to be constants. If we do not add the break keyword, once a case is executed, it's going to fall through all the next cases and execute them until it comes to the end of the statement, or it finds a break. We don't have to add a break to the last statement. 
--------------------------------------------------------------------------------------------------
+```cpp
 switch (n) {
 	case 1 : 	cout << "One" << endl;
 				break;
@@ -181,7 +181,7 @@ switch (n) {
 				break;
 	default : 	cout << "Invalid number for this" << endl;
 }
--------------------------------------------------------------------------------------------------
+```
 
 As the initializer for a for loop, we can either declare a variable inline, or we can use one that’s already been declared. If we declare one in the initializer, that variable will go out of scope at the end of the for loop. 
 We can use the rand function of the cstdlib library to generate a pseudo random number. But this function will give us the same random number (or numbers) each time we execute the program. That's because, its algorithm depends on a seed, in order to get a different number or a set of different numbers, we need to change that seed. We can do that using the srand function. We can pass it an integer as a parameter, which will be used as the seed. But then we have to change the seed every time we execute the code. The easiest way to get around this is to pass the time of the system as the seed to the rand function. We can include the time.h or ctime library and use their time function (both are the same) with NULL passed in as the parameter. We can use mod operation on the returned number to get it in a range. 
