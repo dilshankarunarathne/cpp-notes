@@ -22,6 +22,7 @@ or
 ```cpp
 using std::cout;
 using std::endl;
+
 int main() {
     cout << "Hello world" << endl << "The next line" << endl;
     return 0;
