@@ -913,7 +913,10 @@ private:
 public:	
 	MyClass(string s);
 };
-MyClass::MyClass (string s) : mystring(s) { /* leave this empty*/}
+
+MyClass::MyClass (string s) : mystring(s) { 
+	/* leave this empty*/
+}
 ```
 
 Objects we create are instances of classes. They have a lifetime. When we call a constructor, memory is allocated for that particular object in stack. The object goes out of scope, usually at a }, and then the reserved memory is released. In C++ there is a saying RAII – Resource Acquisition is Initialization, that means if we have a resource that needs to be managed (e.g.- an opened file, a database connection or a windows cursor), the constructor will acquire the resource and once its lifetime ends, the destructor will be called to release the resource. 
