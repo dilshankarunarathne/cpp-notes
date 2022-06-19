@@ -884,13 +884,13 @@ Whenever we're making a reference to any instance member of a class, the compile
 This pointer holds the address of the current object by which the method has been called. The compiler always prefixes references of a class with this pointers.  
 If we want, we can write them ourselves as well. If we use a parameter with the same name as a member variable in a method, we have to use the this pointer explicitly. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 void Car::Car(string color) {
 	this->color = color;
 	this->speed = 0;
 	this->isEngineOn = false;
 }
--------------------------------------------------------------------------------------------------
+```
 
 When we want to access an object from a method outside the class, that's not going to change the object, we can use a constant pointer to pass in the object pointer as a parameter to the function. Using a pointer, increases the efficiency of the program's execution. By declaring the pointer constant, we can make sure there will be no side effects that affect the object. We can declare a constant using the const keyword. We also need to declare those methods as constant as well. The constant keyword comes after the parameter declaration in the method declaration. Once we add the const keyword to a method, that means that method will not change any instance member of the object. We can declare getters constant. Method declaration and implementation both must have const keyword between parenthesis and curly braces. 
 After declaring a method constant, if we still want to perform an operation that may update or change a member variable, we will get a compilation error. But, we can still get around that using mutable variables. Once we declare a member variable mutable, any constant method can still change the variable's value, and the compiler is going to overlook that operation. We can declare a variable mutable using the mutable keyword. This is only used in such occasions as a simple operation for performance enhancement. 
