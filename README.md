@@ -311,6 +311,7 @@ If a pointer points to an object, and we want to use a member function of that o
 # Arrays 
 
 Array is a contiguous data structure. Which means, all the elements are going to be allocated one after another in the primary memory.  
+
 The name of the array always holds the first element's pointer. Whenever we're referring to an element with its index, the compiler uses pointer calculations to get the pointer of the given element. `a[1] -> (*&a +1)`  
 Referring to an index as 4[a] is also possible, because - `4[a] -> (*4 + &a)`  
 To print out the elements, either these ways are allowed.  `a[i]`    `i[a]`   `*(a+i)`
