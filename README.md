@@ -365,7 +365,7 @@ Using pointer manipulation extensively to access elements of an array could lead
 
 Collection implementations like **vector**, can handle all these problems. **Vectors** can even grow automatically as we add elements to it. So, we should only use an array, if we’re sure absolutely about what we’re doing.  
 
-Strings
+# Strings 
 
 String class of the C++ standard library, which contains all the necessary functions needed for string processing. We can instantiate a string using 
 	string var_name("This is a string");
