@@ -370,7 +370,7 @@ Collection implementations like **vector**, can handle all these problems. **Vec
 String class of the C++ standard library, which contains all the necessary functions needed for string processing. We can instantiate a string using `string var_name("This is a string");`  
 
 But we can only call the constructor once for each string object. If we ever want to change the string, we can pass a string to that variable. We can also instantiate a string with the same character using this, it will give us a string made with 15 x s.
-	string str3(15, 'x');
+`string str3(15, 'x');`
 When we use cin to get input to a string variable, it only takes one word. Anything we type in after the first whitespace is going to be discarded by C++. We can use cin to get only one word input. But if we want a string with more than one word as input, we can use the global getline method. We need to pass in the input stream (cin object) and the string variable in which the string be saved to the getline function to get the whole string. 
 	getline(cin, myline);
 We can use the at function of string class and pass it the index of the character we want, to get a specific character of a string by its index. We can also do that by considering the string an array, and using square brackets. There is also a length function in string class. 
