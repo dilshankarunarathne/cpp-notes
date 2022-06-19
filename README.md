@@ -879,7 +879,11 @@ So, as long as we call the methods from a method which contains the objects (e.g
 
 Think about the control flow of a program. When we're calling a method on an object, the control will jump inside the method implementation. If the information, on which object the method is called on is not passed in to the method, the runtime will not be able to resolve the member variables for the method to work on. That information is not passed on to the methods explicitly by the programmer. But it's happening implicitly by the use of '*this pointer*'.  
 
-Whenever we're making a reference to any instance member of a class, the compiler always rewrites the code with this pointers for every instance member of the class. This pointer is declared using this keyword followed by an arrow. This pointer holds the address of the current object by which the method has been called. The compiler always prefixes references of a class with this pointers. If we want, we can write them ourselves as well. If we use a parameter with the same name as a member variable in a method, we have to use the this pointer explicitly. 
+Whenever we're making a reference to any instance member of a class, the compiler always rewrites the code with this pointers for every instance member of the class. This pointer is declared using `this` keyword followed by an arrow.  
+
+This pointer holds the address of the current object by which the method has been called. The compiler always prefixes references of a class with this pointers.  
+If we want, we can write them ourselves as well. If we use a parameter with the same name as a member variable in a method, we have to use the this pointer explicitly. 
+
 -------------------------------------------------------------------------------------------------
 void Car::Car(string color) {
 	this->color = color;
