@@ -496,10 +496,10 @@ int number = atoi(m.c_str());
 C-style strings are arrays of characters. Since arrays don’t carry around its length, a C-style string doesn’t know its length.  
 The theory is, if we can put a special character at the end of an array, we can identify where it ends, and access it using its pointer. This special character is the null character ‘**\0**’ , it have the numeric value zero in it.  
 
-So, if we want to put "**hello**" in a C-style string, the array actually has to be 6 characters long. We can use strlen function, that goes through the array, looking for this character, to know how long a C-style string is. This method is in the <cstring> header along with a lot more. Many of them are unintuitive and unsafe. 
-So, we should take advantage of the modern std::string and std::wstring whenever we can. We can go back and forth between these by using the .c_str() and  strcpy methods. 
+So, if we want to put "**hello**" in a C-style string, the array actually has to be 6 characters long. We can use `strlen` function, that goes through the array, looking for this character, to know how long a C-style string is. This method is in the `<cstring>` header along with a lot more. Many of them are unintuitive and unsafe.  
+So, we should take advantage of the modern `std::string` and `std::wstring` whenever we can. We can go back and forth between these by using the `.c_str()` and  `strcpy` methods. 
 
-File I/O
+# File I/O 
 
 We can use fstream header to handle file inputs and outputs in C++. We can use ofsteam class to output data into a file. 
 -------------------------------------------------------------------------------------------------
