@@ -501,7 +501,7 @@ So, we should take advantage of the modern `std::string` and `std::wstring` when
 
 # File I/O 
 
-We can use fstream header to handle file inputs and outputs in C++. We can use ofsteam class to output data into a file. 
+We can use `fstream` header to handle file inputs and outputs in C++. We can use `ofsteam` class to output data into a file. 
 
 ```cpp
 #include <iostream>
