@@ -188,7 +188,7 @@ switch (n) {
 }
 ```
 
-As the initializer for a for loop, we can either declare a variable inline, or we can use one that’s already been declared. If we declare one in the initializer, that variable will go out of scope at the end of the for loop. 
+As the initializer for a for loop, we can either declare a variable inline, or we can use one that’s already been declared. If we declare one in the initializer, that variable will go out of scope at the end of the for loop.  
 We can use the rand function of the cstdlib library to generate a pseudo random number. But this function will give us the same random number (or numbers) each time we execute the program. That's because, its algorithm depends on a seed, in order to get a different number or a set of different numbers, we need to change that seed. We can do that using the srand function. We can pass it an integer as a parameter, which will be used as the seed. But then we have to change the seed every time we execute the code. The easiest way to get around this is to pass the time of the system as the seed to the rand function. We can include the time.h or ctime library and use their time function (both are the same) with NULL passed in as the parameter. We can use mod operation on the returned number to get it in a range. 
 -------------------------------------------------------------------------------------------------
 #include <iostream>
