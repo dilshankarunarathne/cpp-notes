@@ -658,8 +658,10 @@ But there are other collections that can have more, and in those collections, fi
 
 # Other Collections 
 
-There is also a list class in the standard library that implements a linked list. We can traverse a linked list just like we do with a standard vector. Each element of a linked list keeps two pointers, for the previous and next element. Adding elements is faster in linked lists, but it takes some time to access the elements. 
-All these classes are declared in the standard library, so they can be used interchangeably. If we declare the type to be auto, we can change the collection type whenever we want to, it would still work because after all they have the same standards. 
+There is also a **list** class in the standard library that implements a linked list. We can traverse a linked list just like we do with a standard vector. Each element of a linked list keeps two pointers, for the previous and next element. Adding elements is faster in linked lists, but it takes some time to access the elements.  
+
+All these classes are declared in the standard library, so they can be used interchangeably. If we declare the type to be `auto`, we can change the collection type whenever we want to, it would still work because after all they have the same standards.  
+
 There are classes that gives different behaviors to access elements, like pushing and popping. FIFO collections are available as queues and dequeues (double-ended queue). There is also a sub collection called priority_queue which lets us assign a priority to each element, and be ordered based on the given priority. 
 There is also a set implementation, that has extra functionality for mathematical operations like union and difference. Unlike a vector, a set doesn’t need to re-organize itself whenever we add or remove an element, it allows us to keep iterators going while we’re messing with the elements, which we cannot do with a vector. 
 We can use the multimap, if we want a map-like structure, but with more than one value per key. 
