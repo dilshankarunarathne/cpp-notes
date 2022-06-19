@@ -121,7 +121,7 @@ We can declare a global constant variable using the `const` keyword (right after
 const int number = 5;
 ```
 
-If we create a variable and not initialize it by giving it a value, at the moment it will be holding a garbage value. A garbage value is whatever the state of that point of the memory was. It was never initialized, neither was cleared. So, when we create a variable, the best thing to do is to initialize it to zero by using the equal sign, or empty curly braces.  [ int var {} ; ]
+If we create a variable and not initialize it by giving it a value, initially it will be holding a garbage value. A garbage value is whatever the state of that point of the memory was. It was never initialized, neither was cleared. So, when we create a variable, the best thing to do is to initialize it to zero by using the equal sign, or empty curly braces.  `int var {};` 
 
 istream is a class in iostream library, and cin is a global object that we can use to take console keyboard input to the program. To extract a value from the keyboard using the cin object and assign that to a variable, we need to use >> extraction operator. This class is intelligent enough to extract the value accordingly to the type. 
 
