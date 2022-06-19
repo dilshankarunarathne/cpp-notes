@@ -915,7 +915,7 @@ public:
 };
 
 MyClass::MyClass (string s) : mystring(s) { 
-	/* leave this empty*/
+	/* leave this empty */
 }
 ```
 
