@@ -170,7 +170,8 @@ The only **ternary operator** in C++ is the conditional operator. It's defined a
 `(condition)?(expression if the condition is true):(expression if the condition is false)`  
 We can nest these conditional operators to get an equivalent to an else if statement. This is also called the **immediate if** statement. 
 
-The main best thing about using a switch statement instead of if-else, is that the compiler doesn’t have to test the expression for each condition, so it’s much more efficient than using if-else statements over and over again. Using an enum or an integer value instead of an expression is very common in switch statements. The ordering of the cases is not mandatory. The values of cases always have to be constants. If we do not add the break keyword, once a case is executed, it's going to fall through all the next cases and execute them until it comes to the end of the statement, or it finds a break. We don't have to add a break to the last statement. 
+The main best thing about using a switch statement instead of if-else, is that the compiler doesn’t have to test the expression for each condition, so it’s much more efficient than using if-else statements over and over again. Using an enum or an integer value instead of an expression is very common in switch statements.  
+The ordering of the cases is not mandatory. The values of cases always have to be constants. If we do not add the `break` keyword, once a case is executed, it's going to fall through all the next cases and execute them until it comes to the end of the statement, or it finds a break. We don't have to add a `break` to the last statement. 
 ```cpp
 switch (n) {
 	case 1 : 	cout << "One" << endl;
