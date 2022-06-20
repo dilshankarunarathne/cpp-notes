@@ -33,6 +33,11 @@
     3.  [C-style Strings]() 
 10. [File I/O]() 
 11. [Dynamic Memory Allocation]() 
+    1.  [Stack vs Heap Memory Allocation]() 
+    2.  []() 
+    3.  []() 
+    4.  []() 
+    5.  []() 
 12. []() 
 13. []() 
 14. []() 
@@ -658,7 +663,7 @@ But if we allocate memory in runtime, we can allocate exactly what we need, so t
 We can use the `new` keyword in C++ to dynamically allocate memory for a pointer. The `new` keyword should be followed by the data type. That memory will be allocated during the execution of the program.  
 The compiler will not write any instructions for this memory allocation. The allocation will be arranged contiguously. The base address will be stored in the pointer.  
 
-## Stack vs Heap Memory Allocation 
+## 11.1. Stack vs Heap Memory Allocation 
 
 Whenever we allocate memory dynamically using the `new` keyword, that memory will be allocated in the **heap** memory.  
 The **stack** area is used by the system to allocate compile time memory. So, all the local variables that are declared using compile time allocation, will be using the **stack**.  Once the operation is finished, the operating system de-allocate (or release) the memory implicitly from the stack.  
