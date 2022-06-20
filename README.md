@@ -1568,8 +1568,10 @@ There are two main types of exceptions.
 * logic_error: domain_error, invalid_argument, length_error, out_of_range
 * runtime_error: overflow_error, range_error, underflow_error 
 
-All the derived classes of exceptions are just marker classes. They don’t add any new members. They have only changed the name, so we could catch them or identify them more specifically. 
-To trigger (throw) an exception, we can use the throw keyword. When we caught an exception, or when we prevented an error, we could throw an exception up the stack to inform the caller. We should be as specific as we can, on our choice of what type of derived exception to throw. We can pass in a string with some information as the argument. 
+All the derived classes of `exceptions` are just marker classes. They don’t add any new members. They have only changed the name, so we could catch them or identify them more specifically.  
+
+To trigger (**throw**) an exception, we can use the `throw` keyword. When we caught an exception, or when we prevented an error, we could throw an exception up the stack to inform the caller. We should be as specific as we can, on our choice of what type of derived exception to throw. We can pass in a string with some information as the argument.  
+
 If the thrown exception is caught by reference, the caller will get the benefit from our choice of being specific with the exception type. It will have information containing the given string and the type of the error. But if it was caught by value, the exception will suffer from slicing, and leave out the specified derived exception type. Even though it still has the given string information, this is very bad practice. 
 There could be variable lifetime issues associated with unwinding the stack. When an exception happens, all the members that were local at that point tries go out of scope. If the exception is not handled carefully, this could lead into huge memory management errors. 
 Anything inside the try block will go out of scope at the moment an exception is invoked. Which means, any members, constructed within the try block will be automatically destructed once an exception is thrown. We don’t actually need to deal with that in our catch blocks. But anything outside of the try block, will stay in the stack, even after control hits the exception. 
