@@ -15,7 +15,7 @@
    8. [Binary Operations]() 
    9. [Unary Operations]() 
    10. [Comparing and Booleans]() 
-   11. []() 
+   11. [Characters]() 
    12. []() 
    13. []() 
    14. []() 
@@ -213,6 +213,8 @@ True in C++ is represented with 1 and false in C++ is represented with 0.
 Relational operators in C++ are `==`, `!=`, `>`, `>=`, `<`, `<=`.
 Logical operators in C++ are logical AND `&&`, logical OR `||` and logical NOT `!`.
 There also shortcut assignment operations in C++, like `+=`, `-=`, `*=` and `/=`. 
+
+## 5.11. Characters 
 
 The `char` or the character data type is used to hold a single character. We always have to assign the value in single quote marks. The default encoding is ASCII. We can cast the char variable or the value into an int data type to get the ascii code. 
 But, there is no exponential (power of) operator in C++.
