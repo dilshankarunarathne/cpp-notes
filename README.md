@@ -1005,14 +1005,17 @@ Circle operator++ (int) {
 ```
 
 We need to overload the insertion operator `<<`, for our objects to be able to output into a stream or printed out. Insertion operator is a binary operator. The left-hand operand can be `cout` or `fout`. And the right-hand operand is the object.  
-The call would be like `cout.operator<<(object_instance)`. The operator function is called by the cout object. It's not our object which makes the call to the insertion operator function. We also cannot override the function in the ostream class. 
+The call would be like `cout.operator<<(object_instance)`. The operator function is called by the `cout` object. It's not our object which makes the call to the insertion operator function.  
+We also cannot override the function in the ostream class. 
 To get around this, we need to implement the insertion operator as a global function. Even though we overloaded all the previous operators as members of the class, they also can be implemented as global functions. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 ostream& operator<< (ostream& sout, const Circle& c) {
 	sout << "Radius: " << c.getRadius() << endl;
 	return sout;
 }
--------------------------------------------------------------------------------------------------
+```
+
 The return type would be a reference to an ostream object. The first parameter would be the left-hand operand, and the second parameter would be the right-hand operand. We cannot make a copy of the cout object that's been declared in the std namespace, so we have to take a reference to it. 
 We can also write overloaded operators that take different arguments (like our class and an integer comparison), that will be useful sometimes. For an example, we might want to create a Date class and overload it’s plus operator so we can get another date object by adding an integer to the date. Take this comparison operator for an example. It would have Date to Date comparison and Date to integer comparison, [ date1 < 5 ] we can write a member function that overloads operator< . But, if the arguments are passed in like this [ 5 < date1 ], we cannot include that function inside the class. We can implement it right outside of the class with the correct method signature. Their declarations would look like below as a free function, or we can declare it as a friend function. 
 -------------------------------------------------------------------------------------------------
