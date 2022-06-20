@@ -29,7 +29,7 @@
    3. [Problems with C-Arrays]()
 9.  [Strings]() 
     1.  [Iterators]() 
-    2.  []() 
+    2.  [Methods in String]() 
     3.  []() 
     4.  []() 
     5.  []() 
@@ -495,6 +495,8 @@ while (rit != str.rend()) {
 	++rit;
 }
 ```
+
+## 9.2. Methods in String 
 
 There is a clear method in the string class that we could use to clear all the characters of a string. To delete a specific portion of a string, we can use the erase method. We can call the erase method on the string and pass it the starting index position and the number of characters we want to erase. We can also use the (**str.begin()+number**) to indicate the starting position. Likewise, we can use (**str.end()-number**) to indicate the finishing position of the erasing.  
 
