@@ -1543,10 +1543,10 @@ for_each (
 
 # Exceptions 
 
-The simplest thing to do when we expect an error, just to perform a check before the error happens, instead using exception handling. But in some cases, the place where the problem occurs, is not the place where we could deal with it. One option is to return true if the operation succeeds and false if it doesn’t. But if there’s some value that function must return, we cannot do that. But, with the use of exceptions, we can handle expected errors without constant checks along the way. 
+The simplest thing to do when we expect an error, just to perform a check before the error happens, instead using exception handling. But in some cases, the place where the problem occurs, is not the place where we could deal with it. One option is to return true if the operation succeeds and false if it doesn’t. But if there’s some value that function must return, we cannot do that. But, with the use of exceptions, we can handle expected errors without constant checks along the way.  
 Once an exception is thrown, the transfer flow of the program’s execution jumps from the location where the problem occurred to the place where can handle it. The special thing is, that the intervening code is skipped. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 try {
 	vector <int> v;
 	v.push_back(1);
@@ -1556,7 +1556,7 @@ try {
 } catch (exception& e) {
 	cout << e.what();
 }
--------------------------------------------------------------------------------------------------
+```
 
 The exception is handed to each catch block in turn. The first one that can handle it, gets it. The best practice is to order catch blocks by more specific exceptions first. Also, we must catch exceptions by reference, it’s great for catching derived exceptions. 
 In C++, the programmer has a lot of flexibility. Back in the day, we could throw just about anything. An integer, a string or even an instance of any class could be thrown. And then we could have a catch block that catches integers or etc. So, it’s a great help to have an exceptions class in the standard library. The class exception is the base class of the hierarchy of exceptions. The commonly used exceptions are instances of classes that derived from this class. 
