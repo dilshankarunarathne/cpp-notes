@@ -1123,8 +1123,12 @@ Destructor methods take no argument and have no return type. Inside the method, 
 
 # Template 
 
-Templates in C++ allows us to write generic code. We can write a function that's able to receive any type of parameters. We can write classes that can have instance members of generic type. In other languages like Java, C#, they have generics for this. But C++ templates are a little bit different. They are resolved at compile time, no runtime checks. Type safety is a huge part of C++ language, and this is how we achieve that. Most of old C++ collections and algorithms are rich in templates, even the old C++ standard library was called STL – Standard Template Library. 
-We can declare a template using the template keyword, followed by the type declaration inside angle brackets. We declare the type placeholder using the typename keyword and we usually give the placeholder a capital letter like T. After the template declaration, we can use that type placeholder in our functions. It will replace the object type and give our function a generic independency from types. 
+Templates in C++ allows us to write generic code. We can write a function that's able to receive any type of parameters. We can write classes that can have instance members of generic type.  
+In other languages like Java, C#, they have **generics** for this. But C++ **templates** are a little bit different. They are resolved at compile time, no runtime checks.  
+Type safety is a huge part of C++ language, and this is how we achieve that.  
+Most of old C++ collections and algorithms are rich in templates, even the old C++ standard library was called STL – Standard *Template* Library.  
+
+We can declare a template using the `template` keyword, followed by the type declaration inside angle brackets. We declare the type placeholder using the typename keyword and we usually give the placeholder a capital letter like T. After the template declaration, we can use that type placeholder in our functions. It will replace the object type and give our function a generic independency from types. 
 -------------------------------------------------------------------------------------------------
 template <typename T>
 int compareTo(T a, T b){
