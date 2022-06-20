@@ -1302,7 +1302,7 @@ The *virtual functions* are configured using the *virtual table*. This is happen
 If we’re implementing a class that inherits another class, we can write the sub class’ constructor to call the super class’ constructor and then assign the member variables that are special to the sub class. In that way, when we instantiate the sub class, the constructor for the super class will be called (and finished executing) before the construction of the sub class ends.  
 Likewise, when the destructor is called, the sub class’s destructor (the destructor of the innermost class) will be called first, and then the super class’ destructor will be called.  
 
-Pure Virtual Function
+# Pure Virtual Function 
 
 If we have a function that's common among the child-classes, we can declare that in the parent class. But, what if we the behavior of that function is completely different among the child classes, and have no common behavior to implement on the parent class? Then we can declare a purely virtual function. It's a function declared in the super type, that has not implemented any behavior. So, the child types have the full responsibility of the implementation, but still, any object of that super class still can perform that function. We can declare a virtual method in the super type using the virtual keyword.
 	virtual void printMyName() = 0;
