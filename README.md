@@ -1663,6 +1663,8 @@ std::thread::hardware_concurrency()
 ```
 This would give us an indication of how many threads we could truly run on our hardware. 
 
+### Race Conditions 
+
 A **race condition** occurs when the outcome of a program depends on the relative execution order of two or more threads. We should try to avoid race conditions. One way to avoid this is by using **mutex** to synchronize the access of the common resource. 
 
 ```cpp
