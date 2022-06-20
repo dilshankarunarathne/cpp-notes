@@ -1541,7 +1541,7 @@ for_each (
 );
 ```
 
-Exceptions
+# Exceptions 
 
 The simplest thing to do when we expect an error, just to perform a check before the error happens, instead using exception handling. But in some cases, the place where the problem occurs, is not the place where we could deal with it. One option is to return true if the operation succeeds and false if it doesn’t. But if there’s some value that function must return, we cannot do that. But, with the use of exceptions, we can handle expected errors without constant checks along the way. 
 Once an exception is thrown, the transfer flow of the program’s execution jumps from the location where the problem occurred to the place where can handle it. The special thing is, that the intervening code is skipped. 
