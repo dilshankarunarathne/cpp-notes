@@ -62,7 +62,7 @@
     3.  [Unique Pointer]() 
     4.  [COM Pointers]() 
     5.  [Auto Pointer]() 
-    6.  []() 
+    6.  [Void Pointers]() 
     7.  []() 
 22. []() 
 23. []() 
@@ -1544,7 +1544,7 @@ There was an *auto pointer* in the standard library, a previous attempt to make 
 It worked very poorly inside containers. The programmer had to delete each pointer explicitly when they create contained collections. Shared and unique pointers don’t have that problem. 
 We can switch all the raw pointers we use into shared pointers, we can forget about memory management and just treat it like a normal object. 
 
-### Void Pointers 
+## 21.6. Void Pointers 
 
 A void pointer is declared using `void*` and is very powerful, but also very dangerous functionality.  
 They can point to anything. We can take any type of pointer and cast it into a void pointer, or we can cast a void pointer into any type of a pointer, without any runtime errors.  
