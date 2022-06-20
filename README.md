@@ -1779,9 +1779,9 @@ class Logfile {
 };
 ```
 
-To avoid deadlocks, we could make everything locking the mutexes in the same order. Or we could use the standard library's standard_lock function, which can be used to lock arbitrary number of lockable objects such as mutex, with the use of deadlock avoiding algorithms. 
+To avoid deadlocks, we could make everything locking the mutexes in the same order. Or we could use the standard library's `standard_lock` function, which can be used to lock arbitrary number of lockable objects such as mutex, with the use of deadlock avoiding algorithms. 
 
---------------------------------------------------------------------------
+```cpp
 class Logfile {
 	std::mutex _mu;
 	std::mutex _mu2;
@@ -1803,7 +1803,7 @@ class Logfile {
 			f << "From " << id << ": " << value << endl;
 		} 
 };
---------------------------------------------------------------------------
+```
 
 std::adopt_lock tells the locker, the mutex is already locked and to adopt to the ownership of that mutex, so when the locker goes out of scope, it should unlock the mutex. 
 
