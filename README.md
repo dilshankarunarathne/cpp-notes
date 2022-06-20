@@ -1424,10 +1424,12 @@ We should always try to use either polymorphism instead or a dynamic cast. With 
 
 ### Pointers with Inheritance 
 
-By using smart pointers in inheritance hierarchy, they would work just like raw pointers. So, we should not hesitate to use them. 
-If we create a super class pointer and assign it a sub class object, when we call an overridden method, unless it’s virtual, we’d still get the super class’ implementation executed. If the function is virtual, even though we refer to it using a super class pointer, we’d get the overridden implementation executed. 
-Once we use virtual functions, there will be a virtual table, which will result in a performance hit. 
-If we create a super class pointer for a sub class object, and call delete, the destructor from the super class will be executed. This could be a huge problem, if the class have any resources to close or a lock to release. So, some developers make all destructors virtual. But that’s not necessary, that could result in a virtual function overhead increasing even though that’s not needed. So, we should make the destructor virtual, if the class have any special closing up, or if there are other virtual functions already. 
+By using smart pointers in inheritance hierarchy, they would work just like raw pointers. So, we should not hesitate to use them.  
+If we create a super class pointer and assign it a sub class object, when we call an overridden method, unless it’s virtual, we’d still get the super class’ implementation executed. If the function is virtual, even though we refer to it using a super class pointer, we’d get the overridden implementation executed.  
+Once we use virtual functions, there will be a virtual table, which will result in a performance hit.  
+If we create a super class pointer for a sub class object, and call delete, the destructor from the super class will be executed.  This could be a huge problem, if the class have any resources to close or a lock to release.  
+So, some developers make all destructors virtual. But that’s not necessary, that could result in a virtual function overhead increasing even though that’s not needed.  
+So, we should make the destructor virtual, if the class have any special closing up, or if there are other virtual functions already. 
 
 If we have a sub class with more member variables than the super class, there will be slicing errors. An error could happen, when we copy a super class object into a sub class, or vice-versa. Either there will be no room to put the extra members in the super class (slicing), or there will be information missing in the derived class, if we try to copy an object. This is happened very commonly when objects are passed into functions. 
 If we have a function that takes arguments by value and not by reference, when we pass in the wrong type, either the copy will fail or there will be a slicing. 
