@@ -27,10 +27,15 @@
    1. [The Range-For Loop]() 
    2. [C-Style Arrays]()
    3. [Problems with C-Arrays]()
-9.  []() 
+9.  [Strings]() 
+    1.  []() 
+    2.  []() 
 10. []() 
 11. []() 
-12. 
+12. []() 
+13. []() 
+14. []() 
+15. []() 
 
 # 1. Introduction to C++ 
 
@@ -443,7 +448,7 @@ Using pointer manipulation extensively to access elements of an array could lead
 
 Collection implementations like **vector**, can handle all these problems. **Vectors** can even grow automatically as we add elements to it. So, we should only use an array, if we’re sure absolutely about what we’re doing.  
 
-# Strings 
+# 9. Strings 
 
 String class of the C++ standard library, which contains all the necessary functions needed for string processing. We can instantiate a string using `string var_name("This is a string");`  
 
