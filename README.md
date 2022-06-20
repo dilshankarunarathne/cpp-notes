@@ -1643,13 +1643,17 @@ If we really need to pass arguments by reference, we can use std::ref to cover t
 This is an example for parent and child threads sharing the same memory resource (in this case string `s`) by using references. We can achieve the same thing by using pointers. But, memory sharing could lead into data race problems.  
 
 A better approach would be to use `std::move` function to wrap the resource. It will move the given resource from one thread to another. It's both safe and efficient. In c++ libraries, there are many things that can only be moved and cannot be copied. As a matter of fact, a thread object itself can only be moved. 
-
+```cpp
 std::thread t2 = std::move(t1);
+```
 
 Every thread has an associated id number with it. To get that we could call,
-	std::this_thread::get_id()
+```cpp
+std::this_thread::get_id()
+```
+
 This will return the id of the current thread (or the thread it's been called in). To get the id of another thread, we could call,
-	t1.get_id()
+`t1.get_id()`  
 
 We should use threads as much as we have calls. But if our hardware cannot support that much threads, our performance would degrade. This is called 'oversubscription'. When we create more threads than available cpu cores, it would have to do a lot of contact switching. 
 	std::thread::hardware_concurrency()
