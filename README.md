@@ -58,8 +58,8 @@
     4.  [Multiple Inheritance]() 
 21. [Smart Pointers]() 
     1.  [Shared Pointer]() 
-    2.  []() 
-    3.  []() 
+    2.  [Weak Pointer]() 
+    3.  [Unique Pointer]() 
     4.  []() 
     5.  []() 
     6.  []() 
@@ -1469,7 +1469,7 @@ They even have the overloaded operators for dereferencing and arrow operator.
 
 We can include the memory library of the standard library to use these pointer objects.  
 
-### 21.1. Shared Pointer 
+## 21.1. Shared Pointer 
 
 If we’re having a resource that might get copied a few times, it’s good to use the `shared_ptr`. Shared pointers don’t have any flaws and will make sure no memory leak will happen. We don’t need to implement the copy constructor and the assignment operator anymore. We also don’t need to initialize it to `NULL` or `nullptr`, we also don’t need to worry about the deleting, which means we don’t need to write destructors in classes. We actually cannot use `delete` keyword on them. If we ever wanted to tell the `shared_ptr` to let go of the resource, we can use its member function `reset`.  
 If we ever assign it to a new pointer, we cannot use the `new` keyword to dynamically allocate a new resource and assign it to the shared pointer. Instead, we need to call the `make_shared` function, declare the type and pass in the arguments to instantiate.  
@@ -1483,11 +1483,11 @@ std::shared_ptr<ObjectType> pMySPtr;
 pMySPtr.reset();
 pMySPtr = std::make_shared<ObjectType> ( /* arguments */ );
 ```
-### Weak Pointer 
+## 21.2. Weak Pointer 
 
 There’s also a `weak_ptr` in the memory library that works with shared pointers. Every time we copy a shared pointer, it bumps up the reference count. We can use weak pointers to keep a pointer of which existence doesn’t keep the original pointer alive, by increasing the reference count. If the object goes out of scope, weak pointer handles it nicely.  
 
-### Unique Pointer 
+## 21.3. Unique Pointer 
 
 There’s also a unique pointer (`unique_ptr`). This is fast and efficient. A unique pointer *exclusively owns* the object to which it points. That means, if it’s not null, it’s destructor is obligated to delete the object.  
 It also cannot be copied. There is no copy constructor or copy assignment operator. There is a move method in the standard library, that we can use to move a reference into a unique pointer.  
