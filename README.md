@@ -1112,7 +1112,7 @@ class Circle {
 }
 ```
 
-Note one thing: if we execute this [ Circle c1, c2; c1 = c2; ] the assignment operator will be called upon the assignment. But if we do the assignment in line with the declaration like this [ Circle c1 = c2 ], the compiler will call the copy constructor for that. That's because, there cannot be a chained assignment while the object is being created and the constructor does not return any value. 
+Note one thing: if we execute this `Circle c1, c2; c1 = c2;`  the assignment operator will be called upon the assignment. But if we do the assignment in line with the declaration like this  `Circle c1 = c2` , the compiler will call the copy constructor for that. That's because, there cannot be a chained assignment while the object is being created and the constructor does not return any value.  
 
 If we create a class that behaves as a collection, we might have to overload the subscription operator []. To do that, we need to write the overloaded method that takes an integer as an argument, with the return type of a pointer. Only thing the method needs to do is to return the element in the collection using the integer index. 
 When we implement collection classes, we need to implement the insertion and extraction operators in such a way that is easier to identify as a collection. For an example, we can cover the set of elements with brackets and add commas in between each element. 
