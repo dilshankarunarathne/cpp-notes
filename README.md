@@ -1962,9 +1962,11 @@ Promises and futures can also only be moved. They cannot be copied.
 
 If we need to call this factorial function multiple times, on multiple threads, we can use a shared future, instead of creating multiple futures and multiple promises. Shared future can also be copied, so we don't have to pass it by reference. When parent set the value to be 4 on promise, all the children will get that value. 
 
---------------------------------------------------------------------------
+```cpp
 #include <future>
+
 using namespace std;
+
 int factorial (std::shared_future<int> sf) {
 	int res = 1;
 	int N = f.get();
@@ -1974,6 +1976,7 @@ int factorial (std::shared_future<int> sf) {
 	cout << "Result is: " << res << endl;
 	return res;
 }
+
 int main() {
 	int x;
 	std::promise<int> p;
@@ -1985,8 +1988,4 @@ int main() {
 	p.set_value(4);
 	return 0;
 }
---------------------------------------------------------------------------
-
-
-
-
+```
