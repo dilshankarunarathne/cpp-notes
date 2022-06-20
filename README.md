@@ -47,10 +47,9 @@
     3.  [Member Accessing]()
     4.  [Const with OOP]()
     5.  [Object Life-Cycle]()
-    6.  []()
 16. [Make]() 
 17. [Operator Overloading]() 
-18. []() 
+18. [Friend Functions]() 
 19. []() 
 20. []() 
 
@@ -1150,7 +1149,7 @@ Class Date {
 bool operator< (int i, Date& d);
 ```
 
-# Friend Functions
+# 18. Friend Functions
 
 In the above example, global method is accessing the private member `radius` through a getter function. But, having to access a private member from a global scope could get tedious sometimes.  
 C++ have given the functionality for a short hand method called **friend functions** to solve this issue. We can use the `friend` keyword to declare the friend function of a class that's been implemented globally, but still need to be considered as a part of the class. 
