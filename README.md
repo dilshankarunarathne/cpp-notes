@@ -1580,7 +1580,8 @@ Anything inside the `try` block will go out of scope at the moment an exception 
 We don’t actually need to deal with that in our catch blocks. But anything outside of the try block, will stay in the stack, even after control hits the exception.  
 
 There are no `finally` blocks in C++. So, if we have anything dynamically allocated in the try block, we would not be able to delete it if an exception is thrown. We can’t even de-allocate it in the catch block.  
-To get around this, C++ approach is to always allocate memory in the stack, so the destructor will automatically be invoked. The conclusion is to never use raw pointers in try blocks. We should always use smart pointers instead, so it would be an object, and we wouldn’t have to worry about deallocation. 
+To get around this, C++ approach is to always allocate memory in the stack, so the destructor will automatically be invoked. The conclusion is to never use raw pointers in try blocks. We should always use smart pointers instead, so it would be an object, and we wouldn’t have to worry about deallocation.  
+
 There is a cost on using exceptions. If no exception is thrown in a try block, it’s little to no cost. But if an exception is thrown, that could take more time to process than an if block. So, we should try to prevent errors using if clauses as much as we can, in small and very common inline errors and type checking kind of stuff. We should use exceptions, if it’s not a commonly identified error or if it is a rare case, or if the error handling should be passed way up the call stack, or if handling that in another way could cost just as much time. 
 
 Concurrency
