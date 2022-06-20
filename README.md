@@ -1604,7 +1604,7 @@ void function_1 () {
 
 int main() {
 	std::thread t1(function_1); 	// t1 starts running
-	t1.join();			// main thread waits for t1 to finish
+	t1.join();						// main thread waits for t1 to finish
 	return 0;
 }
 ```
