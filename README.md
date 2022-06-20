@@ -1956,9 +1956,9 @@ If the parent thread do not set the promise, the `f.get()` function will get an 
 ```cpp
 p.set_exception(std::make_exception_ptr(std::runtime_error("To err is human")));
 ```
+So now, when the child thread calls the get function, it will get this runtime error, instead of the infamous `broken_promise` exception.  
 
-So now, when the child thread calls the get function, it will get this runtime error, instead of the infamous broken_promise exception. 
-Promises and futures can also only be moved. They cannot be copied. 
+Promises and futures can also only be moved. They cannot be copied.  
 
 If we need to call this factorial function multiple times, on multiple threads, we can use a shared future, instead of creating multiple futures and multiple promises. Shared future can also be copied, so we don't have to pass it by reference. When parent set the value to be 4 on promise, all the children will get that value. 
 
