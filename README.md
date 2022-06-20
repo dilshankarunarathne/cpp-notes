@@ -1910,13 +1910,15 @@ A **future** object represents an object by using which we can get something in 
 std::future<int> fu = std::async(std::launch::deferred, factorial, 4);
 ```
 It will not create a thread. What it will do now is, it will defer the execution of the factorial function, until later when it actually asks for the result by calling `get()`. And it will be executed on the same thread.  
+
 If we do this, 
 ```cpp
 std::future<int> fu = std::async(std::launch::async, factorial, 4);
 ```
-It will create another thread. We could also call both of those by doing,
-std::future<int> fu = std::async(std::launch::async | 
-std::launch::deferred, factorial, 4);
+It will create another thread. We could also call both of those by doing, 
+```cpp
+std::future<int> fu = std::async(std::launch::async | std::launch::deferred, factorial, 4);
+```
 In this case, the implementation will determine whether it should kick off another thread or not. It is also what's happening by default. 
 We can also use a future to pass a value from the parent thread to the child thread, not at the time of creating the thread, but at some point, in the future. For that we also need a promise. 
 
