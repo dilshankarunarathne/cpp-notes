@@ -28,8 +28,11 @@
    2. [C-Style Arrays]()
    3. [Problems with C-Arrays]()
 9.  [Strings]() 
-    1.  []() 
+    1.  [Iterators]() 
     2.  []() 
+    3.  []() 
+    4.  []() 
+    5.  []() 
 10. []() 
 11. []() 
 12. []() 
@@ -470,6 +473,8 @@ for (char &p:str) {
 }
 cout << str << endl;
 ```
+
+## 9.1. Iterators 
 
 We can use iterators to traverse through a string (or any other collection). In C++ we need to create an iterator object accordingly to the type of the collection. We need to use the scope resolution operator `::` to specify the type.  
 
