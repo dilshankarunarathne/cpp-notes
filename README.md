@@ -1372,24 +1372,31 @@ auto sp2 = make_unique<int>(345);
 auto sp3 = movie(sp1);
 ```
 
-The move function, makes the sp1 pointer give up it’s ownership and release the object to be owned by sp3. We cannot use the assignment operator to do this. 
-Unique pointers even allow Boolean conversion, so we could pass the pointer into a Boolean statement to check if it holds a non-null pointer. 
-We can call the release method on our object, to release all the pointers attached to it. There’s also a reset method we could use to reset the ownership of an object. 
+The move function, makes the `sp1` pointer give up it’s ownership and release the object to be owned by `sp3`. We cannot use the assignment operator to do this.  
+
+Unique pointers even allow Boolean conversion, so we could pass the pointer into a Boolean statement to check if it holds a non-null pointer.  
+
+We can call the release method on our object, to release all the pointers attached to it. There’s also a reset method we could use to reset the ownership of an object.  
+
 We can pass a unique pointer to a function by value. If we write a function that accepts a unique pointer of some kind by value, we need to call the move method inside the parameters when we call that function. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 auto GetMyObj() -> unique_ptr<MyObj> {
 	return make_unique<MyObj> (// construct);
 }
+
 auto TakeThisUPtr (unique_ptr<MyObj> up) -> unique_ptr<MyObj> {
 	// code to update up
 	return up;
 }
+
 auto main() -> int {
 	auto p1 = GetMyObj();
 	p1 = TakeThisUPtr (move(p1));
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
+
 The unique pointer class allows us to override it implicit behavior of deletion. We can provide a custom implementation for the delete process. This class provides a template parameter called deleter. This is simply a function object that deletes the unique pointer. 
 
 Windows SDK provides the ComPtr, that we could use with the COM and WinRT interfaces. The Windows SDK ships with a Visual C++ compiler, and this com pointer is what we should use when we’re dealing directly with COM interfaces. 
