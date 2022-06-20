@@ -40,8 +40,13 @@
     2.  [Map]() 
     3.  [Other Collections]() 
 13. [Algorithms: Sorting and Searching]() 
-14. []() 
+14. [Structures]() 
 15. []() 
+16. []() 
+17. []() 
+18. []() 
+19. []() 
+20. []() 
 
 # 1. Introduction to C++ 
 
@@ -795,7 +800,7 @@ while (o != v.end()) {
 We can sort a collection by simply calling the `sort` function with start and end iterators passed to it. It actually has a lot of overloads that take different arguments.  
 For example, if we wanted to sort based on a different factor, or if we want to use a different order. 
 
-# Struct 
+# 14. Structures 
 
 Struct comes from the **C** language, it allows us to create user-defined types in a fundamental way. We can do that using classes with object-oriented programming too. But struct is generally used for **POD** – ‘plain old data’ with little or no business logic.  
 
