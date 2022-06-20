@@ -1665,7 +1665,7 @@ This would give us an indication of how many threads we could truly run on our h
 
 A **race condition** occurs when the outcome of a program depends on the relative execution order of two or more threads. We should try to avoid race conditions. One way to avoid this is by using **mutex** to synchronize the access of the common resource. 
 
---------------------------------------------------------------------------
+```cpp
 #include <iostream>
 #include <string>
 #include <thread>
@@ -1690,7 +1690,7 @@ int main() {
 	t1.join();
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 By using mutex to synchronize a shared resource among threads, we can avoid race conditions. But, if an exception is thrown in between locking an unlocking, the resource might get locked forever. We could use a lock_guard to get around this. This is also a variant of RAII technique. Whenever the guard goes out of scope, the mutex will always be unlocked, with or without exception. 
 
