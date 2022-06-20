@@ -162,26 +162,26 @@ We can declare a global constant variable using the `const` keyword (right after
 const int number = 5;
 ```
 
-## 5.4. Garbage Values 
+## 5.5. Garbage Values 
 
 If we create a variable and not initialize it by giving it a value, initially it will be holding a garbage value. A garbage value is whatever the state of that point of the memory was. It was never initialized, neither was cleared. So, when we create a variable, the best thing to do is to initialize it to zero by using the equal sign, or empty curly braces.  `int var {};` 
 
-## 5.5. I/O Streams 
+## 5.6. I/O Streams 
 
 `istream` is a class in the `iostream` library, and `cin` is a global object that we can use to take console keyboard input to the program. 
 To extract a value from the keyboard using the `cin` object and assign that to a variable, we need to use `>>` extraction operator. This class is intelligent enough to extract the value accordingly to the type. 
 
-## 5.6. Operations with different numeric types 
+## 5.7. Operations with different numeric types 
 
 Once we apply some operation between two integers, the result is always going to be an integer. If we apply an operation between an integer and a double, the result is going to be a double. Operations between two different data types, the resulting data type is always going to be whichever is the highest precise. 
 We can use explicit casting to covert between data types. We need to mention the casting type inside parenthesis, before the variable or value. 
 
-## 5.7. Binary Operations 
+## 5.8. Binary Operations 
 
 Assigning a value to a variable using the `=` operator is a **binary operation**. It has two operands, the left-hand side and the right-hand side. The left-hand side is called the lvalue (target) and the right-hand side is called the rvalue (source). The operation is always pushing the rvalue to the lvalue. The lvalue is always going to be a variable. We cannot assign a value to a constant. 
 All the operators (like `+`, `-` and even `=` ) returns a value. If we execute `int x=5`, `x` gets the value 1 and this assignment returns 5. If we push that into a Boolean variable, it’ll truncate into `True` (or 1). 
 
-## 5.8. Unary Operations 
+## 5.9. Unary Operations 
 
 The operators that required to be applied on only one operand are called **unary operators**. The unary increment `++` and unary decrement `--` operators are the most commonly used unary operators. 
 These two unary operators can be post-fixed or pre-fixed (either `x++` or `++x`). 
@@ -205,6 +205,8 @@ We cannot use the assignment operator and a unary increment or decrement operato
 p = ++x; 	// ++x -> x = x + 1
 p = ++5; 	// ++5 -> 5 = 5 + 1
 ```
+
+## 5.10. 
 
 The result of any comparison in C++ is either `true` or `false`. It is a value of the `bool` data type. 
 True in C++ is represented with 1 and false in C++ is represented with 0. 
