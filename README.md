@@ -7,7 +7,7 @@
 5. [Data Types and Operators]() 
    1. [Numeric Data Types]() 
    2. [The Auto Keyword]() 
-   3. []() 
+   3. [Value vs. Reference]() 
    4. []() 
 6. []() 
 7. []() 
@@ -139,6 +139,8 @@ int main() {
     cout << "Type of myVar : " << typeid(myVar).name() << endl;
 }
 ```
+
+## 5.3. Value vs. Reference 
 
 Reference variables in C++ are declared using an `&` sign before the variable name. We must initialize a reference variable in C++.  When we declare a reference variable, we must mention to which variable this is going to refer. 
 Data type of the reference variable must be the same type as the variable it points to.  
