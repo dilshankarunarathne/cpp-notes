@@ -1592,19 +1592,22 @@ The first is **multiprocessing**. In this approach there are multiple processes,
 The second method of concurrent programming is **multithreading**. In this approach, one process contains two or more threads, and those threads communicate with each other by using shared memory. A thread is considered to be a light weight process, so they are easy and fast to start. Threads also takes very lower overhead. Communicating through a shared memory is much faster than communicating through pipelines or files.  
 The downsides of multithreading are, that they are difficult to implement, and they cannot run on distributed systems.  
 
---------------------------------------------------------------------------
+```cpp
 #include <iostream>
 #include <thread>
+
 using namespace std;
+
 void function_1 () {
 	std::cout << "Beauty is only skin-deep" << std::endl;
 }
+
 int main() {
 	std::thread t1(function_1); 	// t1 starts running
 	t1.join();			// main thread waits for t1 to finish
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 There is a <thread> header in std namespace.
 If the t1 has a long running process, the main thread doesn’t need to wait for it. We can call t1.detach(); instead of t1.join(); . Then t1 would run independently of the main thread. Then we call t1 a 'daemon process'. Some daemon processes keep running until the system shuts down. Since the main thread no longer have a connection with its child t1 thread, once t1 finishes it's execution, the runtime would have the responsibility to reclaim the resources that were allocated for t1. If the main thread finishes its execution before t1, we will no longer see the console output. So, if we ever have two or more threads sharing the same resource (in this case cout), we should keep the main thread running, until all the child processes finish their execution. 
