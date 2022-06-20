@@ -1316,7 +1316,13 @@ Until we complete the implementation of a virtual function in the sub type, we c
 
 # Multiple Inheritance 
 
-In C++, a class can inherit from multiple super classes. For an example, think about a flying video game, that has birds and air planes. We can't implement the flying functions in the Bird class. Then we'd have to repeat the code in the `AirPlane` class, and also not all birds can fly. What we can do is to create a `Flyable` class and declare flight methods as virtual. Then we should create parent class `Bird` and sub classes of different birds (e.g.- `Eagle`) that extends `Bird`. We also need to create an `AirPlane` class that extends the `Flyable` class, and implement the fly methods in that. We need to create the `Eagle` class that inherit both `Bird` and `Flyable` classes. If we create an `Ostrich` class, that only should extend from the `Bird` class. (In this case, the `Flyable` class has the same functionality as an Interface in Java). The `Flyable` must be declared as a **super most type**, so any child type can inherit from it. We can write extension from multiple classes by separating the parent types with commas after the `:` symbol. 
+In C++, a class can inherit from multiple super classes. For an example, think about a flying video game, that has birds and air planes. We can't implement the flying functions in the Bird class. Then we'd have to repeat the code in the `AirPlane` class, and also not all birds can fly.  
+What we can do is to create a `Flyable` class and declare flight methods as virtual.  
+Then we should create parent class `Bird` and sub classes of different birds (e.g.- `Eagle`) that extends `Bird`.  
+We also need to create an `AirPlane` class that extends the `Flyable` class, and implement the fly methods in that.  
+We need to create the `Eagle` class that inherit both `Bird` and `Flyable` classes.  
+If we create an `Ostrich` class, that only should extend from the `Bird` class. (In this case, the `Flyable` class has the same functionality as an Interface in Java).  
+The `Flyable` must be declared as a **super most type**, so any child type can inherit from it. We can write extension from multiple classes by separating the parent types with commas after the `:` symbol. 
 
 Smart Pointers
 
