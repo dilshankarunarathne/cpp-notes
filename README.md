@@ -1061,6 +1061,7 @@ class Circle {
 	//	everything
 	friend istream& operator>> (istream&, const Circle&);
 }
+
 istream& operator>>(istream& sin, const Circle& c){
     sin >> c.radius;
     return sin;
@@ -1073,6 +1074,7 @@ There are six relational operators in C++. All those returns a boolean value. Th
 bool operator> (const Circle& rho) {
 	return this->radius > rho.radius;
 }
+
 bool operator== (const Circle& rho) {
 	return this->radius == rho.radius;
 }
