@@ -1472,14 +1472,18 @@ A lambda don’t necessarily have to be in a single line or a single statement. 
 ```cpp
 vector <int> v;
 // add elements
-for_each (v.begin(), v.end(), [] (int i) {
-cout << i;
-if (i % 2 == 0) {
-	cout << “ even” << endl;
-} else {
-	Cout << “ odd“ << endl;
-}
-});
+for_each (
+	v.begin(), 
+	v.end(), 
+	[] (int i) {
+		cout << i;
+		if (i % 2 == 0) {
+			cout << “ even” << endl;
+		} else {
+			Cout << “ odd“ << endl;
+		}
+	}
+);
 ```
 
 Lambdas can return a value. If the lambda is single lined, and that line is a return statement, then we do not have to specify the return type, the compiler can infer. But in most cases, they are multi-lined, and we’d have to specify the return type.   [] (int n) -> double { /* --- */ }   This is a lambda that takes an integer, does an operation and return a double.  The body of the lambda have to contain at least one return statement. 
