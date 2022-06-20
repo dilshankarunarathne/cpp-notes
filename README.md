@@ -1522,8 +1522,9 @@ for_each (
 );
 ```
 
-In the below given example, we’re capturing the whole local scope by value. So, even though we’re using the mutable keyword, x and y will not be changed in the outer scope. Only their copies inside the anonymous function object will be changed. But since we’re taking r as an integer reference, the values inside the vector will be changed. 
--------------------------------------------------------------------------------------------------
+In the below given example, we’re capturing the whole local scope by value. So, even though we’re using the `mutable` keyword, `x` and `y` will not be changed in the outer scope. Only their copies inside the anonymous function object will be changed. But since we’re taking `r` as an integer reference, the values inside the vector will be changed. 
+
+
 vector <int> v;
 // add elements
 x = 1;
