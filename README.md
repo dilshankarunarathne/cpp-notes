@@ -1158,7 +1158,7 @@ The compiler is clever enough to determine the type of the passed in arguments a
 compareTo <int> (x, y); 
 ```
 
-The compareTo method with the template will still work fine for a class we implemented ourselves, as long as it's overridden the comparison operators. 
+The compareTo method with the template will still work fine for a class we implemented ourselves, as long as it's overridden the comparison operators.  
 
 When we define our own generic class, that has a generic member, once we implement its method outside of the class, we need to specify a template and a type placeholder post-fixed with the class name in the scope resolution operator. 
 -------------------------------------------------------------------------------------------------
