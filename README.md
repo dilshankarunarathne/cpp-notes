@@ -985,21 +985,24 @@ Circle operator- (const Circle& rho) {
 ```
 
 Unary operators like unary increment and unary decrement can be pre or post fixed. Consider [ c = ++c ], in pre-fixed increment, first the value will be incremented and then be applied to the variable. Consider [ c = C++ ], in post-fixed increment, the value will be applied to the variable first and then it will be incremented.  
-For unary operators, we need to override two function for pre-fixed and post-fixed versions. In pre-fixed function, there will be no parameters. But the post-fixed function will take a dummy int parameter as recommended by C++. It is only used to make a difference between the pre-fixed and post-fixed unary operators. This dummy parameter is not a normal parameter. We wouldn't give it a name. It's declared only by the type. 
--------------------------------------------------------------------------------------------------
+For unary operators, we need to override two function for pre-fixed and post-fixed versions. In pre-fixed function, there will be no parameters. But the post-fixed function will take a dummy int parameter as recommended by C++.  
+It is only used to make a difference between the pre-fixed and post-fixed unary operators. This dummy parameter is not a normal parameter. We wouldn't give it a name. It's declared only by the type. 
+
+```cpp
 Circle operator++ () {
 	this->radius++;
 	Circle result;
 	result.radius = this->radius;
 	return result;
 }
+
 Circle operator++ (int) {
 	Circle result;
 	result.radius = this->radius;
 	this->radius += 1;
 	return result;
 }
--------------------------------------------------------------------------------------------------
+```
 
 We need to overload the insertion operator << , for our objects to be able to output into a stream or printed out. Insertion operator is a binary operator. The left-hand operand can be cout or fout. And the right-hand operand is the object. The call would be like [ cout.operator<<(object_variable) ]. The operator function is called by the cout object. It's not our object which makes the call to the insertion operator function. We also cannot override the function in the ostream class. 
 To get around this, we need to implement the insertion operator as a global function. Even though we overloaded all the previous operators as members of the class, they also can be implemented as global functions. 
