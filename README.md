@@ -30,7 +30,8 @@
 9.  [Strings]() 
     1.  [Iterators]() 
     2.  [Operations on Strings]() 
-10. []() 
+    3.  [C-style Strings]() 
+10. [File I/O]() 
 11. []() 
 12. []() 
 13. []() 
@@ -578,7 +579,7 @@ string m = "50";
 int number = atoi(m.c_str());
 ```
 
-# C-style Strings 
+# 9.3. C-style Strings 
 
 C-style strings are arrays of characters. Since arrays don’t carry around its length, a C-style string doesn’t know its length.  
 The theory is, if we can put a special character at the end of an array, we can identify where it ends, and access it using its pointer. This special character is the null character ‘**\0**’ , it have the numeric value zero in it.  
