@@ -1043,6 +1043,7 @@ class Circle{
 	//	everything
 	friend ostream& operator<< (ostream&, const Circle&);
 }
+
 ostream& operator<<(ostream& sout, const Circle& c){
     sout << "Radius: " << c.radius << endl;
     return sout;
