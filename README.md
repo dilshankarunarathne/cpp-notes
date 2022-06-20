@@ -16,7 +16,7 @@
    9. [Unary Operations]() 
    10. [Comparing and Booleans]() 
    11. [Characters]() 
-   12. []() 
+   12. [The Yoda Syntax]() 
    13. []() 
    14. []() 
 6. []() 
@@ -218,6 +218,8 @@ There also shortcut assignment operations in C++, like `+=`, `-=`, `*=` and `/=`
 
 The `char` or the character data type is used to hold a single character. We always have to assign the value in single quote marks. The default encoding is ASCII. We can cast the char variable or the value into an int data type to get the ascii code. 
 But, there is no exponential (power of) operator in C++.
+
+## 5.12. The Yoda Syntax 
 
 Some programmers use (`3==i`) instead of (`i==3`) as the condition in if statements with binary equals operator, it’s called the **Yoda syntax**. They tend to use this because, if they leave off one equal sign in the operator, instead of doing an assignment operation, the compiler will return an error, because we can’t assign a new value to an integer literal.  
 If we ever have anything to be checked if it’s not zero before pass it into a function (e.g.- modular operator, that will blow up if we pass in zero as the right-hand operand), C++ programmers tend to use this pattern extensively. 
