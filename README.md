@@ -1210,18 +1210,22 @@ ostream& operator << (ostream &out, const SimpleVector<U>& sv){
 }
 ```
 
-There could be some operations in a template implementation, that might not work for some objects. In that case, we could either write the missing operator, or we can write a specialized template. One of the special things about C++ templates is that they can be specially implemented for certain objects. At some times, template specialization is the only option for certain classes. 
--------------------------------------------------------------------------------------------------
+There could be some operations in a template implementation, that might not work for some objects. In that case, we could either write the missing operator, or we can write a specialized template.  
+One of the special things about C++ templates is that they can be specially implemented for certain objects. At some times, template specialization is the only option for certain classes. 
+
+```cpp
 #pragma once
+
 template <class T>
 class MyGenericClass {
 	// Class definition using T
 };
+
 template <>
 class MyGenericClass <ForThisClass> {
 	// Class definition using ForThisClass
 };
--------------------------------------------------------------------------------------------------
+```
 
 Inheritance
 
