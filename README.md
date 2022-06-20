@@ -73,9 +73,18 @@
 23. [Lambdas]() 
 24. [Exceptions]() 
 25. [Concurrency]() 
+    1.  [Multi-Processing vs. Multi-Threading]() 
+    2.  [Threads]() 
+    3.  []() 
+    4.  []() 
+    5.  []() 
+    6.  []() 
+    7.  []() 
+    8.  []() 
+    9.  []() 
+    10. []() 
 26. []() 
 27. []() 
-28. []() 
 
 # 1. Introduction to C++ 
 
@@ -1736,13 +1745,19 @@ To get around this, C++ approach is to always allocate memory in the stack, so t
 
 There is a cost on using exceptions. If no exception is thrown in a `try` block, it’s little to no cost. But if an exception is thrown, that could take more time to process than an `if` block. So, we should try to prevent errors using if clauses as much as we can, in small and very common inline errors and type checking kind of stuff. We should use exceptions, if it’s not a commonly identified error or if it is a rare case, or if the error handling should be passed way up the call stack, or if handling that in another way could cost just as much time. 
 
-# Concurrency 
+# 25. Concurrency 
+
+## 25.1. Multi-Processing vs. Multi-Threading 
 
 There are two approaches to concurrent programming.  
 The first is **multiprocessing**. In this approach there are multiple processes, each process with a single thread, and the processes communicate with each other in preliminary ways such as files, pipes, message queues and etc. But it is usually slow and complicated to start a lot of processes. Also, processes take a considerable amount of overhead, so one process would not accidently step onto another process.  
 
 The second method of concurrent programming is **multithreading**. In this approach, one process contains two or more threads, and those threads communicate with each other by using shared memory. A thread is considered to be a light weight process, so they are easy and fast to start. Threads also takes very lower overhead. Communicating through a shared memory is much faster than communicating through pipelines or files.  
 The downsides of multithreading are, that they are difficult to implement, and they cannot run on distributed systems.  
+
+## 25.2. Threads 
+
+There is a `<thread>` header in `std` namespace.  
 
 ```cpp
 #include <iostream>
@@ -1761,7 +1776,7 @@ int main() {
 }
 ```
 
-There is a `<thread>` header in `std` namespace.  
+
 If the `t1` has a long running process, the `main` thread doesn’t need to wait for it. We can call `t1.detach();` instead of `t1.join();` . Then `t1` would run independently of the `main` thread. Then we call `t1` a '**daemon process**'.  
 Some daemon processes keep running until the system shuts down. Since the *main* thread no longer have a connection with its child *t1* thread, once *t1* finishes it's execution, the runtime would have the responsibility to reclaim the resources that were allocated for *t1*.  
 If the main thread finishes its execution before *t1*, we will no longer see the console output. So, if we ever have two or more threads sharing the same resource (in this case `cout`), we should keep the *main* thread running, until all the child processes finish their execution.  
