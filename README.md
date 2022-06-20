@@ -81,7 +81,7 @@
     6.  [Race Conditions]() 
     7.  [Deadlocks]() 
     8.  [Producer - Consumer Problems]() 
-    9.  []() 
+    9.  [Fututre & Promise]() 
     10. []() 
 26. []() 
 27. []() 
@@ -2050,7 +2050,7 @@ We're sending the locker into the `cond.wait` because, we don't need to lock som
 
 The lock could be awakened by itself while sleeping and waiting for the other thread to notify. That is called a '**spurious wake**'. If that happens, we don't need that thread to keep executing. To ensure that, we can pass a predicate to the wait function to check if the `q` is empty.  
 
-### Fututre & Promise 
+## 25.9. Fututre & Promise 
 
 There is an `async` method in `std` that we could use in small occasions where we need a thread to do just a simple job. It doesn't return a thread, it returns a **future**. A future is a channel that we could use to receive data from a child thread. It's `get()` function will wait for the child thread to finish, and return the result. 
 
