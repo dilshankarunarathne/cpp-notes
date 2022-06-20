@@ -1833,7 +1833,9 @@ class Logfile {
 A wrapper class of a mutex cannot be copied. However, a unique lock can be moved. When we do move a unique lock, the ownership of the mutex transfers from one unique lock to another unique lock. But a lock guard can never be moved.  
 But the downside of a unique lock is that it's a little bit heavier than a lock guard. So, if we have a concern on performance, we should use a lock guard instead.  
 
-If there are two threads sharing a resource, there could be a producer-consumer problem even if we used mutex and unique locks. To get around that, we can use a condition variable and use its notify functions.
+### Producer - Consumer Problems 
+
+If there are two threads sharing a resource, there could be a *producer-consumer* problem even if we used mutex and unique locks. To get around that, we can use a condition variable and use its notify functions.
 notify_one() will wake up one thread, if there is any waiting on that condition. 
 
 --------------------------------------------------------------------------
