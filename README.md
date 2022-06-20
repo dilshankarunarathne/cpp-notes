@@ -20,7 +20,7 @@
    13. [The Ternary Operator]() 
    14. [The Switch Statement]() 
    15. [The For-Loop]() 
-   16. []() 
+   16. [Random Values]() 
    17. []() 
    18. []() 
    19. []() 
@@ -261,6 +261,8 @@ switch (n) {
 ## 5.15. The For-Loop 
 
 As the initializer for a for loop, we can either declare a variable inline, or we can use one that’s already been declared. If we declare one in the initializer, that variable will go out of scope at the end of the for loop.  
+
+## 5.16. Random Values 
 
 We can use the `rand` function of the `cstdlib` library to generate a pseudo random number. But this function will give us the same random number (or numbers) each time we execute the program. That's because, its algorithm depends on a random seed, in order to get a different number or a set of different numbers, we need to change that seed.  
 We can do that using the `srand` function. We can pass it an integer as a parameter, which will be used as the seed. But then we have to change the seed every time we execute the code.  
