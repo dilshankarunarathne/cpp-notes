@@ -5,6 +5,9 @@
 3. [EnuEnumerated Types]() 
 4. [Pre Processor Directives]() 
 5. [Data Types and Operators]() 
+   1. [Numeric Data Types]() 
+   2. 
+6. 
 
 # 1. Introduction to C++ 
 
@@ -102,7 +105,7 @@ We can also use the `#pragma once`  to tell the compiler to only include this on
 
 C++ is a strongly typed language. We must declare the type of a variable in its declaration. 
 
-## Numeric Data Types 
+## 5.1. Numeric Data Types 
 
 There are two main types of integers, signed and unsigned. Signed integers can hold positive and negative numbers. Unsigned integers can only hold positive numbers.  
 We need to declare it using `signed` or `unsigned` keywords before the `int` keyword. If we just use int keyword, the default is signed integer. 
@@ -113,7 +116,7 @@ From C++ 11, it's recommended that we initialize a variable like given below, in
 double rate_of_interest {0.07};
 ```
 
-## The Auto Keyword 
+## 5.2. The Auto Keyword 
 
 There is also an `auto` keyword in C++. If we ever decided not to declare the data type and let the compiler decide it, we can use this keyword and pass in the value. 
 
