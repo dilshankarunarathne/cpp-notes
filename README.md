@@ -13,9 +13,12 @@
    6. [I/O Streams]() 
    7. [Operations with different numeric types]() 
    8. [Binary Operations]() 
-   9. []() 
+   9. [Unary Operations]() 
    10. []() 
    11. []() 
+   12. []() 
+   13. []() 
+   14. []() 
 6. []() 
 7. []() 
 8. []() 
@@ -177,6 +180,8 @@ We can use explicit casting to covert between data types. We need to mention the
 
 Assigning a value to a variable using the `=` operator is a **binary operation**. It has two operands, the left-hand side and the right-hand side. The left-hand side is called the lvalue (target) and the right-hand side is called the rvalue (source). The operation is always pushing the rvalue to the lvalue. The lvalue is always going to be a variable. We cannot assign a value to a constant. 
 All the operators (like `+`, `-` and even `=` ) returns a value. If we execute `int x=5`, `x` gets the value 1 and this assignment returns 5. If we push that into a Boolean variable, it’ll truncate into `True` (or 1). 
+
+## 5.8. Unary Operations 
 
 The operators that required to be applied on only one operand are called **unary operators**. The unary increment `++` and unary decrement `--` operators are the most commonly used unary operators. 
 These two unary operators can be post-fixed or pre-fixed (either `x++` or `++x`). 
