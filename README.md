@@ -4,7 +4,7 @@
 2. [Scope and Namespace]() 
 3. [EnuEnumerated Types]() 
 4. [Pre Processor Directives]() 
-5. 
+5. [Data Types and Operators]() 
 
 # 1. Introduction to C++ 
 
@@ -98,7 +98,7 @@ class Classname {
 
 We can also use the `#pragma once`  to tell the compiler to only include this only once. 
 
-# Data Types and Operators 
+# 5. Data Types and Operators 
 
 C++ is a strongly typed language. We must declare the type of a variable in its declaration. 
 There are two main types of integers, signed and unsigned. Signed integers can hold positive and negative numbers. Unsigned integers can only hold positive numbers. 
