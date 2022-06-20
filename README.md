@@ -1081,17 +1081,19 @@ bool operator== (const Circle& rho) {
 }
 ```
 
-The assignment operator (=) works without being overloaded. That's because, the compiler writes the task of the assignment operator by itself implicitly. We can overload it ourselves in a special situation. But the task of assignment is generally written by the compiler, because what it does is copying bit by bit from the right-hand operand to the corresponding left-hand operand. 
--------------------------------------------------------------------------------------------------
+The assignment operator (`=`) works without being overloaded. That's because, the compiler writes the task of the assignment operator by itself implicitly. We can overload it ourselves in a special situation. But the task of assignment is generally written by the compiler, because what it does is copying bit by bit from the right-hand operand to the corresponding left-hand operand. 
+
+```cpp
 class Circle {
 	//	everything
 	Circle& operator= (const Circle& rho);
 }
+
 Circle& Circle::operator= (const Circle& rho) {
 	this->radius = rho.radius;
 	return *this;
 }
--------------------------------------------------------------------------------------------------
+```
 
 If there are multiple assignments in a single statement [ a = b = c], they are evaluated right to left. Whenever we're writing our own assignment operator, the compiler doesn't write its own version for that class. 
 We have to overload the assignment operator when we have dynamic memory allocation in a class. But, if our class just have simple attributes, we don't need to overload the assignment operator. 
