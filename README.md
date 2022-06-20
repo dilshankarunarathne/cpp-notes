@@ -1408,7 +1408,8 @@ Advanced Microsoft Visual C++ and .Net Programming
 
 ### Auto Pointer 
 
-There was an *auto pointer* in the standard library, a previous attempt to make a smart pointer. It wasn’t as smart as it should be. It worked very poorly inside containers. The programmer had to delete each pointer explicitly when they create contained collections. Shared and unique pointers don’t have that problem. 
+There was an *auto pointer* in the standard library, a previous attempt to make a smart pointer. It wasn’t as smart as it should be.  
+It worked very poorly inside containers. The programmer had to delete each pointer explicitly when they create contained collections. Shared and unique pointers don’t have that problem. 
 We can switch all the raw pointers we use into shared pointers, we can forget about memory management and just treat it like a normal object. 
 
 Void Pointers
