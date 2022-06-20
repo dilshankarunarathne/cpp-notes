@@ -44,7 +44,7 @@
 15. [Object Oriented Programming]() 
     1.  [Classes]()
     2.  [Constructors]()
-    3.  []()
+    3.  [Member Accessing]()
     4.  []()
     5.  []()
     6.  []()
@@ -983,6 +983,8 @@ void Car::startEngine(){
     }
 }
 ```
+
+## 15.3. Member Accessing 
 
 In memory management, for each object the variable values are loaded to memory at each instance. But the methods are only loaded once. The methods will know on which object to work on, because we're calling them on each object, using the dot operator.  
 So, as long as we call the methods from a method which contains the objects (e.g.- main) there will not be any confusion.  
