@@ -1227,7 +1227,7 @@ class MyGenericClass <ForThisClass> {
 };
 ```
 
-Inheritance
+# Inheritance 
 
 We often have objects and entities which are bound hierarchically in parent-child relationships. And the best way to map them in programs is by using inheritance. The concept of inheritance remains same across all the programming languages. Inheritance uses the concept of 'is a' relationship. 
 Sub-types or sub-classes are extended from the general-type or the super-class to have all the general behaviors and features. 
