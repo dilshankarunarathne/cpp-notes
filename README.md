@@ -1922,9 +1922,11 @@ std::future<int> fu = std::async(std::launch::async | std::launch::deferred, fac
 In this case, the implementation will determine whether it should kick off another thread or not. It is also what's happening by default.  
 We can also use a future to pass a value from the parent thread to the child thread, not at the time of creating the thread, but at some point, in the future. For that we also need a **promise**.  
 
---------------------------------------------------------------------------
+```cpp
 #include <future>
+
 using namespace std;
+
 int factorial (std::future<int>& f) {
 	int res = 1;
 	int N = f.get();
@@ -1934,6 +1936,7 @@ int factorial (std::future<int>& f) {
 	cout << "Result is: " << res << endl;
 	return res;
 }
+
 int main() {
 	int x;
 	std::promise<int> p;
@@ -1945,7 +1948,7 @@ int main() {
 	x = fu.get();
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 When we call get_future() on the promise, it will return a future. We can pass it by reference to the child thread, and when the child thread needs the promised value, it will wait for it to be set by the parent thread. 
 If the parent thread do not set the promise, the f.get() function will get an exception: std::future::errc::broken_promise. And if we really cannot set a value, we can set an exception.
