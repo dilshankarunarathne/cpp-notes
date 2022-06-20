@@ -1412,7 +1412,7 @@ There was an *auto pointer* in the standard library, a previous attempt to make 
 It worked very poorly inside containers. The programmer had to delete each pointer explicitly when they create contained collections. Shared and unique pointers don’t have that problem. 
 We can switch all the raw pointers we use into shared pointers, we can forget about memory management and just treat it like a normal object. 
 
-# Void Pointers 
+### Void Pointers 
 
 A void pointer is declared using `void*` and is very powerful, but also very dangerous functionality.  
 They can point to anything. We can take any type of pointer and cast it into a void pointer, or we can cast a void pointer into any type of a pointer, without any runtime errors.  
@@ -1422,7 +1422,7 @@ Void pointer gives up all the type safety in C++. For an example, when a functio
 
 We should always try to use either polymorphism instead or a dynamic cast. With void pointers, developers have got flexibility to do almost anything with it, but they can cause errors very easily. There are no runtime checks, and even when an error is occurred, only a very little information is given by the runtime. 
 
-Pointers with Inheritance
+### Pointers with Inheritance 
 
 By using smart pointers in inheritance hierarchy, they would work just like raw pointers. So, we should not hesitate to use them. 
 If we create a super class pointer and assign it a sub class object, when we call an overridden method, unless it’s virtual, we’d still get the super class’ implementation executed. If the function is virtual, even though we refer to it using a super class pointer, we’d get the overridden implementation executed. 
