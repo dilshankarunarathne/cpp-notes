@@ -1486,7 +1486,8 @@ for_each (
 );
 ```
 
-Lambdas can return a value. If the lambda is single lined, and that line is a return statement, then we do not have to specify the return type, the compiler can infer. But in most cases, they are multi-lined, and we’d have to specify the return type.   [] (int n) -> double { /* --- */ }   This is a lambda that takes an integer, does an operation and return a double.  The body of the lambda have to contain at least one return statement. 
+Lambdas can return a value. If the lambda is single lined, and that line is a return statement, then we do not have to specify the return type, the compiler can infer.  
+But in most cases, they are multi-lined, and we’d have to specify the return type.   `[] (int n) -> double { /* --- */ }`  This is a lambda that takes an integer, does an operation and return a double.  The body of the lambda have to contain at least one return statement. 
 For a single lined lambda, we don’t need to specify.      [] (int n) { return n*n }
 
 Lambdas are implemented in C++ as anonymous function objects. When we write a lambda, the compiler rewrites the anonymous function object for it, by overriding the bracket operators for parameters and -> operator for return type and etc. 
