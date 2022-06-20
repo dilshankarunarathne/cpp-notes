@@ -1186,7 +1186,8 @@ T Test<T>::getSum(){
 
 There can be multiple type declarations in one template. 
 
-When we declare our generic class with a friend function, that friend function would not be a part of the class. So, we need to declare a separate template for the friend function, and that template must contain a different type name to stop shadowing. And then we can pass that typename as the parameter for the friend function. 
+When we declare our generic class with a *friend function*, that friend function would not be a part of the class. So, we need to declare a separate template for the friend function, and that template must contain a different type name to stop shadowing. And then we can pass that typename as the parameter for the friend function.  
+
 -------------------------------------------------------------------------------------------------
 template <typename T>
 class SimpleVector {
