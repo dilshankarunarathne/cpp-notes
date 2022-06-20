@@ -14,7 +14,7 @@
    7. [Operations with different numeric types]() 
    8. [Binary Operations]() 
    9. [Unary Operations]() 
-   10. []() 
+   10. [Comparing and Booleans]() 
    11. []() 
    12. []() 
    13. []() 
@@ -206,7 +206,7 @@ p = ++x; 	// ++x -> x = x + 1
 p = ++5; 	// ++5 -> 5 = 5 + 1
 ```
 
-## 5.10. 
+## 5.10. Comparing and Booleans 
 
 The result of any comparison in C++ is either `true` or `false`. It is a value of the `bool` data type. 
 True in C++ is represented with 1 and false in C++ is represented with 0. 
