@@ -1657,8 +1657,10 @@ This will return the id of the current thread (or the thread it's been called in
 t1.get_id()
 ```
 
-We should use threads as much as we have calls. But if our hardware cannot support that much threads, our performance would degrade. This is called 'oversubscription'. When we create more threads than available cpu cores, it would have to do a lot of contact switching. 
-	std::thread::hardware_concurrency()
+We should use threads as much as we have calls. But if our hardware cannot support that much threads, our performance would degrade. This is called '**oversubscription**'. When we create more threads than available cpu cores, it would have to do a lot of contact switching. 
+```cpp
+std::thread::hardware_concurrency()
+```
 This would give us an indication of how many threads we could truly run on our hardware. 
 
 A race condition occurs when the outcome of a program depends on the relative execution order of two or more threads. We should try to avoid race conditions. One way to avoid this is by using mutex to synchronize the access of the common resource. 
