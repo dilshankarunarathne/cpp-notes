@@ -65,9 +65,9 @@
     6.  [Void Pointers]() 
     7.  [Pointers with Inheritance]() 
 22. [Casting]() 
-    1.  [C-Style Casting]() 
-    2.  [Static Casting]() 
-    3.  [Dynamic Casting]() 
+    1.  [C-Style Cast]() 
+    2.  [Static Cast]() 
+    3.  [Dynamic Cast]() 
     4.  []() 
     5.  []() 
 23. []() 
@@ -1578,7 +1578,7 @@ We should not use pointers (`*`) instead, because we have to use the arrow opera
 
 # 22. Casting 
 
-## 22.1. C-Style Casting 
+## 22.1. C-Style Cast 
 
 We can use **C-style casting** to cast an object to another type. But this is very dangerous and could lead into a lot of potential errors.  
 There are other types of casting in C++, that uses templates. They are relatively much safer than C style castings.  
@@ -1592,7 +1592,11 @@ There are other types of casting in C++, that uses templates. They are relativel
 **Dynamic cast** `dynamic_cast<TypeToCast>` has runtime checks. It relays on knowing what the type is at runtime. It only works with casting to pointer to a class that has a virtual table.  
 The special thing about dynamic cast is, that it returns null if the cast fails. It’s slower to use dynamic casts, but it’s safer because it never misinterprets bits.  
 
+## 22.4. 
+
 There’s also a `const_cast`, that we could use to take a constant variable and cast it into a non-constant variable, so we could change it. This is not a beginner’s technique.  
+
+## 22.5. 
 
 There’s also a `reinterpret_cast` for bit twiddling, this involves knowing how long data types are and the pattern of bits inside the data type, and the bits and the meaning will be interpreted differently. This is really not for beginners. 
 
