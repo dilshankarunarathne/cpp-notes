@@ -1068,14 +1068,15 @@ istream& operator>>(istream& sin, const Circle& c){
 ```
 
 There are six relational operators in C++. All those returns a boolean value. These operators will use the left-hand operand and apply the operator function on that object with the right-hand operand passed in as parameter. Inside our class, we can implement these operators just like we did with arithmetic operators. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 bool operator> (const Circle& rho) {
 	return this->radius > rho.radius;
 }
 bool operator== (const Circle& rho) {
 	return this->radius == rho.radius;
 }
--------------------------------------------------------------------------------------------------
+```
 
 The assignment operator (=) works without being overloaded. That's because, the compiler writes the task of the assignment operator by itself implicitly. We can overload it ourselves in a special situation. But the task of assignment is generally written by the compiler, because what it does is copying bit by bit from the right-hand operand to the corresponding left-hand operand. 
 -------------------------------------------------------------------------------------------------
