@@ -1746,6 +1746,8 @@ int main() {
 }
 ```
 
+### Deadlocks 
+
 **Deadlock** is another problem that might arise, when dealing with thread synchronization with locks.  
 Consider the below given code. We're using two mutexes (two locks) for the same resource for some reason. The `function_1` calls the `shared_print` method, that locks `_mu` first and then `_mu2`, and the main method calls the `shared_print2` which locks `_mu2` first and then `_mu`.  
 There will be a time, in which `function_1` locks `_mu` and waiting for `_mu2` to be released, at the same time the `main` method locks `_mu2` and waiting for `_mu` to be released.  
