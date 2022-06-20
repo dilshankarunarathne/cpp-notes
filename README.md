@@ -1653,7 +1653,9 @@ std::this_thread::get_id()
 ```
 
 This will return the id of the current thread (or the thread it's been called in). To get the id of another thread, we could call,
-`t1.get_id()`  
+```cpp
+t1.get_id()
+```
 
 We should use threads as much as we have calls. But if our hardware cannot support that much threads, our performance would degrade. This is called 'oversubscription'. When we create more threads than available cpu cores, it would have to do a lot of contact switching. 
 	std::thread::hardware_concurrency()
