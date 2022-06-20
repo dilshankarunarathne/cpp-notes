@@ -1558,7 +1558,8 @@ try {
 }
 ```
 
-The exception is handed to each catch block in turn. The first one that can handle it, gets it. The best practice is to order catch blocks by more specific exceptions first. Also, we must catch exceptions by reference, it’s great for catching derived exceptions. 
+The exception is handed to each `catch` block in turn. The first one that can handle it, gets it. The best practice is to order catch blocks by more specific exceptions first. Also, we must catch exceptions by reference, it’s great for catching derived exceptions.  
+
 In C++, the programmer has a lot of flexibility. Back in the day, we could throw just about anything. An integer, a string or even an instance of any class could be thrown. And then we could have a catch block that catches integers or etc. So, it’s a great help to have an exceptions class in the standard library. The class exception is the base class of the hierarchy of exceptions. The commonly used exceptions are instances of classes that derived from this class. 
 Standard exception is defined in the header std::except. It has a member function what() that returns a string which is useful for error messages and debugging. There are two main types of exceptions. 
 •	logic_error  	 –   	domain_error, invalid_argument, length_error, out_of_range
