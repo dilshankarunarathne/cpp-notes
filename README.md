@@ -1562,9 +1562,12 @@ The exception is handed to each `catch` block in turn. The first one that can ha
 
 In C++, the programmer has a lot of flexibility. Back in the day, we could throw just about anything. An integer, a string or even an instance of any class could be thrown. And then we could have a catch block that catches integers or etc. So, it’s a great help to have an exceptions class in the standard library.  
 The class `exception` is the base class of the hierarchy of exceptions. The commonly used exceptions are instances of classes that derived from this class.  
-Standard exception is defined in the header `std::except`. It has a member function what() that returns a string which is useful for error messages and debugging. There are two main types of exceptions. 
-•	logic_error  	 –   	domain_error, invalid_argument, length_error, out_of_range
-•	runtime_error  	 – 	overflow_error, range_error, underflow_error
+
+Standard exception is defined in the header `std::except`. It has a member function `what()` that returns a string which is useful for error messages and debugging.  
+There are two main types of exceptions. 
+* logic_error: domain_error, invalid_argument, length_error, out_of_range
+* runtime_error: overflow_error, range_error, underflow_error 
+
 All the derived classes of exceptions are just marker classes. They don’t add any new members. They have only changed the name, so we could catch them or identify them more specifically. 
 To trigger (throw) an exception, we can use the throw keyword. When we caught an exception, or when we prevented an error, we could throw an exception up the stack to inform the caller. We should be as specific as we can, on our choice of what type of derived exception to throw. We can pass in a string with some information as the argument. 
 If the thrown exception is caught by reference, the caller will get the benefit from our choice of being specific with the exception type. It will have information containing the given string and the type of the error. But if it was caught by value, the exception will suffer from slicing, and leave out the specified derived exception type. Even though it still has the given string information, this is very bad practice. 
