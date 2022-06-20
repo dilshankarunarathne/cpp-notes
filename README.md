@@ -1153,7 +1153,11 @@ int main() {
 }
 ```
 
-The compiler is clever enough to determine the type of the passed in arguments and replace T with integer. Or we can explicitly tell the compiler what type the parameters are, by pre-fixing the parameters with the type inside angle brackets. [ compareTo <int> (x, y); ]
+The compiler is clever enough to determine the type of the passed in arguments and replace `T` with integer. Or we can explicitly tell the compiler what type the parameters are, by pre-fixing the parameters with the type inside angle brackets. 
+```cpp
+compareTo <int> (x, y); 
+```
+
 The compareTo method with the template will still work fine for a class we implemented ourselves, as long as it's overridden the comparison operators. 
 
 When we define our own generic class, that has a generic member, once we implement its method outside of the class, we need to specify a template and a type placeholder post-fixed with the class name in the scope resolution operator. 
