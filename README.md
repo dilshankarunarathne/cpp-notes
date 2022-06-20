@@ -1160,8 +1160,9 @@ compareTo <int> (x, y);
 
 The compareTo method with the template will still work fine for a class we implemented ourselves, as long as it's overridden the comparison operators.  
 
-When we define our own generic class, that has a generic member, once we implement its method outside of the class, we need to specify a template and a type placeholder post-fixed with the class name in the scope resolution operator. 
--------------------------------------------------------------------------------------------------
+When we define our own generic class, that has a generic member, once we implement its method outside of the class, we need to specify a template and a type placeholder post-fixed with the class name in the scope resolution operator.  
+
+```cpp
 template<typename T>
 class Test{
     private:
@@ -1179,7 +1180,8 @@ template<typename T>
 T Test<T>::getSum(){
     return x + y;
 }
--------------------------------------------------------------------------------------------------
+```
+
 There can be multiple type declarations in one template. 
 
 When we declare our generic class with a friend function, that friend function would not be a part of the class. So, we need to declare a separate template for the friend function, and that template must contain a different type name to stop shadowing. And then we can pass that typename as the parameter for the friend function. 
