@@ -1366,11 +1366,12 @@ Smart pointers help to remove the explicit deletes. The make functions help to r
 When we use the default constructor of the `unique_ptr`, we’ll get a *null pointer*. We don’t explicitly assign it into a null pointer.  
 We can get help from the `unique_ptr` class templates and use the `make_unique` function to create a unique pointer. This function even works with most user defined types, by forwarding parameters and creating them naturally and efficiently.  
 
--------------------------------------------------------------------------------------------------
+```cpp
 auto sp1 = unique_ptr<int> { new int { 123 } };
 auto sp2 = make_unique<int>(345);
 auto sp3 = movie(sp1);
--------------------------------------------------------------------------------------------------
+```
+
 The move function, makes the sp1 pointer give up it’s ownership and release the object to be owned by sp3. We cannot use the assignment operator to do this. 
 Unique pointers even allow Boolean conversion, so we could pass the pointer into a Boolean statement to check if it holds a non-null pointer. 
 We can call the release method on our object, to release all the pointers attached to it. There’s also a reset method we could use to reset the ownership of an object. 
