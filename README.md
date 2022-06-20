@@ -48,7 +48,7 @@
     4.  [Const with OOP]()
     5.  [Object Life-Cycle]()
     6.  []()
-16. []() 
+16. [Make]() 
 17. []() 
 18. []() 
 19. []() 
@@ -1044,7 +1044,7 @@ In C++ there is a saying **RAII – Resource Acquisition is Initialization**, th
 
 Whenever if needed, we can use `{ }` to cover any code. If we cover an object with a pair of curly braces, once control reaches the end brace, the destructor will be called.  
 
-# Make 
+# 16. Make 
 
 If we have a project with a class called testclass that's declare in `testclass.h` and implemented in `testclass.cpp` with a client named `main.cpp`, the command to compile all files looks like this.  
 `g++ -o myprogram -Wall main.cpp testclass.cpp`  
