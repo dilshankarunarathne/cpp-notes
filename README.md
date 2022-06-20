@@ -1004,7 +1004,8 @@ Circle operator++ (int) {
 }
 ```
 
-We need to overload the insertion operator << , for our objects to be able to output into a stream or printed out. Insertion operator is a binary operator. The left-hand operand can be cout or fout. And the right-hand operand is the object. The call would be like [ cout.operator<<(object_variable) ]. The operator function is called by the cout object. It's not our object which makes the call to the insertion operator function. We also cannot override the function in the ostream class. 
+We need to overload the insertion operator `<<`, for our objects to be able to output into a stream or printed out. Insertion operator is a binary operator. The left-hand operand can be `cout` or `fout`. And the right-hand operand is the object.  
+The call would be like `cout.operator<<(object_instance)`. The operator function is called by the cout object. It's not our object which makes the call to the insertion operator function. We also cannot override the function in the ostream class. 
 To get around this, we need to implement the insertion operator as a global function. Even though we overloaded all the previous operators as members of the class, they also can be implemented as global functions. 
 -------------------------------------------------------------------------------------------------
 ostream& operator<< (ostream& sout, const Circle& c) {
