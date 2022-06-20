@@ -12,7 +12,7 @@
    5. [Garbage Values]() 
    6. [I/O Streams]() 
    7. [Operations with different numeric types]() 
-   8. []() 
+   8. [Binary Operations]() 
    9. []() 
    10. []() 
    11. []() 
@@ -172,6 +172,8 @@ To extract a value from the keyboard using the `cin` object and assign that to a
 
 Once we apply some operation between two integers, the result is always going to be an integer. If we apply an operation between an integer and a double, the result is going to be a double. Operations between two different data types, the resulting data type is always going to be whichever is the highest precise. 
 We can use explicit casting to covert between data types. We need to mention the casting type inside parenthesis, before the variable or value. 
+
+## 5.7. Binary Operations 
 
 Assigning a value to a variable using the `=` operator is a **binary operation**. It has two operands, the left-hand side and the right-hand side. The left-hand side is called the lvalue (target) and the right-hand side is called the rvalue (source). The operation is always pushing the rvalue to the lvalue. The lvalue is always going to be a variable. We cannot assign a value to a constant. 
 All the operators (like `+`, `-` and even `=` ) returns a value. If we execute `int x=5`, `x` gets the value 1 and this assignment returns 5. If we push that into a Boolean variable, it’ll truncate into `True` (or 1). 
