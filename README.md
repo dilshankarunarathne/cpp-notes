@@ -1102,14 +1102,15 @@ We have to overload the assignment operator when we have dynamic memory allocati
 If someone accidently do  `obj1 = obj2` , this will lead to a crash. So, whenever we're overloading the assignment operator, we need to perform a check to see if it's the same object in memory by comparing the pointers.	 `if (this != &rho)` 
 
 We also don't need to implement the copy constructor by ourselves. The copy constructor is used to copy an object's content to another object. It's done by copying every bit from the source object to the destination object. The compiler is able to do this by itself. We need to write this explicitly, when it comes to dynamic memory allocation for an attribute within our class. 
--------------------------------------------------------------------------------------------------
+
+```cpp
 class Circle {
 	//	everything
 	Circle (const Circle& rho) {
 		this->radius = rho.radius;
 	}
 }
--------------------------------------------------------------------------------------------------
+```
 
 Note one thing: if we execute this [ Circle c1, c2; c1 = c2; ] the assignment operator will be called upon the assignment. But if we do the assignment in line with the declaration like this [ Circle c1 = c2 ], the compiler will call the copy constructor for that. That's because, there cannot be a chained assignment while the object is being created and the constructor does not return any value. 
 
