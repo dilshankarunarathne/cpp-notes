@@ -1304,7 +1304,8 @@ Likewise, when the destructor is called, the sub class’s destructor (the destr
 
 # Pure Virtual Function 
 
-If we have a function that's common among the child-classes, we can declare that in the parent class. But, what if we the behavior of that function is completely different among the child classes, and have no common behavior to implement on the parent class? Then we can declare a purely virtual function. It's a function declared in the super type, that has not implemented any behavior. So, the child types have the full responsibility of the implementation, but still, any object of that super class still can perform that function. We can declare a virtual method in the super type using the virtual keyword.
+If we have a function that's common among the child-classes, we can declare that in the parent class. But, what if we the behavior of that function is completely different among the child classes, and have no common behavior to implement on the parent class? Then we can declare a *purely virtual function*.  
+It's a function declared in the super type, that has not implemented any behavior. So, the child types have the full responsibility of the implementation, but still, any object of that super class still can perform that function. We can declare a virtual method in the super type using the virtual keyword.
 	virtual void printMyName() = 0;
 Until we complete the implementation of a virtual function in the sub type, we cannot instantiate an object of that sub type. 
 
