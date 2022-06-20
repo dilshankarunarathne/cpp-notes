@@ -1382,7 +1382,7 @@ We can pass a unique pointer to a function by value. If we write a function that
 
 ```cpp
 auto GetMyObj() -> unique_ptr<MyObj> {
-	return make_unique<MyObj> (// construct);
+	return make_unique<MyObj> ( /* construct */ );
 }
 
 auto TakeThisUPtr (unique_ptr<MyObj> up) -> unique_ptr<MyObj> {
