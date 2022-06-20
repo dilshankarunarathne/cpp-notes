@@ -1171,11 +1171,13 @@ class Test{
         Test(T x, T y);
         T getSum();
 };
+
 template <typename T>
 Test<T>::Test(T x, T y){
     this->x = x;
     this->y = y;
 }
+
 template<typename T>
 T Test<T>::getSum(){
     return x + y;
