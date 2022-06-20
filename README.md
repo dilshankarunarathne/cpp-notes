@@ -66,8 +66,8 @@
     7.  [Pointers with Inheritance]() 
 22. [Casting]() 
     1.  [C-Style Casting]() 
-    2.  []() 
-    3.  []() 
+    2.  [Static Casting]() 
+    3.  [Dynamic Casting]() 
     4.  []() 
     5.  []() 
 23. []() 
@@ -1583,9 +1583,11 @@ We should not use pointers (`*`) instead, because we have to use the arrow opera
 We can use **C-style casting** to cast an object to another type. But this is very dangerous and could lead into a lot of potential errors.  
 There are other types of casting in C++, that uses templates. They are relatively much safer than C style castings.  
 
-
+## 22.2. Static Casting 
 
 **Static casting** is used as `static_cast<TypeToCast>` can be used instead of C style cast. They are checked at compile time. If the compiler doesn’t see a relation between two types, it’ll return an error or a warning saying the types are incompatible.  
+
+## 22.3. Dynamic Casting 
 
 **Dynamic cast** `dynamic_cast<TypeToCast>` has runtime checks. It relays on knowing what the type is at runtime. It only works with casting to pointer to a class that has a virtual table.  
 The special thing about dynamic cast is, that it returns null if the cast fails. It’s slower to use dynamic casts, but it’s safer because it never misinterprets bits.  
