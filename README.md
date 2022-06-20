@@ -1404,6 +1404,7 @@ The unique pointer class allows us to override it implicit behavior of deletion.
 **Windows SDK** provides the `ComPtr`, that we could use with the **COM** and *WinRT* interfaces. The Windows SDK ships with a *Visual C++ compiler*, and this com pointer is what we should use when we’re dealing directly with COM interfaces.  
 
 *More On This To Come...*  
+Advanced Microsoft Visual C++ and .Net Development  
 
 ### Auto Pointer 
 
