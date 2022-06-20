@@ -1506,17 +1506,21 @@ Similarly, we can capture everything local to the calling scope by reference, by
 We can mix and match these two approaches. Some by value and some by reference.  
 All these captured member variables are **constants** by default. If we want to make changes, we need to use `mutable` keyword. If the members are captured by value, the changes will only be made to the copies, and there will be no impact on the calling local scope. But if they were captured by reference, the lambda will change the original members. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 vector <int> v;
 int x = 3;
 int y = 7;
 // add elements
 cout << “printing elements between 3 and 7” << endl;
-for_each (v.begin(), v.end(), [x,y] (int n) {
-if (n >= x && n <= y) 
-	cout << n << “ “; 
-});
--------------------------------------------------------------------------------------------------
+for_each (
+	v.begin(), 
+	v.end(), 
+	[x,y] (int n) {
+		if (n >= x && n <= y) 
+			cout << n << “ “; 
+	}
+);
+```
 
 In the below given example, we’re capturing the whole local scope by value. So, even though we’re using the mutable keyword, x and y will not be changed in the outer scope. Only their copies inside the anonymous function object will be changed. But since we’re taking r as an integer reference, the values inside the vector will be changed. 
 -------------------------------------------------------------------------------------------------
