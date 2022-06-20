@@ -79,7 +79,7 @@
     4.  [Std-Move]() 
     5.  [Over-Subscription]() 
     6.  [Race Conditions]() 
-    7.  []() 
+    7.  [Deadlocks]() 
     8.  []() 
     9.  []() 
     10. []() 
@@ -1921,7 +1921,7 @@ int main() {
 }
 ```
 
-### Deadlocks 
+## 25.7. Deadlocks 
 
 **Deadlock** is another problem that might arise, when dealing with thread synchronization with locks.  
 Consider the below given code. We're using two mutexes (two locks) for the same resource for some reason. The `function_1` calls the `shared_print` method, that locks `_mu` first and then `_mu2`, and the main method calls the `shared_print2` which locks `_mu2` first and then `_mu`.  
