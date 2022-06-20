@@ -6,7 +6,7 @@
 4. [Pre Processor Directives]() 
 5. [Data Types and Operators]() 
    1. [Numeric Data Types]() 
-   2. []() 
+   2. [The Auto Keyword]() 
    3. []() 
    4. []() 
 6. []() 
