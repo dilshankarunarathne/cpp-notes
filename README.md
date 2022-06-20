@@ -970,20 +970,21 @@ When we apply an operation on two operands, compiler will call the implemented f
 Some operators cannot be overridden. The scope resolution operator `::`, conditional operator `?:`, member access operator (the dot `.`) cannot be overloaded.  
 In most cases, the return type is also the type of the same class.  
 
--------------------------------------------------------------------------------------------------
+```cpp
 Circle operator+ (const Circle& rho) {
 	Circle result;
 	result.radius = this->radius + rho.radius;
 	return result;
 }
+
 Circle operator- (const Circle& rho) {
 	Circle result;
 	result.radius = abs(this->radius - rho.radius);	
 	return result;
 }
--------------------------------------------------------------------------------------------------
+```
 
-Unary operators like unary increment and unary decrement can be pre or post fixed. Consider [ c = ++c ], in pre-fixed increment, first the value will be incremented and then be applied to the variable. Consider [ c = C++ ], in post-fixed increment, the value will be applied to the variable first and then it will be incremented. 
+Unary operators like unary increment and unary decrement can be pre or post fixed. Consider [ c = ++c ], in pre-fixed increment, first the value will be incremented and then be applied to the variable. Consider [ c = C++ ], in post-fixed increment, the value will be applied to the variable first and then it will be incremented.  
 For unary operators, we need to override two function for pre-fixed and post-fixed versions. In pre-fixed function, there will be no parameters. But the post-fixed function will take a dummy int parameter as recommended by C++. It is only used to make a difference between the pre-fixed and post-fixed unary operators. This dummy parameter is not a normal parameter. We wouldn't give it a name. It's declared only by the type. 
 -------------------------------------------------------------------------------------------------
 Circle operator++ () {
