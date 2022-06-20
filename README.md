@@ -1708,12 +1708,14 @@ void shared_print (string msg, int id) {
 
 Still with all that, the shared resource might be available and be used from another thread, without going through the lock. To protect the resource completely, the mutex must be bundled together with the shared resource. 
 
---------------------------------------------------------------------------
+```cpp
 #include <iostream>
 #include <string>
 #include <thread>
 #include <mutex>
+
 using namespace std;
+
 class Logfile {
 	std::mutex m_mutex;
 	ofstream f;
@@ -1726,11 +1728,13 @@ class Logfile {
 			f << "From " << id << ": " << value << endl;
 		} // we should never let f be available to the outside 
 };
+
 void function_1 (Logfile& log) {
 	for (int i=0; i>-100; i--) {
 		log.shared_print(string("From t1: "), i);
 	}
 }
+
 int main() {
 	Logfile log;
 	std::thread t1(function_1, std::ref(log));
@@ -1740,7 +1744,7 @@ int main() {
 	t1.join();
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 Deadlock is another problem that might arise, when dealing with thread synchronization with locks. Consider the below given code. We're using two mutexes (two locks) for the same resource for some reason. The function_1 calls the shared_print method, that locks _mu first and then _mu2, and the main method calls the shared_print2 which locks _mu2 first and then _mu. There will be a time, in which function_1 locks _mu and waiting for _mu2 to be released, at the same time the main method locks _mu2 and waiting for _mu to be released. This is a deadlock, and our program will hang from there. 
 
