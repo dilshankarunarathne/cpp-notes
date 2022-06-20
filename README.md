@@ -1296,8 +1296,8 @@ int main(){
 If we declare the `p` pointer as a `SuperCls` object, the `method1` from the `SuperCls` will be called, and the overridden method will never be executed.  
 If we declare the `p` pointer `SubCls`, the `method1` from the `SubCls` will be executed, and within that we have called the `method1` from the `SuperCls`.  
 
-If the developer of the super class implements a method as virtual, once we call the method, the sub class’ implementation will run. If it’s not declared as virtual, which is the default, the method of the super class will be executed, because it’s faster. This is a specialty in C++. 
-The virtual functions are worked using the virtual table. This is happening behind the curtains, but if our class has a lot of virtual functions, this might cost a lot of memory and could take some time for our program to be executed. 
+If the developer of the super class implements a method as **virtual**, once we call the method, the sub class’ implementation will run. If it’s not declared as virtual, which is the default, the method of the super class will be executed, because it’s faster. This is a specialty in C++.   
+The *virtual functions* are worked using the *virtual table*. This is happening behind the curtains, but if our class has a lot of virtual functions, this might cost a lot of memory and could take some time for our program to be executed. 
 
 If we’re implementing a class that inherits another class, we can write the sub class’ constructor to call the super class’ constructor and then assign the member variables that are special to the sub class. In that way, when we instantiate the sub class, the constructor for the super class will be called (and finished executing) before the construction of the sub class ends. Likewise, when the destructor is called, the sub class’s destructor (the destructor of the innermost class) will be called first, and then the super class’ destructor will be called. 
 
