@@ -1414,7 +1414,10 @@ We can switch all the raw pointers we use into shared pointers, we can forget ab
 
 # Void Pointers 
 
-A void pointer is declared using `void*` and is very powerful, but also very dangerous functionality. They can point to anything. We can take any type of pointer and cast it into a void pointer, or we can cast a void pointer into any type of a pointer, without any runtime errors. This was used very commonly as a function parameter. But we should try to avoid it as much as we can. 
+A void pointer is declared using `void*` and is very powerful, but also very dangerous functionality.  
+They can point to anything. We can take any type of pointer and cast it into a void pointer, or we can cast a void pointer into any type of a pointer, without any runtime errors.  
+This was used very commonly as a function parameter. But we should try to avoid it as much as we can.  
+
 Void pointer gives up all the type safety in C++. For an example, when a function takes a void pointer as an argument, and then cast it into an integer, void pointers goes to the memory location and take the bits in that location and actually builds up an integer with it. No runtime errors or warnings are given. 
 We should always try to use either polymorphism instead or a dynamic cast. With void pointers, developers have got flexibility to do almost anything with it, but they can cause errors very easily. There are no runtime checks, and even when an error is occurred, only a very little information is given by the runtime. 
 
