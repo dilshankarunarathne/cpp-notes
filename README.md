@@ -1807,7 +1807,9 @@ class Logfile {
 
 `std::adopt_lock` tells the locker, the mutex is already locked and to adopt to the ownership of that mutex, so when the locker goes out of scope, it should unlock the mutex.  
 
-There is a unique_lock, which is similar to lock_guard but it gives more flexibility to implement a finer-grained lock. When we use a unique lock, instead of a lock guard, we can construct the locker, without actually locking the mutex. To do that, we need pass in a second parameter of std::defer_lock. When we do that, the given mutex is owned by the locker (unique lock), but the mutex is not locked. So, we're able to do something else, that doesn't use the shared resource. When we do need to lock it, we can call locker.lock() method. And if we need to do something else again, that doesn't use the shared resource, we can call locker.unlock() method. We can repeat locking and unlocking as much as we like. This functionality is not given by lock_guard. 
+There is a `unique_lock`, which is similar to `lock_guard` but it gives more flexibility to implement a *finer-grained* lock.  
+When we use a unique lock, instead of a lock guard, we can construct the locker, without actually locking the mutex. To do that, we need pass in a second parameter of `std::defer_lock`. When we do that, the given mutex is owned by the locker (unique lock), but the mutex is not locked. So, we're able to do something else, that doesn't use the shared resource.  
+When we do need to lock it, we can call `locker.lock()` method. And if we need to do something else again, that doesn't use the shared resource, we can call `locker.unlock()` method. We can repeat locking and unlocking as much as we like. This functionality is not given by `lock_guard`. 
 
 --------------------------------------------------------------------------
 class Logfile {
