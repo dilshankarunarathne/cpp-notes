@@ -392,6 +392,8 @@ To print out the elements, either these ways are allowed.  `a[i]`    `i[a]`   `*
 * If we do not declare the array's length and initialize it with some values, the compiler's going to create the array with the given number of elements. 
 * Multi-dimensional arrays are also allowed in C++.
 
+## 8.1. The Range-For Loop 
+
 In C++ 11, a range for loop was introduced. We can use it to traverse an array. The syntax is similar to for each loop 
 `for(data_type_of_elements   identifier  :  collection)`
 We can get a reference to variables in the for-range loop, and use the identifier to manipulate the elements of that array. We can also use auto type for simple things, so we can pass in different types of arrays. 
