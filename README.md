@@ -1951,6 +1951,7 @@ int main() {
 ```
 
 When we call `get_future()` on the *promise*, it will return a *future*. We can pass it by reference to the child thread, and when the child thread needs the promised value, it will wait for it to be set by the parent thread.  
+
 If the parent thread do not set the promise, the `f.get()` function will get an exception: `std::future::errc::broken_promise`. And if we really cannot set a value, we can set an exception. 
 ```cpp
 p.set_exception(std::make_exception_ptr(std::runtime_error("To err is human")));
