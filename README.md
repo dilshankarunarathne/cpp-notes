@@ -39,7 +39,7 @@
     1.  [Vectors]() 
     2.  [Map]() 
     3.  [Other Collections]() 
-13. []() 
+13. [Algorithms: Sorting and Searching]() 
 14. []() 
 15. []() 
 
@@ -764,7 +764,7 @@ There is also a **set** implementation, that has extra functionality for mathema
 
 We can use the **multimap**, if we want a map-like structure, but with more than one value per key. 
 
-# Sorting and Searching 
+# 13. Algorithms: Sorting and Searching 
 
 Sorting and searching functions in C++ come externally to collections. They are in a header called `algorithm`. They take a collection or in most cases, a pair of iterators, so it can search from given beginning to the given end of the collection. We can use the same functions in any collection. 
 
