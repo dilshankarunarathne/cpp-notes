@@ -1049,7 +1049,7 @@ ostream& operator<<(ostream& sout, const Circle& c){
 }
 ```
 
-We have to return the ostream object because, otherwise multiple insertion [ cout << c1 << c2 ] will not be possible. If we had void in as the return in the operator<< function, we'll still be able to print out one Circle object, but not more than one. 
+We have to return the `ostream` object because, otherwise multiple insertion `cout << c1 << c2`  will not be possible. If we had void in as the return in the operator<< function, we'll still be able to print out one Circle object, but not more than one. 
 When we take cout as an input and return it back, when we have more than one objects to insert, those operations will be executed one by one. If we execute this [ cout << c1 << c2 ], first [ cout << c1 ] will be executed. After that operation, the cout object is returned back to that point. Then we'd have [ cout << c2 ]. That's why we need to return the ostream reference back to the caller. 
 
 Overloading extraction operator is just the same. We can implement a global method for operator>> and declare a friend function in the class. It should take and return an istream reference. 
