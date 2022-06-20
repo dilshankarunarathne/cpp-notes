@@ -1434,7 +1434,8 @@ So, we should make the destructor virtual, if the class have any special closing
 If we have a sub class with more member variables than the super class, there will be slicing errors. An error could happen, when we copy a super class object into a sub class, or vice-versa. Either there will be no room to put the extra members in the super class (**slicing**), or there will be information missing in the derived class, if we try to copy an object. This is happened very commonly when objects are passed into functions.  
 If we have a function that takes arguments by value and not by reference, when we pass in the wrong type, either the copy will fail or there will be a slicing.  
 
-To avoid these errors, we need to use pointers or references. Among many solutions, using references (&) could keep polymorphism and still work easily with the derived members (using the dot), when we try to refer to a sub class object as a super class object. We should not use pointers (*) instead, because we have to use the arrow operator to access members, and we cannot call the derived members of the sub class with it. 
+To avoid these errors, we need to use pointers or references. Among many solutions, using references (`&`) could keep polymorphism and still work easily with the derived members (using the dot `.`), when we try to refer to a sub class object as a super class object.  
+We should not use pointers (`*`) instead, because we have to use the arrow operator to access members, and we cannot call the derived members of the sub class with it.  
 
 Casting
 
