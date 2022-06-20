@@ -285,7 +285,7 @@ int main() {
 }
 ```
 
-# Functions 
+# 6. Functions 
 
 In C++, functions can only return one value. C++ allows us to overload functions (polymorphism). Function can be inside classes (member functions) or not (global/ free functions).  
 When we pass in variables as parameters into a function in C++, the arguments we are passing inside parenthesis in the function call, are called **actual arguments**. 
