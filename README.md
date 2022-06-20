@@ -11,7 +11,7 @@
    4. [Constants]() 
    5. [Garbage Values]() 
    6. [I/O Streams]() 
-   7. []() 
+   7. [Operations with different numeric types]() 
    8. []() 
    9. []() 
    10. []() 
@@ -167,6 +167,8 @@ If we create a variable and not initialize it by giving it a value, initially it
 
 `istream` is a class in the `iostream` library, and `cin` is a global object that we can use to take console keyboard input to the program. 
 To extract a value from the keyboard using the `cin` object and assign that to a variable, we need to use `>>` extraction operator. This class is intelligent enough to extract the value accordingly to the type. 
+
+## 5.6. Operations with different numeric types 
 
 Once we apply some operation between two integers, the result is always going to be an integer. If we apply an operation between an integer and a double, the result is going to be a double. Operations between two different data types, the resulting data type is always going to be whichever is the highest precise. 
 We can use explicit casting to covert between data types. We need to mention the casting type inside parenthesis, before the variable or value. 
