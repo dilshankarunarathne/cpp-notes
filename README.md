@@ -1586,9 +1586,9 @@ There is a cost on using exceptions. If no exception is thrown in a `try` block,
 
 # Concurrency 
 
-There are two approaches to concurrent programming.
-The first is multiprocessing. In this approach there are multiple processes, each process with a single thread, and the processes communicate with each other in preliminary ways such as files, pipes, message queues and etc. But it is usually slow and complicated to start a lot of processes. Also, processes take a considerable amount of overhead, so one process would not accidently step onto another process. 
-The second method of concurrent programming is multithreading. In this approach, one process contains two or more threads, and those threads communicate with each other by using shared memory. A thread is considered to be a light weight process, so they are easy and fast to start. Threads also takes very lower overhead. Communicating through a shared memory is much faster than communicating through pipelines or files. 
+There are two approaches to concurrent programming.  
+The first is **multiprocessing**. In this approach there are multiple processes, each process with a single thread, and the processes communicate with each other in preliminary ways such as files, pipes, message queues and etc. But it is usually slow and complicated to start a lot of processes. Also, processes take a considerable amount of overhead, so one process would not accidently step onto another process.  
+The second method of concurrent programming is **multithreading**. In this approach, one process contains two or more threads, and those threads communicate with each other by using shared memory. A thread is considered to be a light weight process, so they are easy and fast to start. Threads also takes very lower overhead. Communicating through a shared memory is much faster than communicating through pipelines or files. 
 The downsides of multithreading are, that they are difficult to implement, and they cannot run on distributed systems.  
 
 --------------------------------------------------------------------------
