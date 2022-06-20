@@ -965,8 +965,9 @@ Then in the same way, we need to indicate how to build the required dependencies
 
 C++ allows us to overload operators. But this functionality can change the natural meaning of operators. That's why most languages don't allow operator overloading.  
 Implicit data types and classes have operators defined in the compiler. But for explicit classes, we need to implement how those operators should work. That's what operator overloading is.  
-When we apply an operation on two operands, compiler will call the implemented function regarding to that operator on the left-hand operand, and pass in the right-hand operand as the parameter. The compiler will look for the corresponding method within the class definition. Usual operator methods named operator+ , operator- and so on. 
-Some operators cannot be overridden. Scope resolution operator :: , conditional operator ?: , member access operator (the dot .) cannot be overloaded. In most cases, the return type is also the type of the same class. 
+When we apply an operation on two operands, compiler will call the implemented function regarding to that operator on the left-hand operand, and pass in the right-hand operand as the parameter. The compiler will look for the corresponding method within the class definition. Usual operator methods named `operator+`, `operator-` and so on.  
+Some operators cannot be overridden. The scope resolution operator `::`, conditional operator `?:`, member access operator (the dot `.`) cannot be overloaded. In most cases, the return type is also the type of the same class.  
+
 -------------------------------------------------------------------------------------------------
 Circle operator+ (const Circle& rho) {
 	Circle result;
