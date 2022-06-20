@@ -32,7 +32,7 @@
     2.  [Operations on Strings]() 
     3.  [C-style Strings]() 
 10. [File I/O]() 
-11. []() 
+11. [Dynamic Memory Allocation]() 
 12. []() 
 13. []() 
 14. []() 
@@ -646,7 +646,7 @@ int main () {
 
 We can use the `setw`(width) method to print data into cout with a better structure. This class is in `iomanip` header. There is other functionality given in C++ to make it easier. 
 
-# Dynamic Memory Allocation 
+# 11. Dynamic Memory Allocation 
 
 Usually in C++, the compiler will write instructions for memory allocation during the compilation of a program. Then it actually uses the allocated memory in execution. This is called **compile-time allocation**.  
 
