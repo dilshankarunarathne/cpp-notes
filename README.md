@@ -1457,13 +1457,14 @@ A lambda is an expression that represents some operation. We can use lambdas to 
 
 In the `for_each` example code, we had to write a separate (tiny) print function to pass in as the third argument. It could be irritating to maintain these small functions. We can write the same `for_each` by using a lambda instead.  
 
--------------------------------------------------------------------------------------------------
+```cpp
 vector <int> v;
 // add elements
 for_each (v.begin(), v.end(), 
 	[] (int i) {cout << i << “ “ ;}
 );
--------------------------------------------------------------------------------------------------
+```
+
 
 A lambda don’t necessarily have to be in a single line or a single statement. Here’s another lambda that has multiple statements. 
 -------------------------------------------------------------------------------------------------
