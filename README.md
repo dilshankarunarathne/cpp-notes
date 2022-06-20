@@ -1,8 +1,8 @@
 # Topics 
 
-1. [Introduction to C++]() 
-2. [Scope and Namespace]() 
-3. [EnuEnumerated Types]() 
+1. [Introduction to C++](https://github.com/dilshankarunarathne/cpp-notes#1-introduction-to-c) 
+2. [Scope and Namespace](https://github.com/dilshankarunarathne/cpp-notes#2-scope-and-namespace) 
+3. [EnuEnumerated Types](https://github.com/dilshankarunarathne/cpp-notes#3-enums) 
 4. [Pre Processor Directives]() 
 5. [Data Types and Operators]() 
    1. [Numeric Data Types]() 
