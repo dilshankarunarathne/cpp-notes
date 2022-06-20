@@ -1883,9 +1883,11 @@ The lock could be awakened by itself while sleeping and waiting for the other th
 
 There is an `async` method in `std` that we could use in small occasions where we need a thread to do just a simple job. It doesn't return a thread, it returns a **future**. A future is a channel that we could use to receive data from a child thread. It's `get()` function will wait for the child thread to finish, and return the result. 
 
---------------------------------------------------------------------------
+```cpp
 #include <future>
+
 using namespace std;
+
 int factorial (int N) {
 	int res = 1;
 	for (int i=N; i>1; i--) {
@@ -1894,13 +1896,14 @@ int factorial (int N) {
 	cout << "Result is: " << res << endl;
 	return res;
 }
+
 int main() {
 	int x;
 	std::future<int> fu = std::async(factorial, 4);
 	x = fu.get();
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 A future object represents an object by using which we can get something in the future. It can only call get() function once. But the async function will not always kick off another thread. If we call it with this,
 	std::future<int> fu = std::async(std::launch::deferred, factorial, 4);
