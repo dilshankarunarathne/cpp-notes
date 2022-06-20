@@ -1835,8 +1835,9 @@ But the downside of a unique lock is that it's a little bit heavier than a lock 
 
 ### Producer - Consumer Problems 
 
-If there are two threads sharing a resource, there could be a *producer-consumer* problem even if we used mutex and unique locks. To get around that, we can use a condition variable and use its notify functions.
-notify_one() will wake up one thread, if there is any waiting on that condition. 
+If there are two threads sharing a resource, there could be a *producer-consumer* problem even if we used mutex and unique locks.  
+To get around that, we can use a condition variable and use its notify functions. 
+`notify_one()` will wake up one thread, if there is any waiting on that condition. 
 
 --------------------------------------------------------------------------
 std::deque<int> q;
