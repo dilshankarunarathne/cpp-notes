@@ -1335,7 +1335,10 @@ One is to prevent copying by making the copy constructor and the assignment oper
 The other way is by having a reference count. It keeps the count of copy increments, and decrement them when they destructed.  
 They even have the overloaded operators for dereferencing and arrow operator.  
 
-We can include the memory library of the standard library to use these pointer objects. If we’re having a resource that might get copied a few times, it’s good to use the shared_ptr. Shared pointers don’t have any flaws and will make sure no memory leak will happen. We don’t need to implement the copy constructor and the assignment operator anymore. We also don’t need to initialize it to NULL or nullptr, we also don’t need to worry about the deleting, which means we don’t need to write destructors in classes. We actually cannot use delete keyword on them. If we ever wanted to tell the shared_ptr to let go of the resource, we can use its member function reset. If we ever assign it to a new pointer, we cannot use the new keyword to dynamically allocate a new resource and assign it to the shared pointer. Instead, we need to call the make_shared function, declare the type and pass in the arguments to instantiate. 
+We can include the memory library of the standard library to use these pointer objects.  
+If we’re having a resource that might get copied a few times, it’s good to use the `shared_ptr`. Shared pointers don’t have any flaws and will make sure no memory leak will happen. We don’t need to implement the copy constructor and the assignment operator anymore. We also don’t need to initialize it to `NULL` or `nullptr`, we also don’t need to worry about the deleting, which means we don’t need to write destructors in classes. We actually cannot use `delete` keyword on them. If we ever wanted to tell the `shared_ptr` to let go of the resource, we can use its member function `reset`.  
+If we ever assign it to a new pointer, we cannot use the `new` keyword to dynamically allocate a new resource and assign it to the shared pointer. Instead, we need to call the `make_shared` function, declare the type and pass in the arguments to instantiate.  
+
 -------------------------------------------------------------------------------------------------
 #include <memory>
 std::shared_ptr<ObjectType> pMySPtr;
