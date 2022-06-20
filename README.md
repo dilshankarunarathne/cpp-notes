@@ -1453,8 +1453,10 @@ There’s also a `reinterpret_cast` for bit twiddling, this involves knowing how
 
 # Lambdas 
 
-A lambda is an expression that represents some operation. We can use lambdas to improve generic work. They would be a great help when it comes to concurrency. They are extensively used for functional programming. The most common purpose is to eliminate small functions, and replace them with lambdas. 
-In the for_each example code, we had to write a separate (tiny) print function to pass in as the third argument. It could be irritating to maintain these small functions. We can write the same for_each by using a lambda instead. 
+A lambda is an expression that represents some operation. We can use lambdas to improve generic work. They would be a great help when it comes to concurrency. They are extensively used for functional programming. The most common purpose is to eliminate small functions, and replace them with lambdas.  
+
+In the `for_each` example code, we had to write a separate (tiny) print function to pass in as the third argument. It could be irritating to maintain these small functions. We can write the same `for_each` by using a lambda instead.  
+
 -------------------------------------------------------------------------------------------------
 vector <int> v;
 // add elements
