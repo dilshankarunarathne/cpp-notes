@@ -68,9 +68,9 @@
     1.  [C-Style Cast]() 
     2.  [Static Cast]() 
     3.  [Dynamic Cast]() 
-    4.  []() 
-    5.  []() 
-23. []() 
+    4.  [Const Cast]() 
+    5.  [Reinterpret Cast]() 
+23. [Lambdas]() 
 24. []() 
 25. []() 
 
@@ -1592,15 +1592,15 @@ There are other types of casting in C++, that uses templates. They are relativel
 **Dynamic cast** `dynamic_cast<TypeToCast>` has runtime checks. It relays on knowing what the type is at runtime. It only works with casting to pointer to a class that has a virtual table.  
 The special thing about dynamic cast is, that it returns null if the cast fails. It’s slower to use dynamic casts, but it’s safer because it never misinterprets bits.  
 
-## 22.4. 
+## 22.4. Const Cast 
 
 There’s also a `const_cast`, that we could use to take a constant variable and cast it into a non-constant variable, so we could change it. This is not a beginner’s technique.  
 
-## 22.5. 
+## 22.5. Reinterpret Cast 
 
 There’s also a `reinterpret_cast` for bit twiddling, this involves knowing how long data types are and the pattern of bits inside the data type, and the bits and the meaning will be interpreted differently. This is really not for beginners. 
 
-# Lambdas 
+# 23. Lambdas 
 
 A lambda is an expression that represents some operation. We can use lambdas to improve generic work. They would be a great help when it comes to concurrency. They are extensively used for functional programming. The most common purpose is to eliminate small functions, and replace them with lambdas.  
 
