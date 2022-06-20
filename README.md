@@ -1186,15 +1186,16 @@ T Test<T>::getSum(){
 
 There can be multiple type declarations in one template. 
 
-When we declare our generic class with a *friend function*, that friend function would not be a part of the class. So, we need to declare a separate template for the friend function, and that template must contain a different type name to stop shadowing. And then we can pass that typename as the parameter for the friend function.  
+When we declare our generic class with a *friend function*, that friend function would not be a part of the class. So, we need to declare a separate template for the friend function, and that template must contain a different type name to stop shadowing. And then we can pass that typename as the parameter for the friend function. 
 
--------------------------------------------------------------------------------------------------
+```cpp
 template <typename T>
 class SimpleVector {
 	// class declaration using T as the type
 	template<typename U>
 	friend ostream& operator << (ostream &, const SimpleVector<U>&);
 }
+
 template<typename U>
 ostream& operator << (ostream &out, const SimpleVector<U>& sv){
     out << "[";
@@ -1207,7 +1208,7 @@ ostream& operator << (ostream &out, const SimpleVector<U>& sv){
     out << "]";
     return out;
 }
--------------------------------------------------------------------------------------------------
+```
 
 There could be some operations in a template implementation, that might not work for some objects. In that case, we could either write the missing operator, or we can write a specialized template. One of the special things about C++ templates is that they can be specially implemented for certain objects. At some times, template specialization is the only option for certain classes. 
 -------------------------------------------------------------------------------------------------
