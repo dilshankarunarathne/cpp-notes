@@ -728,7 +728,7 @@ vector <string> names {"Anthony", "Josh", "Mark", "Linda", "Carl"};
 names.erase (names.begin(), names.size()-2;
 ```
 
-# Map 
+## 12.2. Map 
 
 Map is a collection in the standard library. Things In a map are organized in key-value pairs. Just like vectors, it grows when it needs to. It keeps the sorted order, so we can access items using keys and speed search, but it costs a little to add items.  
 We can use the key inside square brackets to access a value, or we can use the find method to look up.  
@@ -751,7 +751,7 @@ The `find` method returns an iterator. We can get the found items by dereferenci
 In case of a map, there can be only one hit for each key, because they are unique.  
 But there are other collections that can have more, and in those collections, find method returns an iterator with more than one item. 
 
-# Other Collections 
+## 12.3. Other Collections 
 
 There is also a **list** class in the standard library that implements a linked list. We can traverse a linked list just like we do with a standard vector. Each element of a linked list keeps two pointers, for the previous and next element. Adding elements is faster in linked lists, but it takes some time to access the elements.  
 
