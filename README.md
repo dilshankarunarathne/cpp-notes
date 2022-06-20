@@ -51,7 +51,12 @@
 17. [Operator Overloading]() 
 18. [Friend Functions]() 
 19. [Templates]() 
-20. []() 
+20. [OOP Continued]() 
+    1.  [Inheritance]() 
+    2.  [Virtual Functions]() 
+    3.  [Pure Virtual Functions]() 
+    4.  [Multiple Inheritance]() 
+    5.  []() 
 21. []() 
 22. []() 
 23. []() 
@@ -1346,7 +1351,7 @@ class MyGenericClass <ForThisClass> {
 };
 ```
 
-# Inheritance 
+# 20. Inheritance 
 
 We often have objects and entities which are bound hierarchically in parent-child relationships. And the best way to map them in programs is by using inheritance. The concept of inheritance remains same across all the programming languages. Inheritance uses the concept of **IS-A** relationship.  
 
@@ -1415,13 +1420,15 @@ int main(){
 If we declare the `p` pointer as a `SuperCls` object, the `method1` from the `SuperCls` will be called, and the overridden method will never be executed.  
 If we declare the `p` pointer `SubCls`, the `method1` from the `SubCls` will be executed, and within that we have called the `method1` from the `SuperCls`.  
 
+## 20.2. Virtual Functions
+
 If the developer of the super class implements a method as **virtual**, once we call the method, the sub class’ implementation will run. If it’s not declared as virtual, which is the default, the method of the super class will be executed, because it’s faster. This is a specialty in C++.   
 The *virtual functions* are configured using the *virtual table*. This is happening behind the curtains, but if our class has a lot of virtual functions, this might cost a lot of memory and could take some time for our program to be executed.  
 
 If we’re implementing a class that inherits another class, we can write the sub class’ constructor to call the super class’ constructor and then assign the member variables that are special to the sub class. In that way, when we instantiate the sub class, the constructor for the super class will be called (and finished executing) before the construction of the sub class ends.  
 Likewise, when the destructor is called, the sub class’s destructor (the destructor of the innermost class) will be called first, and then the super class’ destructor will be called.  
 
-# Pure Virtual Function 
+## 20.3 Pure Virtual Functions 
 
 If we have a function that's common among the child-classes, we can declare that in the parent class. But, what if we the behavior of that function is completely different among the child classes, and have no common behavior to implement on the parent class? Then we can declare a *purely virtual function*.  
 
@@ -1433,7 +1440,7 @@ virtual void printMyName() = 0;
 ```
 Until we complete the implementation of a virtual function in the sub type, we cannot instantiate an object of that sub type. 
 
-# Multiple Inheritance 
+## 20.4. Multiple Inheritance 
 
 In C++, a class can inherit from multiple super classes. For an example, think about a flying video game, that has birds and air planes. We can't implement the flying functions in the Bird class. Then we'd have to repeat the code in the `AirPlane` class, and also not all birds can fly.  
 What we can do is to create a `Flyable` class and declare flight methods as virtual.  
