@@ -1250,7 +1250,9 @@ SubCls():SuperCls() {}
 #include <iostream>
 #include <sstream>
 #include <string>
+
 using namespace std;
+
 class SuperCls {
 	private:
 		string var1;
@@ -1266,6 +1268,7 @@ class SuperCls {
 		return var2 * 5;
 	}
 };
+
 class SubCls : public SuperCls {
 	private:
 		int specialVar;
@@ -1281,13 +1284,15 @@ class SubCls : public SuperCls {
 		return answer;
 	}
 };
+
 int main(){
 	SubCls *p = new SubCls("Var1", 1, 5);
 	int answer = p->method1();
 	cout << "\nThis will be 5 in Sub, 10 in Super: " << answer << endl;
 	return 0;
 }
--------------------------------------------------------------------------------------------------
+```
+
 If we declare the p pointer as a SuperCls object, the method1 from the SuperCls will be called, and the overridden method will never be executed. If we declare the p pointer SubCls, the method1 from the SubCls will be executed, and within that we have called the method1 from the SuperCls. 
 If the developer of the super class implements a method as virtual, once we call the method, the sub class’ implementation will run. If it’s not declared as virtual, which is the default, the method of the super class will be executed, because it’s faster. This is a specialty in C++. 
 The virtual functions are worked using the virtual table. This is happening behind the curtains, but if our class has a lot of virtual functions, this might cost a lot of memory and could take some time for our program to be executed. 
