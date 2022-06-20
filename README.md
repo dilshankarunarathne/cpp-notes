@@ -46,12 +46,15 @@
     2.  [Constructors]()
     3.  [Member Accessing]()
     4.  [Const with OOP]()
-    5.  [Object Life-Cycle]()
+    5.  [Object Life-Cycle]() 
 16. [Make]() 
 17. [Operator Overloading]() 
 18. [Friend Functions]() 
-19. []() 
+19. [Templates]() 
 20. []() 
+21. []() 
+22. []() 
+23. []() 
 
 # 1. Introduction to C++ 
 
@@ -1237,7 +1240,7 @@ When we create a class with a dynamic member variable, we have to override the *
 The destructor method will automatically be called, whenever the object goes beyond scope. The destructor for a class is just like a constructor. It has the same name as the class, except we need to prefix it with a tilde (`~`).  
 Destructor methods take no argument and have no return type. Inside the method, we need to use the delete keyword to `delete` any dynamic member of the class. 
 
-# Template 
+# 19. Templates 
 
 Templates in C++ allows us to write generic code. We can write a function that's able to receive any type of parameters. We can write classes that can have instance members of generic type.  
 In other languages like Java, C#, they have **generics** for this. But C++ **templates** are a little bit different. They are resolved at compile time, no runtime checks.  
