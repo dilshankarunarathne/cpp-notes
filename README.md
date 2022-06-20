@@ -1358,9 +1358,14 @@ There’s also a `weak_ptr` in the memory library that works with shared pointer
 ### Unique Pointer 
 
 There’s also a unique pointer (`unique_ptr`). This is fast and efficient. A unique pointer *exclusively owns* the object to which it points. That means, if it’s not null, it’s destructor is obligated to delete the object.  
-It also cannot be copied. There is no copy constructor or copy assignment operator. There is a move method in the standard library, that we can use to move a reference into a unique pointer. 
-Unique pointer provides move constructor and move assignment. With that functionality, we can implement the transfer of a pointer’s ownership, in and out of a function, which could not be done by classical C++. It also makes way to store pointers, elegantly and efficiently within a container. Smart pointers help to remove the explicit deletes. The make functions help to remove the explicit new keywords.  
-When we use the default constructor of the unique_ptr, we’ll get a null pointer. We don’t explicitly assign it into a null pointer. We can get help from the unique_ptr class templates and use the make_unique function to create a unique pointer. This function even works with most user defined types, by forwarding parameters and creating them naturally and efficiently. 
+It also cannot be copied. There is no copy constructor or copy assignment operator. There is a move method in the standard library, that we can use to move a reference into a unique pointer.  
+
+Unique pointer provides move constructor and move assignment. With that functionality, we can implement the transfer of a pointer’s ownership, in and out of a function, which could not be done by classical C++.  
+It also makes way to store pointers, elegantly and efficiently within a container.  
+Smart pointers help to remove the explicit deletes. The make functions help to remove the explicit `new` keywords.  
+When we use the default constructor of the `unique_ptr`, we’ll get a *null pointer*. We don’t explicitly assign it into a null pointer.  
+We can get help from the `unique_ptr` class templates and use the `make_unique` function to create a unique pointer. This function even works with most user defined types, by forwarding parameters and creating them naturally and efficiently.  
+
 -------------------------------------------------------------------------------------------------
 auto sp1 = unique_ptr<int> { new int { 123 } };
 auto sp2 = make_unique<int>(345);
