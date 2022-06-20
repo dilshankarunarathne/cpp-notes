@@ -1096,9 +1096,10 @@ Circle& Circle::operator= (const Circle& rho) {
 ```
 
 If there are multiple assignments in a single statement `a = b = c` , they are evaluated right to left.  
-Whenever we're writing our own assignment operator, the compiler doesn't write its own version for that class. 
-We have to overload the assignment operator when we have dynamic memory allocation in a class. But, if our class just have simple attributes, we don't need to overload the assignment operator. 
-If someone accidently do [ obj1 = obj2 ], this will lead to a crash. So, whenever we're overloading the assignment operator, we need to perform a check to see if it's the same object in memory by comparing the pointers.	[ if (this != &rho) ]
+Whenever we're writing our own assignment operator, the compiler doesn't write its own version for that class.  
+We have to overload the assignment operator when we have dynamic memory allocation in a class. But, if our class just have simple attributes, we don't need to overload the assignment operator.  
+
+If someone accidently do  `obj1 = obj2` , this will lead to a crash. So, whenever we're overloading the assignment operator, we need to perform a check to see if it's the same object in memory by comparing the pointers.	 `if (this != &rho)` 
 
 We also don't need to implement the copy constructor by ourselves. The copy constructor is used to copy an object's content to another object. It's done by copying every bit from the source object to the destination object. The compiler is able to do this by itself. We need to write this explicitly, when it comes to dynamic memory allocation for an attribute within our class. 
 -------------------------------------------------------------------------------------------------
