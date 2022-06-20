@@ -1638,7 +1638,7 @@ int main() {
 If we're instantiating an object inside the instantiation of a thread, we need to pass the parameters to the object constructor as secondary parameters to the thread constructor. And we also need to cover the object's constructor with an additional pair of parentheses, to avoid c++ evaluating it to be a function call.  
 
 Even if we have the object constructor asking for referenced parameters, when we pass something, it will be taken by value. Because, parameters to a thread is always taken by value.  
-If we really need to pass arguments by reference, we can use std::ref to cover the argument (reference wrapper) that's been passed into the thread's object constructor.  
+If we really need to pass arguments by reference, we can use `std::ref` to cover the argument (reference wrapper) that's been passed into the thread's object constructor.  
 
 This is an example for parent and child threads sharing the same memory resource (in this case string `s`) by using references. We can achieve the same thing by using pointers. But, memory sharing could lead into data race problems.  
 
@@ -1656,6 +1656,8 @@ This will return the id of the current thread (or the thread it's been called in
 ```cpp
 t1.get_id()
 ```
+
+### Over-Subscription 
 
 We should use threads as much as we have calls. But if our hardware cannot support that much threads, our performance would degrade. This is called '**oversubscription**'. When we create more threads than available cpu cores, it would have to do a lot of contact switching. 
 ```cpp
