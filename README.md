@@ -1615,8 +1615,8 @@ Some daemon processes keep running until the system shuts down. Since the *main*
 If the main thread finishes its execution before *t1*, we will no longer see the console output. So, if we ever have two or more threads sharing the same resource (in this case `cout`), we should keep the *main* thread running, until all the child processes finish their execution.  
 
 Remember, we can only **join** or *detach* a thread only once. If we ever call the `join` method on a thread that is not joinable, or in other words, if the child thread object goes out of scope before we *join* or *detach* it, the program will crash.  
-To avoid that, there is a joinable() method in thread, that returns a bool. We can check for that before we call detach or join. We still don't get do detach or join more than once, but at least in this way, the program would not crash. 
-We could cover the parent process with try-and-catch block to make sure the child thread joins, with or without exception. Or we could use the RAII approach, and wrap the child thread object with a wrapper class, and have its destructor call join function. 
+To avoid that, there is a `joinable()` method in thread, that returns a bool. We can check for that before we call *detach* or *join*. We still don't get do *detach* or *join* more than once, but at least in this way, the program would not crash.  
+We could cover the parent process with *try-and-catch* block to make sure the child thread joins, with or without exception. Or we could use the **RAII** approach, and wrap the child thread object with a wrapper class, and have its destructor call join function. 
 
 --------------------------------------------------------------------------
 class Fctor {
