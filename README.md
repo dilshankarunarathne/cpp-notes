@@ -60,8 +60,8 @@
     1.  [Shared Pointer]() 
     2.  [Weak Pointer]() 
     3.  [Unique Pointer]() 
-    4.  []() 
-    5.  []() 
+    4.  [COM Pointers]() 
+    5.  [Auto Pointer]() 
     6.  []() 
     7.  []() 
 22. []() 
@@ -1531,14 +1531,14 @@ auto main() -> int {
 
 The unique pointer class allows us to override it implicit behavior of deletion. We can provide a custom implementation for the delete process. This class provides a template parameter called `deleter`. This is simply a function object that deletes the unique pointer.  
 
-### COM Pointers 
+## 21.4. COM Pointers 
 
 **Windows SDK** provides the `ComPtr`, that we could use with the **COM** and *WinRT* interfaces. The Windows SDK ships with a *Visual C++ compiler*, and this com pointer is what we should use when we’re dealing directly with COM interfaces.  
 
 *More On This To Come...*  
 Advanced Microsoft Visual C++ and .Net Programming  
 
-### Auto Pointer 
+## 21.5. Auto Pointer 
 
 There was an *auto pointer* in the standard library, a previous attempt to make a smart pointer. It wasn’t as smart as it should be.  
 It worked very poorly inside containers. The programmer had to delete each pointer explicitly when they create contained collections. Shared and unique pointers don’t have that problem. 
