@@ -24,7 +24,10 @@
 6. [Functions]() 
 7. [Pointers]() 
 8. [Arrays]() 
-9. []() 
+   1. [The Range-For Loop]() 
+   2. [C-Style Arrays]()
+   3. []()
+9.  []() 
 10. []() 
 11. []() 
 12. 
@@ -407,6 +410,8 @@ for (auto k: x) {
 	cout << k << " ";
 }
 ```
+
+## 8.2. C-Style Arrays 
 
 Special thing to note about arrays in C++ is, their variable name only holds the base address. It doesn't contain the number of elements. So, when we pass an array to a function, it's not easy to get around because, we cannot process it without its length. So usually, C++ recommends to receive a reference to the array in functions. 
 
