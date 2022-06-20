@@ -23,7 +23,7 @@
    16. [Random Values]() 
 6. [Functions]() 
 7. [Pointers]() 
-8. []() 
+8. [Arrays]() 
 9. []() 
 10. []() 
 11. []() 
@@ -377,7 +377,7 @@ int main() {
 
 If a pointer points to an object, and we want to use a member function of that object, we have to cover the pointer variable with a bracket `(*p)` and then use the dot `.` character to call the member. Or we can use the arrow sign `->`. 
 
-# Arrays 
+# 8. Arrays 
 
 Array is a contiguous data structure. Which means, all the elements are going to be allocated one after another in the primary memory.  
 
