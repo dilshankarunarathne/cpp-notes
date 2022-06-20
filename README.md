@@ -1905,11 +1905,15 @@ int main() {
 }
 ```
 
-A future object represents an object by using which we can get something in the future. It can only call get() function once. But the async function will not always kick off another thread. If we call it with this,
-	std::future<int> fu = std::async(std::launch::deferred, factorial, 4);
-It will not create a thread. What it will do now is, it will defer the execution of the factorial function, until later when it actually asks for the result by calling get(). And it will be executed on the same thread. 
-If we do this,
-	std::future<int> fu = std::async(std::launch::async, factorial, 4);
+A **future** object represents an object by using which we can get something in the future. It can only call `get()` function once.  But the async function will not always kick off another thread. If we call it with this, 
+```cpp
+std::future<int> fu = std::async(std::launch::deferred, factorial, 4);
+```
+It will not create a thread. What it will do now is, it will defer the execution of the factorial function, until later when it actually asks for the result by calling `get()`. And it will be executed on the same thread.  
+If we do this, 
+```cpp
+std::future<int> fu = std::async(std::launch::async, factorial, 4);
+```
 It will create another thread. We could also call both of those by doing,
 std::future<int> fu = std::async(std::launch::async | 
 std::launch::deferred, factorial, 4);
