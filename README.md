@@ -1053,9 +1053,10 @@ We have to return the `ostream` object because, otherwise multiple insertion `co
 
 When we take `cout` as an input and return it back, when we have more than one objects to insert, those operations will be executed one by one. If we execute this `cout << c1 << c2` , first `cout << c1`  will be executed. After that operation, the `cout` object is returned back to that point. Then we'd have `cout << c2` . That's why we need to return the `ostream` reference back to the caller. 
 
-Overloading extraction operator is just the same. We can implement a global method for operator>> and declare a friend function in the class. It should take and return an istream reference. 
-These insertion and extraction operators work with ifstream ofstream objects as well.
--------------------------------------------------------------------------------------------------
+Overloading extraction operator is just the same. We can implement a global method for `operator>>` and declare a friend function in the class. It should take and return an istream reference.  
+These insertion and extraction operators work with `ifstream` `ofstream` objects as well.
+
+```cpp
 class Circle {
 	//	everything
 	friend istream& operator>> (istream&, const Circle&);
@@ -1064,8 +1065,8 @@ istream& operator>>(istream& sin, const Circle& c){
     sin >> c.radius;
     return sin;
 }
--------------------------------------------------------------------------------------------------
- 
+```
+
 There are six relational operators in C++. All those returns a boolean value. These operators will use the left-hand operand and apply the operator function on that object with the right-hand operand passed in as parameter. Inside our class, we can implement these operators just like we did with arithmetic operators. 
 -------------------------------------------------------------------------------------------------
 bool operator> (const Circle& rho) {
