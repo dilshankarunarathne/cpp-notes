@@ -49,7 +49,7 @@
     5.  [Object Life-Cycle]()
     6.  []()
 16. [Make]() 
-17. []() 
+17. [Operator Overloading]() 
 18. []() 
 19. []() 
 20. []() 
@@ -1078,7 +1078,7 @@ These all, clean and others are called rules (or rule labels).
 `all` rule label indicates what the final executable is after the compilation. Then it tells how that executable is going to be created. Right after the colon, we have to indicate what objects required to create the executable. Then in the next line with one tab from the beginning, we need to write the command for the compilation of that executable, given those indicated object files exist.  
 Then in the same way, we need to indicate how to build the required dependencies for that executable to be created. If they depend on others, we need to add rules for those too. And at the end, we can add some clean-up commands using the `clean` rule label. 
 
-# Operator Overloading 
+# 17. Operator Overloading 
 
 C++ allows us to overload operators. But this functionality can change the natural meaning of operators. That's why most languages don't allow operator overloading.  
 Implicit data types and classes have operators defined in the compiler. But for explicit classes, we need to implement how those operators should work. That's what operator overloading is.  
