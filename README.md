@@ -1437,7 +1437,7 @@ If we have a function that takes arguments by value and not by reference, when w
 To avoid these errors, we need to use pointers or references. Among many solutions, using references (`&`) could keep polymorphism and still work easily with the derived members (using the dot `.`), when we try to refer to a sub class object as a super class object.  
 We should not use pointers (`*`) instead, because we have to use the arrow operator to access members, and we cannot call the derived members of the sub class with it.  
 
-Casting
+# Casting 
 
 We can use C-style casting to cast an object to another type. But this is very dangerous and could lead into a lot of potential errors. There are other types of casting in C++, that uses templates. They are relatively much safer than C style castings. 
 Static casting is used as static_cast<TypeToCast> can be used instead of C style cast. They are checked at compile time. If the compiler doesn’t see a relation between two types, it’ll return an error or a warning saying the types are incompatible. 
