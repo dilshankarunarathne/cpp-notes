@@ -1877,7 +1877,7 @@ int main() {
 
 We're sending the locker into the `cond.wait` because, we don't need to lock something while that thread's obviously sleeping. This way, it will release the lock and go to sleep, and once it's been awakened by the other thread, it will again lock the mutex. Since we have to lock and unlock the mutex many times, we have to use unique lock.  
 
-The lock could be awakened by itself while sleeping and waiting for the other thread to notify. That is called a 'spurious wake'. If that happens, we don't need that thread to keep executing. To ensure that, we can pass a predicate to the wait function to check if the q is empty. 
+The lock could be awakened by itself while sleeping and waiting for the other thread to notify. That is called a '**spurious wake**'. If that happens, we don't need that thread to keep executing. To ensure that, we can pass a predicate to the wait function to check if the `q` is empty.  
 
 There is an async method in std that we could use in small occasions where we need a thread to do just a simple job. It doesn't return a thread, it returns a future. A future is a channel that we could use to receive data from a child thread. It's get() function will wait for the child thread to finish, and return the result. 
 
