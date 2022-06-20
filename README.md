@@ -1036,8 +1036,9 @@ bool operator< (int i, Date& d);
 # Friend Functions
 
 In the above example, global method is accessing the private member `radius` through a getter function. But, having to access a private member from a global scope could get tedious sometimes.  
-C++ have given the functionality for a short hand method called friend functions to solve this issue. We can use the friend keyword to declare the friend function of a class that's been implemented globally, but still need to be considered as a part of the class. 
--------------------------------------------------------------------------------------------------
+C++ have given the functionality for a short hand method called **friend functions** to solve this issue. We can use the `friend` keyword to declare the friend function of a class that's been implemented globally, but still need to be considered as a part of the class. 
+
+```cpp
 class Circle{
 	//	everything
 	friend ostream& operator<< (ostream&, const Circle&);
@@ -1046,7 +1047,7 @@ ostream& operator<<(ostream& sout, const Circle& c){
     sout << "Radius: " << c.radius << endl;
     return sout;
 }
--------------------------------------------------------------------------------------------------
+```
 
 We have to return the ostream object because, otherwise multiple insertion [ cout << c1 << c2 ] will not be possible. If we had void in as the return in the operator<< function, we'll still be able to print out one Circle object, but not more than one. 
 When we take cout as an input and return it back, when we have more than one objects to insert, those operations will be executed one by one. If we execute this [ cout << c1 << c2 ], first [ cout << c1 ] will be executed. After that operation, the cout object is returned back to that point. Then we'd have [ cout << c2 ]. That's why we need to return the ostream reference back to the caller. 
