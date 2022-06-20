@@ -1,4 +1,10 @@
-# Introduction to C++ 
+# Topics 
+
+1. [Introduction to C++]() 
+2. [Scope and Namespace]() 
+3. 
+
+# 1. Introduction to C++ 
 
 The `main()` function is the entry point of a program's execution. We can use `#include` to import a library, followed by the name of the library within either angle brackets if the library is in standard libraries, or double quotation marks if the library exists inside the project directory.  
 
@@ -10,7 +16,7 @@ At first, C++ had no library that shipped with it. It only had the C Runtime Lib
 It’s controlled by the standards committee. The current C++ standard library is not necessarily in all headers. The vendors of the compiler can choose how to implement its own library. 
 Everything of the standard library is in the std namespace. Those class names start with lower case letters.  
 
-# Scope and namespace 
+# Scope and Namespace 
 
 The scope resolution operator `::` is used to mention the scope.  
 
