@@ -1349,7 +1349,7 @@ pMySPtr.reset();
 pMySPtr = std::make_shared<ObjectType> ( /* arguments */ );
 ```
 
-There’s also a weak_ptr in the memory library that works with shared pointers. Every time we copy a shared pointer, it bumps up the reference count. We can use weak pointers to keep a pointer of which existence doesn’t keep the original pointer alive, by increasing the reference count. If the object goes out of scope, weak pointer handles it nicely. 
+There’s also a `weak_ptr` in the memory library that works with shared pointers. Every time we copy a shared pointer, it bumps up the reference count. We can use weak pointers to keep a pointer of which existence doesn’t keep the original pointer alive, by increasing the reference count. If the object goes out of scope, weak pointer handles it nicely.  
 
 Unique Pointer
 There’s also a unique pointer (unique_ptr). This is fast and efficient. A unique pointer exclusively owns the object to which it points. That means, if it’s not null, it’s destructor is obligated to delete the object. It also cannot be copied. There is no copy constructor or copy assignment operator. There is a move method in the standard library, that we can use to move a reference into a unique pointer. 
