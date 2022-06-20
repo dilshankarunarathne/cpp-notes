@@ -1811,7 +1811,7 @@ There is a `unique_lock`, which is similar to `lock_guard` but it gives more fle
 When we use a unique lock, instead of a lock guard, we can construct the locker, without actually locking the mutex. To do that, we need pass in a second parameter of `std::defer_lock`. When we do that, the given mutex is owned by the locker (unique lock), but the mutex is not locked. So, we're able to do something else, that doesn't use the shared resource.  
 When we do need to lock it, we can call `locker.lock()` method. And if we need to do something else again, that doesn't use the shared resource, we can call `locker.unlock()` method. We can repeat locking and unlocking as much as we like. This functionality is not given by `lock_guard`. 
 
---------------------------------------------------------------------------
+```cpp
 class Logfile {
 	std::mutex _mu;
 	ofstream _f;
@@ -1828,7 +1828,7 @@ class Logfile {
 			// ...
 		}
 };
---------------------------------------------------------------------------
+```
 
 A wrapper class of a mutex cannot be copied. However, a unique lock can be moved. When we do move a unique lock, the ownership of the mutex transfers from one unique lock to another unique lock. But a lock guard can never be moved. 
 But the downside of a unique lock is that it's a little bit heavier than a lock guard. So, if we have a concern on performance, we should use a lock guard instead. 
