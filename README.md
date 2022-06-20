@@ -35,7 +35,10 @@
 11. [Dynamic Memory Allocation]() 
     1.  [Stack vs Heap Memory Allocation]() 
     2.  [Shallow vs Deep Copies]() 
-12. [Vectors]() 
+12. [Collections]() 
+    1.  [Vectors]() 
+    2.  [Map]() 
+    3.  [Other Collections]() 
 13. []() 
 14. []() 
 15. []() 
@@ -679,7 +682,9 @@ There are two ways to copy a compile time allocated array into a dynamically all
 
 To get around this, we need to use deep copying. We can implement that by creating an entirely new array dynamically using the new keyword, and copying each element from the source array using a for loop.  
 
-# 12. Vectors 
+# Collections
+
+## 12.1. Vectors 
 
 Vectors are dynamic containers and its implementation is available in the standard C++ library. Vector class comes with a lot of functions that we can use to process our data.  
 We need to use the `vector` keyword to initialize a vector. It must be followed by the type of the elements in angle brackets and the vector variable name.  
