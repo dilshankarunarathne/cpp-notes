@@ -29,10 +29,7 @@
    3. [Problems with C-Arrays]()
 9.  [Strings]() 
     1.  [Iterators]() 
-    2.  [Methods in String]() 
-    3.  []() 
-    4.  []() 
-    5.  []() 
+    2.  [Operations on Strings]() 
 10. []() 
 11. []() 
 12. []() 
@@ -496,7 +493,7 @@ while (rit != str.rend()) {
 }
 ```
 
-## 9.2. Methods in String 
+## 9.2. Operations on Strings 
 
 There is a clear method in the string class that we could use to clear all the characters of a string. To delete a specific portion of a string, we can use the erase method. We can call the erase method on the string and pass it the starting index position and the number of characters we want to erase. We can also use the (**str.begin()+number**) to indicate the starting position. Likewise, we can use (**str.end()-number**) to indicate the finishing position of the erasing.  
 
@@ -519,7 +516,7 @@ while (index != string::npos) {
 **npos** is the value that's going to be returned by find, if the target is not found till the end of the string.  
 We can use the **find_first_of** method to find the first occurrence of any character of a given string, inside another string.  
 
-There’s also a wstring class In the standard library for wide strings, which could be useful in a Unicode situation.  
+There’s also a `wstring` class In the standard library for wide strings, which could be useful in a Unicode situation.  
 String comparison in C++ is done based on their position in the dictionary. That's called lexicographical comparison.  
 Lexicon is the dictionary and lexicography are the style of writing the dictionary. We can use comparison operators to compare strings. They are shortcuts to the compare method of the string class. If we want to, we can use that instead. String compare method returns an integer. If both strings are equal, it will return 0. If the string we compare on comes first in the dictionary, it will return -1. And if the augmented string appears first in the dictionary, it will return +1. 
 
