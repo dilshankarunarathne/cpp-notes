@@ -1131,7 +1131,7 @@ Most of old C++ collections and algorithms are rich in templates, even the old C
 We can declare a template using the `template` keyword, followed by the type declaration inside angle brackets. We declare the type placeholder using the `typename` keyword and we usually give the placeholder a capital letter like `T`.  
 After the template declaration, we can use that type placeholder in our functions. It will replace the object type and give our function a generic independency from types.  
 
--------------------------------------------------------------------------------------------------
+```cpp
 template <typename T>
 int compareTo(T a, T b){
     if (a < b){
@@ -1144,13 +1144,14 @@ int compareTo(T a, T b){
         return 0;
     }
 }
+
 int main() {
     int x = 10, y = 100, i;
     i =  compareTo(x, y);
     cout << "i = " << i << endl;
     return 0;
 }
--------------------------------------------------------------------------------------------------
+```
 
 The compiler is clever enough to determine the type of the passed in arguments and replace T with integer. Or we can explicitly tell the compiler what type the parameters are, by pre-fixing the parameters with the type inside angle brackets. [ compareTo <int> (x, y); ]
 The compareTo method with the template will still work fine for a class we implemented ourselves, as long as it's overridden the comparison operators. 
