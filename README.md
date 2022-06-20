@@ -1635,12 +1635,16 @@ int main() {
 }
 ```
 
-If we're instantiating an object inside the instantiation of a thread, we need to pass the parameters to the object constructor as secondary parameters to the thread constructor. And we also need to cover the object's constructor with an additional pair of parentheses, to avoid c++ evaluating it to be a function call. 
-Even if we have the object constructor asking for referenced parameters, when we pass something, it will be taken by value. Because, parameters to a thread is always taken by value. 
-If we really need to pass arguments by reference, we can use std::ref to cover the argument (reference wrapper) that's been passed into the thread's object constructor. 
-This is an example for parent and child threads sharing the same memory resource (in this case string s) by using references. We can achieve the same thing by using pointers. But, memory sharing could lead into data race problems. 
-A better approach would be to use std::move function to wrap the resource. It will move the given resource from one thread to another. It's both safe and efficient. In c++ libraries, there are many things that can only be moved and cannot be copied. As a matter of fact, a thread object itself can only be moved. 
-	std::thread t2 = std::move(t1);
+If we're instantiating an object inside the instantiation of a thread, we need to pass the parameters to the object constructor as secondary parameters to the thread constructor. And we also need to cover the object's constructor with an additional pair of parentheses, to avoid c++ evaluating it to be a function call.  
+
+Even if we have the object constructor asking for referenced parameters, when we pass something, it will be taken by value. Because, parameters to a thread is always taken by value.  
+If we really need to pass arguments by reference, we can use std::ref to cover the argument (reference wrapper) that's been passed into the thread's object constructor.  
+
+This is an example for parent and child threads sharing the same memory resource (in this case string `s`) by using references. We can achieve the same thing by using pointers. But, memory sharing could lead into data race problems.  
+
+A better approach would be to use `std::move` function to wrap the resource. It will move the given resource from one thread to another. It's both safe and efficient. In c++ libraries, there are many things that can only be moved and cannot be copied. As a matter of fact, a thread object itself can only be moved. 
+
+std::thread t2 = std::move(t1);
 
 Every thread has an associated id number with it. To get that we could call,
 	std::this_thread::get_id()
