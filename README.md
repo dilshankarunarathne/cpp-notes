@@ -1757,7 +1757,7 @@ Consider the below given code. We're using two mutexes (two locks) for the same 
 There will be a time, in which `function_1` locks `_mu` and waiting for `_mu2` to be released, at the same time the `main` method locks `_mu2` and waiting for `_mu` to be released.  
 This is a deadlock, and our program will hang from there. 
 
---------------------------------------------------------------------------
+```cpp
 class Logfile {
 	std::mutex _mu;
 	std::mutex _mu2;
@@ -1777,7 +1777,7 @@ class Logfile {
 			f << "From " << id << ": " << value << endl;
 		} 
 };
---------------------------------------------------------------------------
+```
 
 To avoid deadlocks, we could make everything locking the mutexes in the same order. Or we could use the standard library's standard_lock function, which can be used to lock arbitrary number of lockable objects such as mutex, with the use of deadlock avoiding algorithms. 
 
