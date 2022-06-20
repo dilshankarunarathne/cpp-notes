@@ -41,7 +41,7 @@
     3.  [Other Collections]() 
 13. [Algorithms: Sorting and Searching]() 
 14. [Structures]() 
-15. []() 
+15. [Object Oriented Programming]() 
 16. []() 
 17. []() 
 18. []() 
@@ -887,7 +887,7 @@ p->holderName = "Tom";
 delete p;
 ```
 
-# Object Oriented Programming 
+# 15. Object Oriented Programming 
 
 Classes in C++ are defined using the `class` keyword followed by the name of the class and curly braces block ended with a semi-colon.  
 A class typically have three sections, *private*, *public* and *protected*. These access modifiers must be followed with a colon, and then we can write the members in there. We can have multiple sections of access modifiers. If nothing is mentioned, the members are going to be considered as private. Protected members will be available in the scope of that same class and within the child classes.  
