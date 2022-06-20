@@ -21,8 +21,8 @@
    14. [The Switch Statement]() 
    15. [The For-Loop]() 
    16. [Random Values]() 
-6. []() 
-7. []() 
+6. [Functions]() 
+7. [Pointers]() 
 8. []() 
 9. []() 
 10. []() 
@@ -285,6 +285,7 @@ int main() {
 # 6. Functions 
 
 In C++, functions can only return one value. C++ allows us to overload functions (polymorphism). Function can be inside classes (member functions) or not (global/ free functions).  
+
 When we pass in variables as parameters into a function in C++, the arguments we are passing inside parenthesis in the function call, are called **actual arguments**. 
 The arguments we define in the function definition that reflect these actual arguments are called **formal arguments**.  
 
