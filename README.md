@@ -1618,13 +1618,14 @@ Remember, we can only **join** or *detach* a thread only once. If we ever call t
 To avoid that, there is a `joinable()` method in thread, that returns a bool. We can check for that before we call *detach* or *join*. We still don't get do *detach* or *join* more than once, but at least in this way, the program would not crash.  
 We could cover the parent process with *try-and-catch* block to make sure the child thread joins, with or without exception. Or we could use the **RAII** approach, and wrap the child thread object with a wrapper class, and have its destructor call join function. 
 
---------------------------------------------------------------------------
+```cpp
 class Fctor {
 	public:
 		void operator()(string& msg) {
 			cout << "t1 says: " << msg << endl;
 		}
 };
+
 int main() {
 	string s = "Where there is no trust, there is no love";
 	std::thread t1((Fctor()), std::move(s));
@@ -1632,7 +1633,7 @@ int main() {
 	cout << "main says: " << s << endl;
 	return 0;
 }
---------------------------------------------------------------------------
+```
 
 If we're instantiating an object inside the instantiation of a thread, we need to pass the parameters to the object constructor as secondary parameters to the thread constructor. And we also need to cover the object's constructor with an additional pair of parentheses, to avoid c++ evaluating it to be a function call. 
 Even if we have the object constructor asking for referenced parameters, when we pass something, it will be taken by value. Because, parameters to a thread is always taken by value. 
