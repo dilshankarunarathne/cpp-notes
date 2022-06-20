@@ -1235,9 +1235,9 @@ Sub-types or sub-classes are extended from the general-type or the super-class t
 We implement the super class just like we did with other classes and we use the `:` to declare the extension in the sub class.  
 
 There are three different types of inheritance in C++. The first is public, that we use the most in general practice. And the others are protected and private.  
-In public inheritance, all the public members of the super type will remain public in the sub type.  
-Any member we've declared private in the super type will only be available exclusively inside the super class. To access them from the child classes, we can use getters & setters, and call them from the child class using the scope resolution operator pre-fixed with the super class.  
-Anything we have declared as protected in the super class, will be available within the child classes.  
+In **public** inheritance, all the public members of the super type will remain public in the sub type.  
+Any member we've declared **private** in the super type will only be available exclusively inside the super class. To access them from the child classes, we can use getters & setters, and call them from the child class using the scope resolution operator pre-fixed with the super class.  
+Anything we have declared as **protected** in the super class, will be available within the child classes.  
 
 When we write constructors for the sub-class, we must call the constructor from the super class within it. If we do not implement a constructor for the sub class, it's going to call the DEFAULT (empty) constructor of the super class. If the default constructor for the super class does not exist, the compiler will give an error. Otherwise, we need to call the super class' constructor using the : symbol right after the parenthesis of the sub class' constructor. If we do not implement the sub class' constructor, the compiler will write this 
 [ SubCls():SuperCls() {} ]. 
