@@ -56,8 +56,7 @@
     2.  [Virtual Functions]() 
     3.  [Pure Virtual Functions]() 
     4.  [Multiple Inheritance]() 
-    5.  []() 
-21. []() 
+21. [Smart Pointers]() 
 22. []() 
 23. []() 
 
@@ -1450,7 +1449,7 @@ We need to create the `Eagle` class that inherit both `Bird` and `Flyable` class
 If we create an `Ostrich` class, that only should extend from the `Bird` class. (In this case, the `Flyable` class has the same functionality as an Interface in Java).  
 The `Flyable` must be declared as a **super most type**, so any child type can inherit from it. We can write extension from multiple classes by separating the parent types with commas after the `:` symbol. 
 
-# Smart Pointers 
+# 21. Smart Pointers 
 
 C++ have provided a collection of **smart pointers** that we could use instead of a pointer. They are objects (pointer wrappers) that would be allocated in the stack, and automatically delete the resource once it’s gone out of scope.  
 This is not garbage collection, it’s deterministic destruction.  
