@@ -1229,7 +1229,8 @@ class MyGenericClass <ForThisClass> {
 
 # Inheritance 
 
-We often have objects and entities which are bound hierarchically in parent-child relationships. And the best way to map them in programs is by using inheritance. The concept of inheritance remains same across all the programming languages. Inheritance uses the concept of 'is a' relationship. 
+We often have objects and entities which are bound hierarchically in parent-child relationships. And the best way to map them in programs is by using inheritance. The concept of inheritance remains same across all the programming languages. Inheritance uses the concept of **IS-A** relationship.  
+
 Sub-types or sub-classes are extended from the general-type or the super-class to have all the general behaviors and features. 
 We implement the super class just like we did with other classes and we use the : to declare the extension in the sub class. There are three different types of inheritance in C++. The first is public, that we use the most in general practice. And the others are protected and private. 
 In public inheritance, all the public members of the super type will remain public in the sub type. Any member we've declared private in the super type will only be available exclusively inside the super class. To access them from the child classes, we can use getters & setters, and call them from the child class using the scope resolution operator pre-fixed with the super class. Anything we have declared as protected in the super class, will be available within the child classes. 
