@@ -26,7 +26,7 @@
 8. [Arrays]() 
    1. [The Range-For Loop]() 
    2. [C-Style Arrays]()
-   3. []()
+   3. [Problems with C-Arrays]()
 9.  []() 
 10. []() 
 11. []() 
@@ -432,6 +432,8 @@ int main() {
 	print_array(x);
 }
 ```
+
+## 8.3. Problems with C-Arrays 
 
 Even though arrays can be very useful, most developers recommend not to use them, and to use a **vector** or another collection instead. That’s because of a few problems, that C-style arrays have.  
 
