@@ -63,7 +63,7 @@
     4.  [COM Pointers]() 
     5.  [Auto Pointer]() 
     6.  [Void Pointers]() 
-    7.  []() 
+    7.  [Pointers with Inheritance]() 
 22. []() 
 23. []() 
 
@@ -1554,7 +1554,7 @@ Void pointer gives up all the type safety in C++. For an example, when a functio
 
 We should always try to use either polymorphism instead or a dynamic cast. With void pointers, developers have got flexibility to do almost anything with it, but they can cause errors very easily. There are no runtime checks, and even when an error is occurred, only a very little information is given by the runtime. 
 
-### Pointers with Inheritance 
+## 21.7. Pointers with Inheritance 
 
 By using smart pointers in inheritance hierarchy, they would work just like raw pointers. So, we should not hesitate to use them.  
 If we create a super class pointer and assign it a sub class object, when we call an overridden method, unless it’s virtual, we’d still get the super class’ implementation executed. If the function is virtual, even though we refer to it using a super class pointer, we’d get the overridden implementation executed.  
