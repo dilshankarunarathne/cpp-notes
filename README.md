@@ -1095,7 +1095,8 @@ Circle& Circle::operator= (const Circle& rho) {
 }
 ```
 
-If there are multiple assignments in a single statement [ a = b = c], they are evaluated right to left. Whenever we're writing our own assignment operator, the compiler doesn't write its own version for that class. 
+If there are multiple assignments in a single statement `a = b = c` , they are evaluated right to left.  
+Whenever we're writing our own assignment operator, the compiler doesn't write its own version for that class. 
 We have to overload the assignment operator when we have dynamic memory allocation in a class. But, if our class just have simple attributes, we don't need to overload the assignment operator. 
 If someone accidently do [ obj1 = obj2 ], this will lead to a crash. So, whenever we're overloading the assignment operator, we need to perform a check to see if it's the same object in memory by comparing the pointers.	[ if (this != &rho) ]
 
