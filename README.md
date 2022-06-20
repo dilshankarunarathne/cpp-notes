@@ -1004,7 +1004,8 @@ void Car::Car(string color) {
 }
 ```
 
-When we want to access an object from a method outside the class, that's not going to change the object, we can use a constant pointer to pass in the object pointer as a parameter to the function. Using a pointer, increases the efficiency of the program's execution. By declaring the pointer constant, we can make sure there will be no side effects that affect the object. We can declare a constant using the `const` keyword. We also need to declare those methods as constant as well.  
+When we want to access an object from a method outside the class, that's not going to change the object, we can use a constant pointer to pass in the object pointer as a parameter to the function. Using a pointer, increases the efficiency of the program's execution. By declaring the pointer constant, we can make sure there will be no side effects that affect the object.  
+We can declare a constant using the `const` keyword. We also need to declare those methods as constant as well.  
 The constant keyword comes after the parameter declaration in the method declaration. Once we add the const keyword to a method, that means that method will not change any instance member of the object.  
 We can declare getters constant. Method declaration and implementation both must have const keyword between parenthesis and curly braces.  
 
