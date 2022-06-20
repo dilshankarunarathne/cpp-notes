@@ -1697,12 +1697,14 @@ int main() {
 }
 ```
 
-By using mutex to synchronize a shared resource among threads, we can avoid race conditions. But, if an exception is thrown in between locking an unlocking, the resource might get locked forever. We could use a lock_guard to get around this. This is also a variant of RAII technique. Whenever the guard goes out of scope, the mutex will always be unlocked, with or without exception. 
-
-	void shared_print (string msg, int id) {
-		std::lock_guard<std::mutex> guard(mu);
-		cout << msg << id << endl;
-	}
+By using mutex to synchronize a shared resource among threads, we can avoid race conditions. But, if an exception is thrown in between locking an unlocking, the resource might get locked forever. We could use a `lock_guard` to get around this.  
+This is also a variant of **RAII** technique. Whenever the guard goes out of scope, the mutex will always be unlocked, with or without exception. 
+```cpp
+void shared_print (string msg, int id) {
+	std::lock_guard<std::mutex> guard(mu);
+	cout << msg << id << endl;
+}
+```
 
 Still with all that, the shared resource might be available and be used from another thread, without going through the lock. To protect the resource completely, the mutex must be bundled together with the shared resource. 
 
