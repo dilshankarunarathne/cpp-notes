@@ -8,7 +8,7 @@
    1. [Numeric Data Types]() 
    2. [The Auto Keyword]() 
    3. [Value vs. Reference]() 
-   4. []() 
+   4. [Constants]() 
    5. []() 
    6. []() 
    7. []() 
@@ -147,6 +147,8 @@ int main() {
 
 Reference variables in C++ are declared using an `&` sign before the variable name. We must initialize a reference variable in C++.  When we declare a reference variable, we must mention to which variable this is going to refer. 
 Data type of the reference variable must be the same type as the variable it points to.  
+
+## 5.4. Constants 
 
 We can declare a global constant variable using the `const` keyword (right after the namespace declaration). It will be available for all the functions. 
 ```cpp
