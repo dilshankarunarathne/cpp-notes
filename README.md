@@ -10,7 +10,7 @@
    3. [Value vs. Reference]() 
    4. [Constants]() 
    5. [Garbage Values]() 
-   6. []() 
+   6. [I/O Streams]() 
    7. []() 
    8. []() 
    9. []() 
@@ -162,6 +162,8 @@ const int number = 5;
 ## 5.4. Garbage Values 
 
 If we create a variable and not initialize it by giving it a value, initially it will be holding a garbage value. A garbage value is whatever the state of that point of the memory was. It was never initialized, neither was cleared. So, when we create a variable, the best thing to do is to initialize it to zero by using the equal sign, or empty curly braces.  `int var {};` 
+
+## 5.5. I/O Streams 
 
 `istream` is a class in the `iostream` library, and `cin` is a global object that we can use to take console keyboard input to the program. 
 To extract a value from the keyboard using the `cin` object and assign that to a variable, we need to use `>>` extraction operator. This class is intelligent enough to extract the value accordingly to the type. 
