@@ -1128,7 +1128,9 @@ In other languages like Java, C#, they have **generics** for this. But C++ **tem
 Type safety is a huge part of C++ language, and this is how we achieve that.  
 Most of old C++ collections and algorithms are rich in templates, even the old C++ standard library was called STL – Standard *Template* Library.  
 
-We can declare a template using the `template` keyword, followed by the type declaration inside angle brackets. We declare the type placeholder using the typename keyword and we usually give the placeholder a capital letter like T. After the template declaration, we can use that type placeholder in our functions. It will replace the object type and give our function a generic independency from types. 
+We can declare a template using the `template` keyword, followed by the type declaration inside angle brackets. We declare the type placeholder using the `typename` keyword and we usually give the placeholder a capital letter like `T`.  
+After the template declaration, we can use that type placeholder in our functions. It will replace the object type and give our function a generic independency from types.  
+
 -------------------------------------------------------------------------------------------------
 template <typename T>
 int compareTo(T a, T b){
