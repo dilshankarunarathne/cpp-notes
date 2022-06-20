@@ -82,9 +82,6 @@
     7.  [Deadlocks]() 
     8.  [Producer - Consumer Problems]() 
     9.  [Fututre & Promise]() 
-    10. []() 
-26. []() 
-27. []() 
 
 # 1. Introduction to C++ 
 
