@@ -72,7 +72,7 @@
     5.  [Reinterpret Cast]() 
 23. [Lambdas]() 
 24. [Exceptions]() 
-25. []() 
+25. [Concurrency]() 
 26. []() 
 27. []() 
 28. []() 
