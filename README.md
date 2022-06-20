@@ -3,6 +3,8 @@
 1. [Introduction to C++]() 
 2. [Scope and Namespace]() 
 3. [EnuEnumerated Types]() 
+4. [Pre Processor Directives]() 
+5. 
 
 # 1. Introduction to C++ 
 
@@ -74,7 +76,7 @@ int main () {
 }
 ```
 
-# Pre Processors 
+# 4. Pre Processor Directives 
 
 Anything that starts with a `#` is called a pre-processor directive. They are instructions for the compiler usually to combine files together, to include a library or for debugging purposes. We can create debug builds with more output than release builds. We can also use them for convenience, like include guards with `#ifendif`, `#endif` and `#define` that we can use to stop the same library from importing more than once.  
 
