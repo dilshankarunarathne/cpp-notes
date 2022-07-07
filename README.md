@@ -351,8 +351,6 @@ Because of the compilation starts from the top, if we call a function in our cod
 ```cpp
 #include <iostream>
 
-using namespace std;
-
 void swap(int &, int &);
 
 int main() {
