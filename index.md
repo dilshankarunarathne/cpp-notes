@@ -1,4 +1,4 @@
 # Dilshan.ga 
 
-[C++ Notes](./README)  
+[C++ Notes](./readme)  
 
