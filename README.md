@@ -1,4 +1,4 @@
-# Dilshan Karunarathne's C++ Note 
+# Dilshan Karunarathne's C++ Notes 
 
 ## Topics 
 
